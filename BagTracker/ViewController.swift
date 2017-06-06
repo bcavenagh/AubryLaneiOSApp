@@ -12,14 +12,12 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var MenuButton: UIBarButtonItem!
     @IBOutlet weak var OptionalButton: UIBarButtonItem!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sideMenus()
         customizeNavBar()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +45,13 @@ class ViewController: UIViewController {
         //Change the color of the top main bar
         navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 255/255, green: 87/255, blue: 35/255, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
     }
-
+    
+    func customizeTableView(_ tableView: UITableView, willDisplayHeaderView view:UIView, forSection: Int) {
+        if let headerTitle = view as? UITableViewHeaderFooterView {
+            headerTitle.textLabel?.textColor = UIColor.red
+        }
+    }
+    
 }

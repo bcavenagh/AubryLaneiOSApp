@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		43A7FF29FF02A0A760DCCF7D /* libPods-BagTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D89C9A5A1C8958767BFC03E5 /* libPods-BagTracker.a */; };
+		8B4E82DB1EE719D100969EB1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E82DA1EE719D100969EB1 /* TableViewController.swift */; };
+		8B4E82E41EE71C9200969EB1 /* TableViewCellUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E82E21EE71C9200969EB1 /* TableViewCellUser.swift */; };
+		8B4E82E51EE71C9200969EB1 /* TableViewCellUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E82E31EE71C9200969EB1 /* TableViewCellUser.xib */; };
+		8B4E82E81EE71D9400969EB1 /* TableViewCellTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E82E61EE71D9400969EB1 /* TableViewCellTab.swift */; };
+		8B4E82E91EE71D9400969EB1 /* TableViewCellTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E82E71EE71D9400969EB1 /* TableViewCellTab.xib */; };
 		8BB9A9091EE6DF4F009D3052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9A9081EE6DF4F009D3052 /* AppDelegate.swift */; };
 		8BB9A90E1EE6DF4F009D3052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB9A90C1EE6DF4F009D3052 /* Main.storyboard */; };
 		8BB9A9101EE6DF4F009D3052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB9A90F1EE6DF4F009D3052 /* Assets.xcassets */; };
@@ -39,6 +44,11 @@
 
 /* Begin PBXFileReference section */
 		12E3A5B8678B2C9D5A408677 /* Pods-BagTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BagTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BagTracker/Pods-BagTracker.release.xcconfig"; sourceTree = "<group>"; };
+		8B4E82DA1EE719D100969EB1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
+		8B4E82E21EE71C9200969EB1 /* TableViewCellUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellUser.swift; sourceTree = "<group>"; };
+		8B4E82E31EE71C9200969EB1 /* TableViewCellUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellUser.xib; sourceTree = "<group>"; };
+		8B4E82E61EE71D9400969EB1 /* TableViewCellTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTab.swift; sourceTree = "<group>"; };
+		8B4E82E71EE71D9400969EB1 /* TableViewCellTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellTab.xib; sourceTree = "<group>"; };
 		8BB9A9051EE6DF4F009D3052 /* BagTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB9A9081EE6DF4F009D3052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BB9A90D1EE6DF4F009D3052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +114,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8B4E82EA1EE7311E00969EB1 /* TableViewControl */ = {
+			isa = PBXGroup;
+			children = (
+				8B4E82DA1EE719D100969EB1 /* TableViewController.swift */,
+				8B4E82E21EE71C9200969EB1 /* TableViewCellUser.swift */,
+				8B4E82E31EE71C9200969EB1 /* TableViewCellUser.xib */,
+				8B4E82E61EE71D9400969EB1 /* TableViewCellTab.swift */,
+				8B4E82E71EE71D9400969EB1 /* TableViewCellTab.xib */,
+			);
+			name = TableViewControl;
+			sourceTree = "<group>";
+		};
 		8BB9A8FC1EE6DF4F009D3052 = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +152,12 @@
 		8BB9A9071EE6DF4F009D3052 /* BagTracker */ = {
 			isa = PBXGroup;
 			children = (
+				8B4E82EA1EE7311E00969EB1 /* TableViewControl */,
 				8BB9A93A1EE6DF64009D3052 /* Supporting Files */,
-				8BB9A9081EE6DF4F009D3052 /* AppDelegate.swift */,
 				8BB9A90C1EE6DF4F009D3052 /* Main.storyboard */,
-				8BB9A90F1EE6DF4F009D3052 /* Assets.xcassets */,
 				8BB9A9111EE6DF4F009D3052 /* LaunchScreen.storyboard */,
-				8BB9A9141EE6DF4F009D3052 /* Info.plist */,
+				8BB9A90F1EE6DF4F009D3052 /* Assets.xcassets */,
+				8BB9A9081EE6DF4F009D3052 /* AppDelegate.swift */,
 				8BB9A93B1EE6E18B009D3052 /* ViewController.swift */,
 				8BB9A93D1EE6E8E4009D3052 /* MapController.swift */,
 			);
@@ -163,6 +185,7 @@
 		8BB9A93A1EE6DF64009D3052 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8BB9A9141EE6DF4F009D3052 /* Info.plist */,
 				8BB9A9371EE6DF61009D3052 /* SWRevealViewController.h */,
 				8BB9A9381EE6DF61009D3052 /* SWRevealViewController.m */,
 				8BB9A9361EE6DF60009D3052 /* BagTracker-Bridging-Header.h */,
@@ -282,9 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB9A9131EE6DF4F009D3052 /* LaunchScreen.storyboard in Resources */,
+				8B4E82E51EE71C9200969EB1 /* TableViewCellUser.xib in Resources */,
 				8BB9A9101EE6DF4F009D3052 /* Assets.xcassets in Resources */,
 				8BB9A9401EE6E916009D3052 /* Podfile in Resources */,
 				8BB9A90E1EE6DF4F009D3052 /* Main.storyboard in Resources */,
+				8B4E82E91EE71D9400969EB1 /* TableViewCellTab.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +385,9 @@
 				8BB9A93E1EE6E8E4009D3052 /* MapController.swift in Sources */,
 				8BB9A93C1EE6E18B009D3052 /* ViewController.swift in Sources */,
 				8BB9A9091EE6DF4F009D3052 /* AppDelegate.swift in Sources */,
+				8B4E82DB1EE719D100969EB1 /* TableViewController.swift in Sources */,
+				8B4E82E81EE71D9400969EB1 /* TableViewCellTab.swift in Sources */,
+				8B4E82E41EE71C9200969EB1 /* TableViewCellUser.swift in Sources */,
 				8BB9A9391EE6DF61009D3052 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,6 +640,7 @@
 				8BB9A92F1EE6DF4F009D3052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BB9A9301EE6DF4F009D3052 /* Build configuration list for PBXNativeTarget "BagTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -620,6 +649,7 @@
 				8BB9A9321EE6DF4F009D3052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BB9A9331EE6DF4F009D3052 /* Build configuration list for PBXNativeTarget "BagTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -628,6 +658,7 @@
 				8BB9A9351EE6DF4F009D3052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
