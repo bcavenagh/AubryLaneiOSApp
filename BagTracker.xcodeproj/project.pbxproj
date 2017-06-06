@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43A7FF29FF02A0A760DCCF7D /* libPods-BagTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D89C9A5A1C8958767BFC03E5 /* libPods-BagTracker.a */; };
 		8BB9A9091EE6DF4F009D3052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9A9081EE6DF4F009D3052 /* AppDelegate.swift */; };
-		8BB9A90B1EE6DF4F009D3052 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9A90A1EE6DF4F009D3052 /* ViewController.swift */; };
 		8BB9A90E1EE6DF4F009D3052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB9A90C1EE6DF4F009D3052 /* Main.storyboard */; };
 		8BB9A9101EE6DF4F009D3052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB9A90F1EE6DF4F009D3052 /* Assets.xcassets */; };
 		8BB9A9131EE6DF4F009D3052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB9A9111EE6DF4F009D3052 /* LaunchScreen.storyboard */; };
 		8BB9A91E1EE6DF4F009D3052 /* BagTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9A91D1EE6DF4F009D3052 /* BagTrackerTests.swift */; };
 		8BB9A9291EE6DF4F009D3052 /* BagTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9A9281EE6DF4F009D3052 /* BagTrackerUITests.swift */; };
+		8BB9A9391EE6DF61009D3052 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9A9381EE6DF61009D3052 /* SWRevealViewController.m */; };
+		8BB9A93C1EE6E18B009D3052 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9A93B1EE6E18B009D3052 /* ViewController.swift */; };
+		8BB9A93E1EE6E8E4009D3052 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9A93D1EE6E8E4009D3052 /* MapController.swift */; };
+		8BB9A9401EE6E916009D3052 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8BB9A93F1EE6E916009D3052 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12E3A5B8678B2C9D5A408677 /* Pods-BagTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BagTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BagTracker/Pods-BagTracker.release.xcconfig"; sourceTree = "<group>"; };
 		8BB9A9051EE6DF4F009D3052 /* BagTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB9A9081EE6DF4F009D3052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BB9A90A1EE6DF4F009D3052 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BB9A90D1EE6DF4F009D3052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BB9A90F1EE6DF4F009D3052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BB9A9121EE6DF4F009D3052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		8BB9A9241EE6DF4F009D3052 /* BagTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BagTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB9A9281EE6DF4F009D3052 /* BagTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTrackerUITests.swift; sourceTree = "<group>"; };
 		8BB9A92A1EE6DF4F009D3052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB9A9361EE6DF60009D3052 /* BagTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BagTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BB9A9371EE6DF61009D3052 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8BB9A9381EE6DF61009D3052 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8BB9A93B1EE6E18B009D3052 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8BB9A93D1EE6E8E4009D3052 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		8BB9A93F1EE6E916009D3052 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		B08120948DC071217DE0BC31 /* Pods-BagTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BagTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BagTracker/Pods-BagTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		D89C9A5A1C8958767BFC03E5 /* libPods-BagTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BagTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A7FF29FF02A0A760DCCF7D /* libPods-BagTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +87,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72A2150F6F53A923A37C978D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D89C9A5A1C8958767BFC03E5 /* libPods-BagTracker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		831B9674FD516B26A63AAC1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B08120948DC071217DE0BC31 /* Pods-BagTracker.debug.xcconfig */,
+				12E3A5B8678B2C9D5A408677 /* Pods-BagTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8BB9A8FC1EE6DF4F009D3052 = {
 			isa = PBXGroup;
 			children = (
+				8BB9A93F1EE6E916009D3052 /* Podfile */,
 				8BB9A9071EE6DF4F009D3052 /* BagTracker */,
 				8BB9A91C1EE6DF4F009D3052 /* BagTrackerTests */,
 				8BB9A9271EE6DF4F009D3052 /* BagTrackerUITests */,
 				8BB9A9061EE6DF4F009D3052 /* Products */,
+				831B9674FD516B26A63AAC1B /* Pods */,
+				72A2150F6F53A923A37C978D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +130,14 @@
 		8BB9A9071EE6DF4F009D3052 /* BagTracker */ = {
 			isa = PBXGroup;
 			children = (
+				8BB9A93A1EE6DF64009D3052 /* Supporting Files */,
 				8BB9A9081EE6DF4F009D3052 /* AppDelegate.swift */,
-				8BB9A90A1EE6DF4F009D3052 /* ViewController.swift */,
 				8BB9A90C1EE6DF4F009D3052 /* Main.storyboard */,
 				8BB9A90F1EE6DF4F009D3052 /* Assets.xcassets */,
 				8BB9A9111EE6DF4F009D3052 /* LaunchScreen.storyboard */,
 				8BB9A9141EE6DF4F009D3052 /* Info.plist */,
+				8BB9A93B1EE6E18B009D3052 /* ViewController.swift */,
+				8BB9A93D1EE6E8E4009D3052 /* MapController.swift */,
 			);
 			path = BagTracker;
 			sourceTree = "<group>";
@@ -125,6 +160,16 @@
 			path = BagTrackerUITests;
 			sourceTree = "<group>";
 		};
+		8BB9A93A1EE6DF64009D3052 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BB9A9371EE6DF61009D3052 /* SWRevealViewController.h */,
+				8BB9A9381EE6DF61009D3052 /* SWRevealViewController.m */,
+				8BB9A9361EE6DF60009D3052 /* BagTracker-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BB9A92D1EE6DF4F009D3052 /* Build configuration list for PBXNativeTarget "BagTracker" */;
 			buildPhases = (
+				C4F94B763DE522C8609EDBA4 /* [CP] Check Pods Manifest.lock */,
 				8BB9A9011EE6DF4F009D3052 /* Sources */,
 				8BB9A9021EE6DF4F009D3052 /* Frameworks */,
 				8BB9A9031EE6DF4F009D3052 /* Resources */,
+				D867CE52CEF6949A6A811995 /* [CP] Embed Pods Frameworks */,
+				46326A64CD9D4C8DB26C12B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +241,7 @@
 				TargetAttributes = {
 					8BB9A9041EE6DF4F009D3052 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					8BB9A9181EE6DF4F009D3052 = {
@@ -234,6 +283,7 @@
 			files = (
 				8BB9A9131EE6DF4F009D3052 /* LaunchScreen.storyboard in Resources */,
 				8BB9A9101EE6DF4F009D3052 /* Assets.xcassets in Resources */,
+				8BB9A9401EE6E916009D3052 /* Podfile in Resources */,
 				8BB9A90E1EE6DF4F009D3052 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +304,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46326A64CD9D4C8DB26C12B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BagTracker/Pods-BagTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4F94B763DE522C8609EDBA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D867CE52CEF6949A6A811995 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BagTracker/Pods-BagTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8BB9A9011EE6DF4F009D3052 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB9A90B1EE6DF4F009D3052 /* ViewController.swift in Sources */,
+				8BB9A93E1EE6E8E4009D3052 /* MapController.swift in Sources */,
+				8BB9A93C1EE6E18B009D3052 /* ViewController.swift in Sources */,
 				8BB9A9091EE6DF4F009D3052 /* AppDelegate.swift in Sources */,
+				8BB9A9391EE6DF61009D3052 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,24 +510,31 @@
 		};
 		8BB9A92E1EE6DF4F009D3052 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B08120948DC071217DE0BC31 /* Pods-BagTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BagTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aubrylane.BagTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BagTracker/BagTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8BB9A92F1EE6DF4F009D3052 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E3A5B8678B2C9D5A408677 /* Pods-BagTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BagTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aubrylane.BagTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BagTracker/BagTracker-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
