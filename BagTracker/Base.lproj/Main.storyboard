@@ -59,12 +59,19 @@
                             <constraint firstAttribute="trailing" secondItem="kq0-9u-hYL" secondAttribute="trailing" id="yXl-RU-6Dz"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="add" id="FAF-Ox-1SL"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="7yA-xL-zPu">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="bQB-YL-G7y"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vdf-Q0-Xxg"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LgX-AQ-fkB">
+                            <rect key="frame" x="92" y="7" width="191" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
+                            <state key="normal" title="AUBRY LANE">
+                                <color key="titleColor" red="0.81960784313725488" green="0.59215686274509804" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" image="Purse" id="vdf-Q0-Xxg"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -105,28 +112,10 @@
             </objects>
             <point key="canvasLocation" x="-1543.2" y="465.51724137931041"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="pBf-h2-pyD">
-            <objects>
-                <viewController id="xMb-AE-yMC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="veH-uR-AtD"/>
-                        <viewControllerLayoutGuide type="bottom" id="yGI-61-rug"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="z7B-JB-FDr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3DX-FG-Inx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1543" y="1272"/>
-        </scene>
-        <!--Table View Controller-->
+        <!--Right Table View Controller-->
         <scene sceneID="ba1-m5-BUW">
             <objects>
-                <tableViewController id="0yY-o1-AzW" sceneMemberID="viewController">
+                <tableViewController id="0yY-o1-AzW" customClass="RightTableViewController" customModule="BagTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mTb-9C-tzn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,5 +179,6 @@
     </scenes>
     <resources>
         <image name="Menu" width="25" height="25"/>
+        <image name="Purse" width="25" height="25"/>
     </resources>
 </document>

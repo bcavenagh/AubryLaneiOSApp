@@ -27,31 +27,32 @@ class ViewController: UIViewController {
     
     func sideMenus() {
         if revealViewController() != nil{
+            //Make the Menu Button to the reveal the menu
             MenuButton.target = revealViewController()
             MenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             
+            //Choose how far the view slides to reveal the left menu
             revealViewController().rearViewRevealWidth = 275
+            //Choose how far the view slides to reveal the right menu
             revealViewController().rightViewRevealWidth = 160
             
+            //MAke the right bar button open the right menu
+            //TODO: Determine if we want a right side menu or not. Choose a bag to show on the map?
             OptionalButton.target = revealViewController()
             OptionalButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             
+            //Allow a swipe gesture to open the menu
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
 
     func customizeNavBar(){
-        navigationController?.navigationBar.tintColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        //Change the color of the images
+        navigationController?.navigationBar.tintColor = UIColor(colorLiteralRed: 209/255, green: 151/255, blue: 72/255, alpha: 1)
         //Change the color of the top main bar
-        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 255/255, green: 87/255, blue: 35/255, alpha: 1)
+        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 100/255, green: 5/255, blue: 57/255, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
-    }
-    
-    func customizeTableView(_ tableView: UITableView, willDisplayHeaderView view:UIView, forSection: Int) {
-        if let headerTitle = view as? UITableViewHeaderFooterView {
-            headerTitle.textLabel?.textColor = UIColor.red
-        }
     }
     
 }

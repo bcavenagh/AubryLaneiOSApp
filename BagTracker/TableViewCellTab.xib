@@ -39,9 +39,9 @@
                 <constraints>
                     <constraint firstItem="tC6-Jm-hi4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4rt-Oe-4QP"/>
                     <constraint firstItem="tC6-Jm-hi4" firstAttribute="leading" secondItem="8N4-7t-4nt" secondAttribute="trailing" constant="8" id="Hi7-eV-lUb"/>
-                    <constraint firstItem="8N4-7t-4nt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="YAJ-ZR-ICU"/>
                     <constraint firstItem="8N4-7t-4nt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cr6-GZ-5C7"/>
                     <constraint firstItem="8N4-7t-4nt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="ePu-B7-5FU"/>
+                    <constraint firstItem="8N4-7t-4nt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="tBK-ut-IIr"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

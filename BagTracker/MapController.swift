@@ -11,10 +11,14 @@ import GoogleMaps
 import UIKit
 
 class MapController: UIViewController {
+    var latitude = 39.909319
+    var longitude = -86.251950
+    var zoom : Float! = 16
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        let camera = GMSCameraPosition.camera(withLatitude: 39.909319, longitude: -86.251950, zoom: 17)
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: zoom)
         
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
@@ -25,5 +29,11 @@ class MapController: UIViewController {
         marker.title = "Aubry Lane"
         marker.snippet = "Handbags"
         marker.map = mapView
+    }
+    func reloadMap(){
+        NSLog("Latitude %f", latitude)
+        NSLog("Longitude %f", longitude)
+        NSLog("Zoom %f", zoom)
+        
     }
 }
