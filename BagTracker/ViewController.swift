@@ -12,7 +12,19 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var MenuButton: UIBarButtonItem!
     @IBOutlet weak var OptionalButton: UIBarButtonItem!
-
+    
+    //Login Information
+    @IBOutlet weak var loginLabel: UILabel!
+    @IBOutlet weak var _email: UITextField!
+    @IBOutlet weak var _password: UITextField!
+    
+    //Register Information
+    @IBOutlet weak var acceptTCBox: UIButton!
+    @IBOutlet weak var _registerEmail: UITextField!
+    @IBOutlet weak var _registerUsername: UITextField!
+    @IBOutlet weak var _registerPassword: UITextField!
+    @IBOutlet weak var _registerPasswordConfirm: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,9 +32,38 @@ class ViewController: UIViewController {
         customizeNavBar()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func login_Clicked(_ sender: Any) {
+        let user = "ben"
+        let psw = "purse"
+        
+        if(_email.text == user && _password.text == psw){
+            _email.resignFirstResponder()
+            _password.resignFirstResponder()
+            loginLabel.text = "Success."
+            loginLabel.textColor = UIColor.green
+            self.performSegue(withIdentifier: "loginSuccess", sender:self)
+        }
+        else{
+            loginLabel.text = "Invalid credentials. Try again."
+            _email.resignFirstResponder()
+            _password.resignFirstResponder()
+        }
+    }
+    func toggleTermsAndConditions(){
+        if(acceptTCBox.currentImage == #imageLiteral(resourceName: "unchecked")){
+            acceptTCBox.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
+        }
+        else{
+            acceptTCBox.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
+        }
+    }
+    
+    @IBAction func acceptTCBox_Clicked(_ sender: Any) {
+        toggleTermsAndConditions()
+    }
+    
+    @IBAction func acceptTCText_Clicked(_ sender: Any) {
+        toggleTermsAndConditions()
     }
     
     func sideMenus() {
