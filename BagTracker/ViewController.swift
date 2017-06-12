@@ -18,13 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var _email: UITextField!
     @IBOutlet weak var _password: UITextField!
     
-    //Register Information
-    @IBOutlet weak var acceptTCBox: UIButton!
-    @IBOutlet weak var _registerEmail: UITextField!
-    @IBOutlet weak var _registerUsername: UITextField!
-    @IBOutlet weak var _registerPassword: UITextField!
-    @IBOutlet weak var _registerPasswordConfirm: UITextField!
-    
+
+    //unwinds the forgot password form back to the login
+    @IBAction func forgotPasswordBackButton_Clicked(segue:UIStoryboardSegue) {
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +31,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func login_Clicked(_ sender: Any) {
-        let user = "ben"
+        let user = "Ben"
         let psw = "purse"
         
         if(_email.text == user && _password.text == psw){
@@ -41,6 +39,8 @@ class ViewController: UIViewController {
             _password.resignFirstResponder()
             loginLabel.text = "Success."
             loginLabel.textColor = UIColor.green
+            
+            
             self.performSegue(withIdentifier: "loginSuccess", sender:self)
         }
         else{
@@ -49,23 +49,7 @@ class ViewController: UIViewController {
             _password.resignFirstResponder()
         }
     }
-    func toggleTermsAndConditions(){
-        if(acceptTCBox.currentImage == #imageLiteral(resourceName: "unchecked")){
-            acceptTCBox.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
-        }
-        else{
-            acceptTCBox.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
-        }
-    }
-    
-    @IBAction func acceptTCBox_Clicked(_ sender: Any) {
-        toggleTermsAndConditions()
-    }
-    
-    @IBAction func acceptTCText_Clicked(_ sender: Any) {
-        toggleTermsAndConditions()
-    }
-    
+
     func sideMenus() {
         if revealViewController() != nil{
             //Make the Menu Button to the reveal the menu
@@ -77,8 +61,7 @@ class ViewController: UIViewController {
             //Choose how far the view slides to reveal the right menu
             revealViewController().rightViewRevealWidth = 160
             
-            //MAke the right bar button open the right menu
-            //TODO: Determine if we want a right side menu or not. Choose a bag to show on the map?
+            //Make the right bar button open the right menu
             OptionalButton.target = revealViewController()
             OptionalButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             
@@ -89,9 +72,9 @@ class ViewController: UIViewController {
 
     func customizeNavBar(){
         //Change the color of the images
-        navigationController?.navigationBar.tintColor = UIColor(colorLiteralRed: 209/255, green: 151/255, blue: 72/255, alpha: 1)
+        navigationController?.navigationBar.tintColor = UIColor(red: 209/255, green: 151/255, blue: 72/255, alpha: 1)
         //Change the color of the top main bar
-        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 100/255, green: 5/255, blue: 57/255, alpha: 1)
+        navigationController?.navigationBar.barTintColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
     }

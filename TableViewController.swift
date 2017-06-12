@@ -116,5 +116,32 @@ class TableViewController: UITableViewController {
             return 30
         }
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        switch indexPath.row {
+            case 0: //For User Profile
+                performSegue(withIdentifier: "userSegue", sender: nil)
+            case 1: //For Home
+                performSegue(withIdentifier: "mapSegue", sender: nil)
+            case 2: //For History
+                performSegue(withIdentifier: "historySegue", sender: nil)
+            case 3: //For Favorite
+                performSegue(withIdentifier: "favoriteSegue", sender: nil)
+            case 4: //For Find My Purse
+                performSegue(withIdentifier: "mapSegue", sender: nil)
+            case 5: //For Geo Fence
+                performSegue(withIdentifier: "mapSegue", sender: nil)
+            case 6: //For Battery Status
+                performSegue(withIdentifier: "batterySegue", sender: nil)
+            //NO 7 BECAUSE THATS EMPTY ROW
+            case 8: //For Help
+                performSegue(withIdentifier: "helpSegue", sender: nil)
+            case 9: //For Settings
+                performSegue(withIdentifier: "settingsSegue", sender: nil)
+            default: //For Logout
+                performSegue(withIdentifier: "mapSegue", sender: nil)
+        }
+
+    }
     
 }
