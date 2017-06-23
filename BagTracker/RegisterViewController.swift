@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var _registerLastName: UITextField!
     @IBOutlet weak var _registerPassword: UITextField!
     @IBOutlet weak var _registerPasswordConfirm: UITextField!
+    var acceptedTC: Bool = false
     
     //unwinds the register form back to the login
     override func viewDidLoad() {
@@ -28,9 +29,11 @@ class RegisterViewController: UIViewController {
     func toggleTermsAndConditions(){
         if(acceptTCBox.currentImage == #imageLiteral(resourceName: "unchecked")){
             acceptTCBox.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
+            acceptedTC = true
         }
         else{
             acceptTCBox.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
+            acceptedTC = false
         }
     }
     
@@ -42,22 +45,18 @@ class RegisterViewController: UIViewController {
         toggleTermsAndConditions()
     }
     func verifyPassword()-> Bool{
-        NSLog("Verifying...")
         let psw = _registerPassword.text
         let confirm = _registerPasswordConfirm.text
         if(psw == confirm){
-            print("Passed")
             return true
         }
-        print("Failed.")
         return false
     }
     @IBAction func createAccount_Clicked(_ sender: Any) {
         guard let email = _registerEmail.text, let password = _registerPassword.text, let firstName = _registerFirstName.text, let lastName = _registerLastName.text else{
-            print("Invalid Form")
             return
         }
-        if(verifyPassword()){
+        if(verifyPassword() && acceptedTC == true){
             FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: {(user: FIRUser?, error) in
                 if error != nil{
                     print(error!)
@@ -75,15 +74,18 @@ class RegisterViewController: UIViewController {
                 
                 usersRef.updateChildValues(values, withCompletionBlock: { (err, ref) in
                     if err != nil{
-                        print(err)
+                        print(err!)
                         return
                     }
+                    
                     //successfull addition
-                    print("Saved user into firebase DB")
+                    self.dismiss(animated: true, completion: nil)
                 })
             })
             
         }
+        
+        
     }
 
 }

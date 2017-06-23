@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 struct cellData {
-    let cell: Int!
-    let text: String!
-    let image: UIImage!
+    var cell: Int!
+    var text: String!
+    var image: UIImage!
 }
 
 class TableViewController: UITableViewController {
@@ -19,22 +20,25 @@ class TableViewController: UITableViewController {
     var arrayOfCellData = [cellData]()
     
     override func viewDidLoad() {
-        arrayOfCellData = [cellData(cell : 1, text : "Ben Cavenagh", image : #imageLiteral(resourceName: "BlankUserW")),
+        
+        arrayOfCellData = [cellData(cell : 1, text : "User", image : #imageLiteral(resourceName: "BlankUserW")),
                            cellData(cell : 2, text : "Home", image : #imageLiteral(resourceName: "HomeW")),
                            cellData(cell : 2, text : "History", image : #imageLiteral(resourceName: "HistoryW")),
-                           cellData(cell : 2, text : "Favorite", image : #imageLiteral(resourceName: "FavoriteW")),
+                           cellData(cell : 2, text : "Emergency Contacts", image : #imageLiteral(resourceName: "FavoriteW")),
                            cellData(cell : 2, text : "Find My Purse", image : #imageLiteral(resourceName: "PurseW")),
                            cellData(cell : 2, text : "Geo Fence", image : #imageLiteral(resourceName: "GeoFenceW")),
                            cellData(cell : 2, text : "Battery", image : #imageLiteral(resourceName: "BatteryW")),
+                           cellData(cell : 2, text : "Side Button Function", image : #imageLiteral(resourceName: "BatteryW")),
                            //Empty cell for spacing
-                           cellData(cell : 3, text : "", image : nil),
+                           cellData(cell : 3, text : nil, image : nil),
                            cellData(cell : 2, text : "Help", image : #imageLiteral(resourceName: "HelpW")),
                            cellData(cell : 2, text : "Settings", image : #imageLiteral(resourceName: "SettingsW")),
                            cellData(cell : 2, text : "Logout", image : #imageLiteral(resourceName: "LogoutW"))]
-        
-        self.tableView.backgroundColor = UIColor(colorLiteralRed: 139/255, green: 37/255, blue: 72/255, alpha: 1)
+        //red: 100/255, green: 5/255, blue: 57/255, alpha: 1
+        self.tableView.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
         
         tableView.separatorStyle = .none
+    
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,14 +51,26 @@ class TableViewController: UITableViewController {
         //if the cell is type 1 (TableViewCellUser.xib)
         if arrayOfCellData[indexPath.row].cell == 1{
             let cell = Bundle.main.loadNibNamed("TableViewCellUser", owner: self, options: nil)?.first as! TableViewCellUser
+            let ref = FIRDatabase.database().reference(fromURL: "https://test-database-ba3a2.firebaseio.com/")
+            let user = (FIRAuth.auth()?.currentUser?.uid)!
+            let userRef = ref.child("users").child(user)
             
             //Grabbing the image and text from array of cell data and setting up the Nib file
             cell.userImageView.image = arrayOfCellData[indexPath.row].image
-            cell.userLabel.text = arrayOfCellData[indexPath.row].text
             
+            //Fetching user data and updating cell with information
+            userRef.observe(.value, with: { (snapshot) in
+                if let dictionary = snapshot.value as? [String: AnyObject]{
+                    let firstName = dictionary["firstName"] as! String
+                    cell.userLabel.text = firstName
+                    let lastName = dictionary["lastName"] as! String
+                    cell.userLabel.text?.append(" " + lastName)
+                    
+                }
+            }, withCancel: nil)
             
             //Setting color of the cell and the label text
-            cell.backgroundColor = UIColor(colorLiteralRed: 139/255, green: 37/255, blue: 72/255, alpha: 1)
+            cell.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
             cell.userLabel.textColor = UIColor.white
             
             //Set the color of the selected menu item
@@ -74,7 +90,7 @@ class TableViewController: UITableViewController {
             cell.mainLabel.text = arrayOfCellData[indexPath.row].text
             
             //Setting color of the cell and the label text
-            cell.backgroundColor = UIColor(colorLiteralRed: 139/255, green: 37/255, blue: 72/255, alpha: 1)
+            cell.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
             cell.mainLabel.textColor = UIColor.white
             
             //Set the color of the selected menu item
@@ -90,7 +106,7 @@ class TableViewController: UITableViewController {
             cell.isUserInteractionEnabled = false
             cell.mainLabel.text = ""
             //Setting color of the cell and the label text
-            cell.backgroundColor = UIColor(colorLiteralRed: 139/255, green: 37/255, blue: 72/255, alpha: 1)
+            cell.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
             cell.mainLabel.textColor = UIColor.white
             
             //Set the color of the selected menu item
@@ -112,7 +128,7 @@ class TableViewController: UITableViewController {
            return 50
         }
         else{
-            //Height of the empty button cells
+            //Height of the empty cells
             return 30
         }
     }
@@ -133,15 +149,28 @@ class TableViewController: UITableViewController {
                 performSegue(withIdentifier: "mapSegue", sender: nil)
             case 6: //For Battery Status
                 performSegue(withIdentifier: "batterySegue", sender: nil)
-            //NO 7 BECAUSE THATS EMPTY ROW
+            //NO 7 BECAUSE THATS EMPTY SPACING ROW
             case 8: //For Help
                 performSegue(withIdentifier: "helpSegue", sender: nil)
             case 9: //For Settings
                 performSegue(withIdentifier: "settingsSegue", sender: nil)
-            default: //For Logout
-                performSegue(withIdentifier: "mapSegue", sender: nil)
+            default:  //For Logout
+                handleLogout()
         }
 
+    }
+    
+    func handleLogout(){
+        do{
+            try FIRAuth.auth()?.signOut()
+        } catch let logoutError{
+            print(logoutError)
+        }
+        
+        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "loginView")
+        if FIRAuth.auth()?.currentUser?.uid == nil{
+            present(vc as! UIViewController, animated: true, completion: nil)
+        }
     }
     
 }
