@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ALBagsListSelectionView" customModule="AubryLane" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="360"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-w5-P4l">
+                    <rect key="frame" x="36" y="67" width="288" height="226"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmZ-8I-596">
+                            <rect key="frame" x="10.5" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="TmZ-8I-596" secondAttribute="height" multiplier="1:1" id="I9M-uK-GHZ"/>
+                                <constraint firstAttribute="height" constant="20" id="lWA-iQ-Y6z"/>
+                            </constraints>
+                            <state key="normal" image="tick"/>
+                            <connections>
+                                <action selector="DoneButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="0Oy-Fz-9lD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h8-hQ-Nk6">
+                            <rect key="frame" x="257.5" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="8h8-hQ-Nk6" secondAttribute="height" multiplier="1:1" id="puB-Gb-7W2"/>
+                            </constraints>
+                            <state key="normal" image="cross"/>
+                            <connections>
+                                <action selector="SkipButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="pJ9-fm-rYo"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nle-Ji-ANi">
+                            <rect key="frame" x="0.0" y="71" width="288" height="150"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your default device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C98-2X-pvr">
+                            <rect key="frame" x="10.5" y="40" width="267" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="C98-2X-pvr" firstAttribute="trailing" secondItem="8h8-hQ-Nk6" secondAttribute="trailing" id="1C3-21-ZbM"/>
+                        <constraint firstItem="8h8-hQ-Nk6" firstAttribute="width" secondItem="TmZ-8I-596" secondAttribute="width" id="4Bh-Fh-Yro"/>
+                        <constraint firstItem="TmZ-8I-596" firstAttribute="top" secondItem="ugd-w5-P4l" secondAttribute="top" constant="10" id="DyT-hf-Qgi"/>
+                        <constraint firstItem="TmZ-8I-596" firstAttribute="leading" secondItem="ugd-w5-P4l" secondAttribute="leading" constant="10" id="G5O-11-KsI"/>
+                        <constraint firstItem="C98-2X-pvr" firstAttribute="leading" secondItem="TmZ-8I-596" secondAttribute="leading" id="Icg-P7-Zje"/>
+                        <constraint firstItem="nle-Ji-ANi" firstAttribute="top" secondItem="C98-2X-pvr" secondAttribute="bottom" priority="999" constant="10" id="QEm-zl-4cn"/>
+                        <constraint firstItem="nle-Ji-ANi" firstAttribute="leading" secondItem="ugd-w5-P4l" secondAttribute="leading" id="RBi-15-Okx"/>
+                        <constraint firstAttribute="trailing" secondItem="8h8-hQ-Nk6" secondAttribute="trailing" constant="11" id="VjV-PB-O1F"/>
+                        <constraint firstItem="8h8-hQ-Nk6" firstAttribute="top" secondItem="TmZ-8I-596" secondAttribute="top" id="gpq-2g-o1h"/>
+                        <constraint firstAttribute="trailing" secondItem="nle-Ji-ANi" secondAttribute="trailing" id="qNW-nX-u7F"/>
+                        <constraint firstItem="C98-2X-pvr" firstAttribute="top" secondItem="TmZ-8I-596" secondAttribute="bottom" constant="10" id="rCA-OR-8W5"/>
+                        <constraint firstAttribute="bottom" secondItem="nle-Ji-ANi" secondAttribute="bottom" constant="5" id="rQh-hV-A2y"/>
+                        <constraint firstAttribute="width" secondItem="ugd-w5-P4l" secondAttribute="height" multiplier="320:251" id="s97-2v-qsj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ugd-w5-P4l" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="JsS-wn-V7E"/>
+                <constraint firstItem="ugd-w5-P4l" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cXI-jb-8hj"/>
+                <constraint firstItem="ugd-w5-P4l" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tbh-Wb-frJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="ugd-w5-P4l" id="VQQ-c5-hJk"/>
+                <outlet property="deviceListTblView" destination="nle-Ji-ANi" id="cES-sd-I9U"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="-102"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cross" width="40" height="40"/>
+        <image name="tick" width="40" height="40"/>
+    </resources>
+</document>

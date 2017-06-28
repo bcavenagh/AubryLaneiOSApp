@@ -28,7 +28,7 @@ class TableViewController: UITableViewController {
                            cellData(cell : 2, text : "Find My Purse", image : #imageLiteral(resourceName: "PurseW")),
                            cellData(cell : 2, text : "Geo Fence", image : #imageLiteral(resourceName: "GeoFenceW")),
                            cellData(cell : 2, text : "Battery", image : #imageLiteral(resourceName: "BatteryW")),
-                           cellData(cell : 2, text : "Side Button Function", image : #imageLiteral(resourceName: "BatteryW")),
+                           cellData(cell : 2, text : "Side Button Function", image : #imageLiteral(resourceName: "clickButtonW")),
                            //Empty cell for spacing
                            cellData(cell : 3, text : nil, image : nil),
                            cellData(cell : 2, text : "Help", image : #imageLiteral(resourceName: "HelpW")),
@@ -121,15 +121,15 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if arrayOfCellData[indexPath.row].cell == 1{
             //Height of the user profile cell
-            return 155
+            return 145
         }
         else if arrayOfCellData[indexPath.row].cell == 2{
             //Height of the menu button cells
-           return 50
+           return 49
         }
         else{
             //Height of the empty cells
-            return 30
+            return 15
         }
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -149,10 +149,12 @@ class TableViewController: UITableViewController {
                 performSegue(withIdentifier: "mapSegue", sender: nil)
             case 6: //For Battery Status
                 performSegue(withIdentifier: "batterySegue", sender: nil)
-            //NO 7 BECAUSE THATS EMPTY SPACING ROW
-            case 8: //For Help
+            case 7:
+                performSegue(withIdentifier: "settingsSegue", sender: nil)
+            //NO 8 BECAUSE THATS EMPTY SPACING ROW
+            case 9: //For Help
                 performSegue(withIdentifier: "helpSegue", sender: nil)
-            case 9: //For Settings
+            case 10: //For Settings
                 performSegue(withIdentifier: "settingsSegue", sender: nil)
             default:  //For Logout
                 handleLogout()

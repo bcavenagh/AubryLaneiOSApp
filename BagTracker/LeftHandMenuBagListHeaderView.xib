@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LeftHandMenuBagListHeaderView" customModule="AubryLane" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBY-19-WJg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.40392156862745099" green="0.086274509803921567" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rFG-Io-jbW"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMN-rQ-xO4">
+                    <rect key="frame" x="121" y="11" width="40" height="38"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m1I-FQ-Hnd">
+                    <rect key="frame" x="171" y="22.5" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="m1I-FQ-Hnd" secondAttribute="height" multiplier="1:1" id="Hrt-8k-fUq"/>
+                        <constraint firstAttribute="height" constant="15" id="nk6-pt-9K7"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noC-HC-kHg">
+                    <rect key="frame" x="171" y="22.5" width="15" height="15"/>
+                    <connections>
+                        <action selector="ExpandBagListButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="ogY-ra-l0j"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfE-YW-0oX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <connections>
+                        <action selector="selectDeviceButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="2pF-Dq-kV5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tfE-YW-0oX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1P2-W4-06D"/>
+                <constraint firstItem="xBY-19-WJg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Cik-FM-yuD"/>
+                <constraint firstItem="XMN-rQ-xO4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.75" id="HwD-ar-ubf"/>
+                <constraint firstItem="xBY-19-WJg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NdU-jV-ELF"/>
+                <constraint firstItem="m1I-FQ-Hnd" firstAttribute="leading" secondItem="XMN-rQ-xO4" secondAttribute="trailing" constant="10" id="Z1J-c2-yLr"/>
+                <constraint firstItem="noC-HC-kHg" firstAttribute="leading" secondItem="m1I-FQ-Hnd" secondAttribute="leading" id="ZHq-Ff-yo6"/>
+                <constraint firstAttribute="trailing" secondItem="xBY-19-WJg" secondAttribute="trailing" id="ZuK-wi-d1z"/>
+                <constraint firstAttribute="bottom" secondItem="XMN-rQ-xO4" secondAttribute="bottom" constant="11" id="bVC-Qq-t9K"/>
+                <constraint firstItem="noC-HC-kHg" firstAttribute="top" secondItem="m1I-FQ-Hnd" secondAttribute="top" id="bdm-23-dPd"/>
+                <constraint firstItem="tfE-YW-0oX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cd0-gD-Zui"/>
+                <constraint firstItem="m1I-FQ-Hnd" firstAttribute="centerY" secondItem="XMN-rQ-xO4" secondAttribute="centerY" id="eg5-Kp-uHN"/>
+                <constraint firstItem="noC-HC-kHg" firstAttribute="bottom" secondItem="m1I-FQ-Hnd" secondAttribute="bottom" id="kio-4X-UnJ"/>
+                <constraint firstItem="XMN-rQ-xO4" firstAttribute="top" secondItem="xBY-19-WJg" secondAttribute="bottom" constant="10" id="lgP-Zj-1f0"/>
+                <constraint firstItem="noC-HC-kHg" firstAttribute="trailing" secondItem="m1I-FQ-Hnd" secondAttribute="trailing" id="ozv-k4-FKo"/>
+                <constraint firstAttribute="bottom" secondItem="tfE-YW-0oX" secondAttribute="bottom" id="s1c-SD-ymX"/>
+                <constraint firstAttribute="trailing" secondItem="tfE-YW-0oX" secondAttribute="trailing" id="t1x-r7-apj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dropDownIcon" destination="m1I-FQ-Hnd" id="oth-kK-ztI"/>
+                <outlet property="headerTextLbl" destination="XMN-rQ-xO4" id="PMz-bt-Ksg"/>
+            </connections>
+            <point key="canvasLocation" x="-135.5" y="-219"/>
+        </view>
+    </objects>
+</document>

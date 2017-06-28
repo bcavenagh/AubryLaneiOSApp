@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="leftMenuSimpleCell" id="KGk-i7-Jjw" customClass="LeftHandMenuCustomTableViewCell" customModule="AubryLane" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4RG-Do-1j9">
+                        <rect key="frame" x="10" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="aUZ-9U-jj0"/>
+                            <constraint firstAttribute="width" secondItem="4RG-Do-1j9" secondAttribute="height" multiplier="1:1" id="fu1-Mh-Alx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbi-j7-vHO">
+                        <rect key="frame" x="40" y="5" width="270" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-Bf-E29">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                        <connections>
+                            <action selector="tableCellBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vg3-qE-b3y"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xbi-j7-vHO" secondAttribute="bottom" constant="5" id="5hr-dh-qbW"/>
+                    <constraint firstItem="4RG-Do-1j9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="7kJ-HA-IOb"/>
+                    <constraint firstItem="xbi-j7-vHO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="BIW-2p-lug"/>
+                    <constraint firstItem="xbi-j7-vHO" firstAttribute="leading" secondItem="4RG-Do-1j9" secondAttribute="trailing" constant="10" id="JT2-TT-je1"/>
+                    <constraint firstAttribute="top" secondItem="D1g-Bf-E29" secondAttribute="top" id="JXb-3D-omd"/>
+                    <constraint firstAttribute="trailing" secondItem="D1g-Bf-E29" secondAttribute="trailing" id="SvQ-iu-bCJ"/>
+                    <constraint firstAttribute="bottom" secondItem="D1g-Bf-E29" secondAttribute="bottom" id="fZa-ug-9cW"/>
+                    <constraint firstItem="4RG-Do-1j9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fxX-EZ-XXR"/>
+                    <constraint firstAttribute="trailing" secondItem="xbi-j7-vHO" secondAttribute="trailing" constant="10" id="iP7-qb-avG"/>
+                    <constraint firstItem="D1g-Bf-E29" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uH8-iI-aPS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="cellIconImgView" destination="4RG-Do-1j9" id="hkx-F2-k4b"/>
+                <outlet property="cellTextLbl" destination="xbi-j7-vHO" id="oSt-tq-Eq9"/>
+            </connections>
+            <point key="canvasLocation" x="-82" y="112"/>
+        </tableViewCell>
+    </objects>
+</document>

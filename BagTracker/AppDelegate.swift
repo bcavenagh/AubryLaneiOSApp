@@ -14,7 +14,15 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    func setHomeViewController() {
+        
+        self.window?.rootViewController = nil
+        
+        //Display The View According To User Logged In Or Not...
+        self.window?.rootViewController = ALConstantMethods.getViewControllerWith(storyBoardID: "Main", viewControllerID: ALGlobal.sharedInstance.isCurrentUserLoggedIn ? "RevealViewController" : "LoginNavigationController")
+        
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()

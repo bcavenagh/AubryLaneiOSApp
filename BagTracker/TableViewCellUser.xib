@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PW1-mL-s9P">
@@ -28,7 +28,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBs-Wx-Xec">
-                        <rect key="frame" x="8" y="125" width="304" height="25"/>
+                        <rect key="frame" x="8" y="120" width="304" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="9DZ-AP-QDq"/>
                         </constraints>
@@ -41,7 +41,7 @@
                     <constraint firstItem="PW1-mL-s9P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="6E4-Lo-3QK"/>
                     <constraint firstItem="WBs-Wx-Xec" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="JYR-0l-RjA"/>
                     <constraint firstItem="WBs-Wx-Xec" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="NPQ-oQ-pLC"/>
-                    <constraint firstItem="WBs-Wx-Xec" firstAttribute="top" secondItem="PW1-mL-s9P" secondAttribute="bottom" constant="10" id="Nb3-GU-lZu"/>
+                    <constraint firstItem="WBs-Wx-Xec" firstAttribute="top" secondItem="PW1-mL-s9P" secondAttribute="bottom" constant="5" id="Nb3-GU-lZu"/>
                     <constraint firstItem="PW1-mL-s9P" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Rdl-pt-Sov"/>
                 </constraints>
             </tableViewCellContentView>
