@@ -32,12 +32,26 @@
 		8BC2CF341EE788A500F8E0A2 /* PurseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2CF321EE788A500F8E0A2 /* PurseTableViewCell.swift */; };
 		8BC2CF351EE788A500F8E0A2 /* PurseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2CF331EE788A500F8E0A2 /* PurseTableViewCell.xib */; };
 		8BCE20F41EF80F74003F0883 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCE20F31EF80F74003F0883 /* LoginController.swift */; };
-		8BD29C4C1F04138900F29EC4 /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C4B1F04138900F29EC4 /* BaseDataManager.swift */; };
-		8BD29C4E1F0413B300F29EC4 /* ALConstantMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C4D1F0413B300F29EC4 /* ALConstantMethods.swift */; };
-		8BD29C501F04140100F29EC4 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C4F1F04140100F29EC4 /* LoginDataManager.swift */; };
-		8BD29C521F04175C00F29EC4 /* ALSharedInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C511F04175C00F29EC4 /* ALSharedInstance.swift */; };
-		8BD29C561F04189C00F29EC4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C551F04189C00F29EC4 /* MBProgressHUD.m */; };
-		8BD29C581F0418DE00F29EC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C571F0418DE00F29EC4 /* LoginViewModel.swift */; };
+		8BD29C611F04493900F29EC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD29C601F04493900F29EC4 /* CoreLocation.framework */; };
+		8BD29C631F06954C00F29EC4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C621F06954C00F29EC4 /* HomeViewController.swift */; };
+		8BD29C751F06A9AE00F29EC4 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C741F06A9AE00F29EC4 /* NewUserViewController.swift */; };
+		8BD29C7E1F06B12800F29EC4 /* ALCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C7D1F06B12800F29EC4 /* ALCustomTextField.swift */; };
+		8BD29C801F06B13500F29EC4 /* ALCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C7F1F06B13500F29EC4 /* ALCustomButton.swift */; };
+		8BD29C821F06B13E00F29EC4 /* ALConstantMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C811F06B13E00F29EC4 /* ALConstantMethods.swift */; };
+		8BD29C861F06B14500F29EC4 /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C831F06B14500F29EC4 /* BaseDataManager.swift */; };
+		8BD29C871F06B14500F29EC4 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C841F06B14500F29EC4 /* LoginDataManager.swift */; };
+		8BD29C881F06B14500F29EC4 /* ReverseGeoCodeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C851F06B14500F29EC4 /* ReverseGeoCodeDataManager.swift */; };
+		8BD29C8A1F06B15600F29EC4 /* HistoryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C891F06B15600F29EC4 /* HistoryDataManager.swift */; };
+		8BD29C8C1F06B15F00F29EC4 /* ALSharedInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C8B1F06B15F00F29EC4 /* ALSharedInstance.swift */; };
+		8BD29C921F06B17200F29EC4 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C911F06B17200F29EC4 /* HistoryViewModel.swift */; };
+		8BD29C941F06B17700F29EC4 /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C931F06B17700F29EC4 /* RegisterUserViewModel.swift */; };
+		8BD29C961F06B17B00F29EC4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C951F06B17B00F29EC4 /* HomeViewModel.swift */; };
+		8BD29C981F06B18500F29EC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C971F06B18500F29EC4 /* LoginViewModel.swift */; };
+		8BD29C9A1F06B1A100F29EC4 /* LoginCustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C991F06B1A100F29EC4 /* LoginCustomTextFields.swift */; };
+		8BD29C9C1F06B1C500F29EC4 /* ALGlobalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C9B1F06B1C500F29EC4 /* ALGlobalExtensions.swift */; };
+		8BD29C9F1F06B33B00F29EC4 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C9D1F06B33B00F29EC4 /* HistoryTableViewCell.swift */; };
+		8BD29CA01F06B33B00F29EC4 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD29C9E1F06B33B00F29EC4 /* HistoryTableViewCell.xib */; };
+		8BD29CA21F06B76800F29EC4 /* LoginCustomTextFields.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD29CA11F06B76800F29EC4 /* LoginCustomTextFields.xib */; };
 		8BECDDE21EFAC47700B8826B /* Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDE11EFAC47700B8826B /* Purse.swift */; };
 		8BECDDE61EFC9DB800B8826B /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDE51EFC9DB800B8826B /* AddContactViewController.swift */; };
 		8BECDDEA1EFCA88100B8826B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDE91EFCA88100B8826B /* Contact.swift */; };
@@ -104,13 +118,26 @@
 		8BC2CF321EE788A500F8E0A2 /* PurseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurseTableViewCell.swift; sourceTree = "<group>"; };
 		8BC2CF331EE788A500F8E0A2 /* PurseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurseTableViewCell.xib; sourceTree = "<group>"; };
 		8BCE20F31EF80F74003F0883 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		8BD29C4B1F04138900F29EC4 /* BaseDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataManager.swift; sourceTree = "<group>"; };
-		8BD29C4D1F0413B300F29EC4 /* ALConstantMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALConstantMethods.swift; sourceTree = "<group>"; };
-		8BD29C4F1F04140100F29EC4 /* LoginDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
-		8BD29C511F04175C00F29EC4 /* ALSharedInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALSharedInstance.swift; sourceTree = "<group>"; };
-		8BD29C541F04189C00F29EC4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		8BD29C551F04189C00F29EC4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		8BD29C571F0418DE00F29EC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8BD29C601F04493900F29EC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8BD29C621F06954C00F29EC4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8BD29C741F06A9AE00F29EC4 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		8BD29C7D1F06B12800F29EC4 /* ALCustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALCustomTextField.swift; sourceTree = "<group>"; };
+		8BD29C7F1F06B13500F29EC4 /* ALCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALCustomButton.swift; sourceTree = "<group>"; };
+		8BD29C811F06B13E00F29EC4 /* ALConstantMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALConstantMethods.swift; sourceTree = "<group>"; };
+		8BD29C831F06B14500F29EC4 /* BaseDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataManager.swift; sourceTree = "<group>"; };
+		8BD29C841F06B14500F29EC4 /* LoginDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		8BD29C851F06B14500F29EC4 /* ReverseGeoCodeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeoCodeDataManager.swift; sourceTree = "<group>"; };
+		8BD29C891F06B15600F29EC4 /* HistoryDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDataManager.swift; sourceTree = "<group>"; };
+		8BD29C8B1F06B15F00F29EC4 /* ALSharedInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALSharedInstance.swift; sourceTree = "<group>"; };
+		8BD29C911F06B17200F29EC4 /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		8BD29C931F06B17700F29EC4 /* RegisterUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModel.swift; sourceTree = "<group>"; };
+		8BD29C951F06B17B00F29EC4 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8BD29C971F06B18500F29EC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8BD29C991F06B1A100F29EC4 /* LoginCustomTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCustomTextFields.swift; sourceTree = "<group>"; };
+		8BD29C9B1F06B1C500F29EC4 /* ALGlobalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALGlobalExtensions.swift; sourceTree = "<group>"; };
+		8BD29C9D1F06B33B00F29EC4 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		8BD29C9E1F06B33B00F29EC4 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		8BD29CA11F06B76800F29EC4 /* LoginCustomTextFields.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginCustomTextFields.xib; sourceTree = "<group>"; };
 		8BECDDE11EFAC47700B8826B /* Purse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purse.swift; sourceTree = "<group>"; };
 		8BECDDE51EFC9DB800B8826B /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		8BECDDE91EFCA88100B8826B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -131,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD29C611F04493900F29EC4 /* CoreLocation.framework in Frameworks */,
 				A48C8B8E4573AA9E5B78F876 /* Pods_BagTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +183,7 @@
 		72A2150F6F53A923A37C978D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BD29C601F04493900F29EC4 /* CoreLocation.framework */,
 				C2843812EF8EB51B7AAE45E6 /* Pods_BagTracker.framework */,
 			);
 			name = Frameworks;
@@ -203,7 +232,7 @@
 		8BB9A9071EE6DF4F009D3052 /* BagTracker */ = {
 			isa = PBXGroup;
 			children = (
-				8BD29C4A1F0412B200F29EC4 /* Imported Materials */,
+				8BD29C7C1F06B11A00F29EC4 /* Imported Materials */,
 				8BECDDE41EFAF1CA00B8826B /* Views */,
 				8BECDDE31EFAF0FD00B8826B /* Models */,
 				8BFC276B1EEED1F8008E79F2 /* Controllers */,
@@ -257,26 +286,28 @@
 			name = RightMenuTableViewControl;
 			sourceTree = "<group>";
 		};
-		8BD29C4A1F0412B200F29EC4 /* Imported Materials */ = {
+		8BD29C7C1F06B11A00F29EC4 /* Imported Materials */ = {
 			isa = PBXGroup;
 			children = (
-				8BD29C4B1F04138900F29EC4 /* BaseDataManager.swift */,
-				8BD29C4F1F04140100F29EC4 /* LoginDataManager.swift */,
-				8BD29C4D1F0413B300F29EC4 /* ALConstantMethods.swift */,
-				8BD29C511F04175C00F29EC4 /* ALSharedInstance.swift */,
-				8BD29C571F0418DE00F29EC4 /* LoginViewModel.swift */,
-				8BD29C531F04189C00F29EC4 /* MBProgressHUD */,
+				8BD29C7D1F06B12800F29EC4 /* ALCustomTextField.swift */,
+				8BD29C9B1F06B1C500F29EC4 /* ALGlobalExtensions.swift */,
+				8BD29C7F1F06B13500F29EC4 /* ALCustomButton.swift */,
+				8BD29C811F06B13E00F29EC4 /* ALConstantMethods.swift */,
+				8BD29C8B1F06B15F00F29EC4 /* ALSharedInstance.swift */,
+				8BD29C991F06B1A100F29EC4 /* LoginCustomTextFields.swift */,
+				8BD29C831F06B14500F29EC4 /* BaseDataManager.swift */,
+				8BD29C891F06B15600F29EC4 /* HistoryDataManager.swift */,
+				8BD29C841F06B14500F29EC4 /* LoginDataManager.swift */,
+				8BD29C851F06B14500F29EC4 /* ReverseGeoCodeDataManager.swift */,
+				8BD29C911F06B17200F29EC4 /* HistoryViewModel.swift */,
+				8BD29C951F06B17B00F29EC4 /* HomeViewModel.swift */,
+				8BD29C971F06B18500F29EC4 /* LoginViewModel.swift */,
+				8BD29C931F06B17700F29EC4 /* RegisterUserViewModel.swift */,
+				8BD29C9D1F06B33B00F29EC4 /* HistoryTableViewCell.swift */,
+				8BD29C9E1F06B33B00F29EC4 /* HistoryTableViewCell.xib */,
+				8BD29CA11F06B76800F29EC4 /* LoginCustomTextFields.xib */,
 			);
 			name = "Imported Materials";
-			sourceTree = "<group>";
-		};
-		8BD29C531F04189C00F29EC4 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				8BD29C541F04189C00F29EC4 /* MBProgressHUD.h */,
-				8BD29C551F04189C00F29EC4 /* MBProgressHUD.m */,
-			);
-			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		8BECDDE31EFAF0FD00B8826B /* Models */ = {
@@ -319,6 +350,7 @@
 				8BC2CF2F1EE785CF00F8E0A2 /* RightMenuTableViewControl */,
 				8B4E82EA1EE7311E00969EB1 /* LeftMenuTableViewControl */,
 				8BB9A93B1EE6E18B009D3052 /* ViewController.swift */,
+				8BD29C621F06954C00F29EC4 /* HomeViewController.swift */,
 				8BCE20F31EF80F74003F0883 /* LoginController.swift */,
 				8BFC27671EEEC2AC008E79F2 /* UserViewController.swift */,
 				8BB9A93D1EE6E8E4009D3052 /* MapController.swift */,
@@ -328,6 +360,7 @@
 				8BFC27721EEED26C008E79F2 /* HelpViewController.swift */,
 				8BFC27741EEED276008E79F2 /* SettingsViewController.swift */,
 				8BA94A0C1EEEF8F400D0BF22 /* RegisterViewController.swift */,
+				8BD29C741F06A9AE00F29EC4 /* NewUserViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -445,11 +478,13 @@
 			files = (
 				8BB9A9131EE6DF4F009D3052 /* LaunchScreen.storyboard in Resources */,
 				8BB07ABD1EEEF531007230CF /* GoogleService-Info.plist in Resources */,
+				8BD29CA21F06B76800F29EC4 /* LoginCustomTextFields.xib in Resources */,
 				8B4E82E51EE71C9200969EB1 /* TableViewCellUser.xib in Resources */,
 				8BC2CF351EE788A500F8E0A2 /* PurseTableViewCell.xib in Resources */,
 				8BB9A9101EE6DF4F009D3052 /* Assets.xcassets in Resources */,
 				8BB9A9401EE6E916009D3052 /* Podfile in Resources */,
 				8BB9A90E1EE6DF4F009D3052 /* Main.storyboard in Resources */,
+				8BD29CA01F06B33B00F29EC4 /* HistoryTableViewCell.xib in Resources */,
 				8B4E82E91EE71D9400969EB1 /* TableViewCellTab.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,12 +558,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD29C521F04175C00F29EC4 /* ALSharedInstance.swift in Sources */,
-				8BD29C4C1F04138900F29EC4 /* BaseDataManager.swift in Sources */,
+				8BD29C861F06B14500F29EC4 /* BaseDataManager.swift in Sources */,
 				8BB07ABA1EEEE6F7007230CF /* NHRangeSlider.swift in Sources */,
 				8BECDDF41EFCB72600B8826B /* ContactsViewController.swift in Sources */,
+				8BD29C961F06B17B00F29EC4 /* HomeViewModel.swift in Sources */,
 				8BB9A93E1EE6E8E4009D3052 /* MapController.swift in Sources */,
+				8BD29C981F06B18500F29EC4 /* LoginViewModel.swift in Sources */,
 				8BECDDEA1EFCA88100B8826B /* Contact.swift in Sources */,
+				8BD29C921F06B17200F29EC4 /* HistoryViewModel.swift in Sources */,
+				8BD29C941F06B17700F29EC4 /* RegisterUserViewModel.swift in Sources */,
 				8BFC27681EEEC2AC008E79F2 /* UserViewController.swift in Sources */,
 				8BB9A93C1EE6E18B009D3052 /* ViewController.swift in Sources */,
 				8BFC276D1EEED217008E79F2 /* HistoryViewController.swift in Sources */,
@@ -536,22 +574,30 @@
 				8BFC27771EEEDFE0008E79F2 /* KDCircularProgress.swift in Sources */,
 				8B2EFF701F013FFE003F0B4C /* ContactCell.swift in Sources */,
 				8BFC27731EEED26C008E79F2 /* HelpViewController.swift in Sources */,
+				8BD29C631F06954C00F29EC4 /* HomeViewController.swift in Sources */,
 				8BB9A9091EE6DF4F009D3052 /* AppDelegate.swift in Sources */,
 				8BECDDE61EFC9DB800B8826B /* AddContactViewController.swift in Sources */,
+				8BD29C881F06B14500F29EC4 /* ReverseGeoCodeDataManager.swift in Sources */,
 				8BC2CF341EE788A500F8E0A2 /* PurseTableViewCell.swift in Sources */,
 				8BFC27751EEED276008E79F2 /* SettingsViewController.swift in Sources */,
+				8BD29C9A1F06B1A100F29EC4 /* LoginCustomTextFields.swift in Sources */,
 				8BFC276A1EEECEE5008E79F2 /* RevealViewController.swift in Sources */,
-				8BD29C4E1F0413B300F29EC4 /* ALConstantMethods.swift in Sources */,
 				8BCE20F41EF80F74003F0883 /* LoginController.swift in Sources */,
-				8BD29C581F0418DE00F29EC4 /* LoginViewModel.swift in Sources */,
 				8BA94A0D1EEEF8F400D0BF22 /* RegisterViewController.swift in Sources */,
 				8B4E82DB1EE719D100969EB1 /* TableViewController.swift in Sources */,
-				8BD29C561F04189C00F29EC4 /* MBProgressHUD.m in Sources */,
 				8B4E82E81EE71D9400969EB1 /* TableViewCellTab.swift in Sources */,
+				8BD29C871F06B14500F29EC4 /* LoginDataManager.swift in Sources */,
+				8BD29C9F1F06B33B00F29EC4 /* HistoryTableViewCell.swift in Sources */,
+				8BD29C801F06B13500F29EC4 /* ALCustomButton.swift in Sources */,
+				8BD29C751F06A9AE00F29EC4 /* NewUserViewController.swift in Sources */,
+				8BD29C7E1F06B12800F29EC4 /* ALCustomTextField.swift in Sources */,
 				8B0A13991EEF1D4300FC9FA7 /* AddPurseViewController.swift in Sources */,
+				8BD29C8A1F06B15600F29EC4 /* HistoryDataManager.swift in Sources */,
 				8BFC27711EEED25F008E79F2 /* BatteryViewController.swift in Sources */,
+				8BD29C8C1F06B15F00F29EC4 /* ALSharedInstance.swift in Sources */,
+				8BD29C821F06B13E00F29EC4 /* ALConstantMethods.swift in Sources */,
 				8B4E82E41EE71C9200969EB1 /* TableViewCellUser.swift in Sources */,
-				8BD29C501F04140100F29EC4 /* LoginDataManager.swift in Sources */,
+				8BD29C9C1F06B1C500F29EC4 /* ALGlobalExtensions.swift in Sources */,
 				8BC2CF311EE7869C00F8E0A2 /* RightTableViewController.swift in Sources */,
 				8BB9A9391EE6DF61009D3052 /* SWRevealViewController.m in Sources */,
 				8BB07ABB1EEEE6F7007230CF /* NHRangeSliderView.swift in Sources */,

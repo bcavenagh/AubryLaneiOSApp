@@ -51,7 +51,6 @@ class LoginViewModel: NSObject {
                 self.errorMessage = nil
                 //Show The Next View Controller...
                 ALConstantMethods.saveUserDataWith(isUserLoggedIn: true, emailID: nil, userName: userName, password: nil, bearerToken: accessToken, bearerTokenType: accessTokenType)
-                print("saved")
                 callBack()
             }
         })

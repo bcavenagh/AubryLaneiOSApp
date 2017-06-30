@@ -27,8 +27,8 @@ class TableViewController: UITableViewController {
                            cellData(cell : 2, text : "Emergency Contacts", image : #imageLiteral(resourceName: "FavoriteW")),
                            cellData(cell : 2, text : "Find My Purse", image : #imageLiteral(resourceName: "PurseW")),
                            cellData(cell : 2, text : "Geo Fence", image : #imageLiteral(resourceName: "GeoFenceW")),
-                           cellData(cell : 2, text : "Battery", image : #imageLiteral(resourceName: "BatteryW")),
-                           cellData(cell : 2, text : "Side Button Function", image : #imageLiteral(resourceName: "clickButtonW")),
+                           cellData(cell : 2, text : "Amulet Battery Status", image : #imageLiteral(resourceName: "BatteryW")),
+                           cellData(cell : 2, text : "Side Phone Button", image : #imageLiteral(resourceName: "clickButtonW")),
                            //Empty cell for spacing
                            cellData(cell : 3, text : nil, image : nil),
                            cellData(cell : 2, text : "Help", image : #imageLiteral(resourceName: "HelpW")),
@@ -59,15 +59,17 @@ class TableViewController: UITableViewController {
             cell.userImageView.image = arrayOfCellData[indexPath.row].image
             
             //Fetching user data and updating cell with information
-            userRef.observe(.value, with: { (snapshot) in
-                if let dictionary = snapshot.value as? [String: AnyObject]{
-                    let firstName = dictionary["firstName"] as! String
-                    cell.userLabel.text = firstName
-                    let lastName = dictionary["lastName"] as! String
-                    cell.userLabel.text?.append(" " + lastName)
-                    
-                }
-            }, withCancel: nil)
+            cell.userLabel.text = ALConstantMethods.getRegisteredUserName()
+            
+//            userRef.observe(.value, with: { (snapshot) in
+//                if let dictionary = snapshot.value as? [String: AnyObject]{
+//                    let firstName = dictionary["firstName"] as! String
+//                    cell.userLabel.text = firstName
+//                    let lastName = dictionary["lastName"] as! String
+//                    cell.userLabel.text?.append(" " + lastName)
+//                    
+//                }
+//            }, withCancel: nil)
             
             //Setting color of the cell and the label text
             cell.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
@@ -163,16 +165,25 @@ class TableViewController: UITableViewController {
     }
     
     func handleLogout(){
-        do{
-            try FIRAuth.auth()?.signOut()
-        } catch let logoutError{
-            print(logoutError)
-        }
-        
-        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "loginView")
-        if FIRAuth.auth()?.currentUser?.uid == nil{
-            present(vc as! UIViewController, animated: true, completion: nil)
-        }
+        let alert = UIAlertController.init(title: "Logout?", message: "Are you sure you want to Logout?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction.init(title: "Cancel", style: .destructive, handler: nil)
+        let logoutAction = UIAlertAction.init(title: "Logout", style: .default, handler: { _ in
+            ALConstantMethods.saveUserDataWith(isUserLoggedIn: false, emailID: nil, userName: nil, password: nil, bearerToken: nil, bearerTokenType: nil)
+            ALConstantMethods.refreshAppWindow()
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(logoutAction)
+        self.present(alert, animated: true, completion: nil)
+//        do{
+//            try FIRAuth.auth()?.signOut()
+//        } catch let logoutError{
+//            print(logoutError)
+//        }
+//        
+//        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "loginView")
+//        if FIRAuth.auth()?.currentUser?.uid == nil{
+//            present(vc as! UIViewController, animated: true, completion: nil)
+//        }
     }
     
 }

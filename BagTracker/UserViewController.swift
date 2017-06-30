@@ -12,6 +12,6 @@ class UserViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 }

@@ -8,75 +8,29 @@
 
 import UIKit
 import Firebase
+import MapKit
+import CoreLocation
 
-class BagModel {
-    
-    var alarm : String?
-    var bagID : String?
-    var batteryStatus : NSNumber?
-    var carNumber : String?
-    var bagDirection : NSNumber?
-    var gpsTime : NSDate?
-    var input : String?
-    var isOnline : NSNumber?
-    var latitude : CGFloat
-    var longitude : CGFloat
-    var machineNumber : NSNumber?
-    var mileage : NSNumber?
-    var simNumber : NSNumber?
-    var speed : NSNumber?
-    var locationName : String = ""
-    
-    init(bagData : NSDictionary) {
-        alarm = bagData.value(forKey: "alarm") as? String ?? ""
-        bagID = bagData.value(forKey: "bagId") as? String ?? ""
-        batteryStatus = bagData.value(forKey: "batterystatus") as? NSNumber ?? NSNumber.init(value: 0)
-        carNumber = bagData.value(forKey: "carNO") as? String ?? ""
-        bagDirection = bagData.value(forKey: "direction") as? NSNumber ?? NSNumber.init(value: 0)
-        gpsTime = bagData.value(forKey: "gpsTime") as? NSDate ?? nil
-        input = bagData.value(forKey: "input4") as? String ?? ""
-        isOnline = bagData.value(forKey: "isonline") as? NSNumber ?? NSNumber.init(value: 0)
-        latitude = bagData.value(forKey: "la") as? CGFloat ?? CGFloat.init(0.0)
-        longitude = bagData.value(forKey: "lo") as? CGFloat ?? CGFloat.init(0.0)
-        machineNumber = bagData.value(forKey: "machineNO") as? NSNumber ?? NSNumber.init(value: 0)
-        mileage = bagData.value(forKey: "mileage") as? NSNumber ?? NSNumber.init(value: 0.0)
-        simNumber = bagData.value(forKey: "simNO") as? NSNumber ?? NSNumber.init(value: 0)
-        speed = bagData.value(forKey: "speed") as? NSNumber ?? NSNumber.init(value: 0)
-        
-    }
-    
-    
-    //    func getUserLocationName(callBack : @escaping ((Void) -> (Void))){
-    //        let geoCoder = CLGeocoder()
-    //        geoCoder.reverseGeocodeLocation(CLLocation.init(latitude: CLLocationDegrees.init(self.latitude), longitude: CLLocationDegrees.init(self.longitude)), completionHandler: {(placeMark, error) in
-    //            if let firstPlaceMark = placeMark?.first{
-    //                self.locationName = "\(firstPlaceMark.name ?? "") \(firstPlaceMark.subThoroughfare ?? "") \(firstPlaceMark.locality ?? "") \(firstPlaceMark.administrativeArea ?? "") \(firstPlaceMark.subAdministrativeArea ?? "") \(firstPlaceMark.isoCountryCode ?? "")"
-    //                callBack()
-    //            }
-    //        })
-    //    }
-    
+class CustomPointAnnotation: MKPointAnnotation {
+    var imageName: String!
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var MenuButton: UIBarButtonItem!
     @IBOutlet weak var OptionalButton: UIBarButtonItem!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenus()
         customizeNavBar()
-        checkIfUserLoggedIn()
+        //getBagList()
+        
+        //GET USER'S CURRENT LOCATION AND CALL getBagList WHEN THEY SELECT A BAG FROM MENU
+        //getUserLocation()
+        
     }
-
-    func checkIfUserLoggedIn(){
-        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "loginView")
-        if FIRAuth.auth()?.currentUser?.uid == nil{
-            present(vc as! UIViewController, animated: true, completion: nil)
-        }
-    }
-    
     
     func sideMenus() {
         if revealViewController() != nil{
@@ -94,6 +48,7 @@ class ViewController: UIViewController {
 
             //Allow a swipe gesture to open the menu
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
         }
     }
     

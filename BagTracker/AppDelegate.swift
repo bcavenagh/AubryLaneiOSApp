@@ -20,11 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = nil
         
         //Display The View According To User Logged In Or Not...
-        self.window?.rootViewController = ALConstantMethods.getViewControllerWith(storyBoardID: "Main", viewControllerID: ALGlobal.sharedInstance.isCurrentUserLoggedIn ? "RevealViewController" : "LoginNavigationController")
+        self.window?.rootViewController = ALConstantMethods.getViewControllerWith(storyBoardID: "Main", viewControllerID: ALGlobal.sharedInstance.isCurrentUserLoggedIn ? "RevealViewController" : "loginView")
         
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.setHomeViewController()
         FIRApp.configure()
         GMSServices.provideAPIKey("AIzaSyDZtrqQR1csEg2Z1Rr5vjF41bBQXLdPwB0")
         

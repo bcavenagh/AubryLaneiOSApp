@@ -20,6 +20,7 @@ class RightTableViewController: UITableViewController {
     var rightArrayOfCellData = [rightCellData]()
     let mapViewController = MapController()
     var purses = [Purse]()
+    var cells = [UITableViewCell]()
     
     override func viewDidLoad() {
         
@@ -50,58 +51,52 @@ class RightTableViewController: UITableViewController {
         
     }
     func createArray(){
-        rightArrayOfCellData = [rightCellData(cell : 2, text : "Add Purse", image : #imageLiteral(resourceName: "Add"))]
-        var i = 0
-        while i < purses.count{
-            rightArrayOfCellData.append(rightCellData(cell : 1, text : purses[i].deviceName, image : #imageLiteral(resourceName: "PurseW")))
-            i += 1
-        }
+//        rightArrayOfCellData = [rightCellData(cell : 2, text : "Add Purse", image : #imageLiteral(resourceName: "Add"))]
+//        var i = 0
+//        while i < purses.count{
+//            rightArrayOfCellData.append(rightCellData(cell : 1, text : purses[i].deviceName, image : #imageLiteral(resourceName: "PurseW")))
+//            i += 1
+//        }
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //count how many cells are in the array
-        return rightArrayOfCellData.count
+//        return rightArrayOfCellData.count
+        print(ALGlobal.sharedInstance.getBagsCount)
+        return ALGlobal.sharedInstance.getBagsCount + 1
     }
-        
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if rightArrayOfCellData[indexPath.row].cell == 1{
-            let cell = Bundle.main.loadNibNamed("PurseTableViewCell", owner: self, options: nil)?.first as! PurseTableViewCell
-                
-            //Grabbing the image and text from array of cell data and setting up the Nib file
-            cell.PurseImageView.image = rightArrayOfCellData[indexPath.row].image
-            cell.PurseLabel.text = rightArrayOfCellData[indexPath.row].text
-                
-                
-            //Setting color of the cell and the label text
-            cell.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
-            cell.PurseLabel.textColor = UIColor.white
-                
-            //Set the color of the selected menu item
-            let bgColorView = UIView()
-            bgColorView.backgroundColor = UIColor(red: 148/255, green: 55/255, blue: 86/255, alpha: 1)
-            cell.selectedBackgroundView = bgColorView
-            
-            return cell
-        }
-        else{
-            let cell = Bundle.main.loadNibNamed("PurseTableViewCell", owner: self, options: nil)?.first as! PurseTableViewCell
-            
-            cell.PurseImageView.image = rightArrayOfCellData[indexPath.row].image
-            cell.PurseLabel.text = rightArrayOfCellData[indexPath.row].text
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //var cell = UITableViewCell() as! PurseTableViewCell
+        let cellAdded = Bundle.main.loadNibNamed("PurseTableViewCell", owner: self, options: nil)?.first as! PurseTableViewCell
+        
+        if indexPath.row == 0{
+            cellAdded.PurseImageView.image = #imageLiteral(resourceName: "Add")
+            cellAdded.PurseLabel.text = "Add Purse"
             //Setting color of the cell and the label text
-            cell.backgroundColor = UIColor(red: 209/255, green: 151/255, blue: 72/255, alpha: 1)
-            cell.PurseLabel.textColor = UIColor.white
+            cellAdded.backgroundColor = UIColor(red: 209/255, green: 151/255, blue: 72/255, alpha: 1)
+            cellAdded.PurseLabel.textColor = UIColor.white
             
             //Set the color of the selected menu item
             let bgColorView = UIView()
             bgColorView.backgroundColor = UIColor(red: 158/255, green: 122/255, blue: 31/255, alpha: 1)
-            cell.selectedBackgroundView = bgColorView
-            
-            return cell
+            cellAdded.selectedBackgroundView = bgColorView
+            cells.append(cellAdded)
         }
-        
+        else{
+            cellAdded.PurseImageView.image = #imageLiteral(resourceName: "PurseW")
+            cellAdded.PurseLabel.text = ALGlobal.sharedInstance.bagLists?[(indexPath.row) - 1].carNumber
+            cellAdded.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
+            cellAdded.PurseLabel.textColor = UIColor.white
+            
+            //Set the color of the selected menu item
+            let bgColorView = UIView()
+            bgColorView.backgroundColor = UIColor(red: 148/255, green: 55/255, blue: 86/255, alpha: 1)
+            cellAdded.selectedBackgroundView = bgColorView
+            cells.append(cellAdded)
+        }
+            
+           return cellAdded
     }
     
     

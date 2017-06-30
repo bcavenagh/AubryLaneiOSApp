@@ -74,7 +74,7 @@ class ALConstantMethods: NSObject {
     
     class func refreshAppWindow(){
         if let appDelegateInstance = UIApplication.shared.delegate as? AppDelegate{
-            //appDelegateInstance.setHomeViewController()
+            appDelegateInstance.setHomeViewController()
         }
     }
     
