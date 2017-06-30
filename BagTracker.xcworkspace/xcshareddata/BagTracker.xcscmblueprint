@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0E2B9AB9E1675595B5A022914FEE57AE5067EEF7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A63C570122D1F509480DE9C5054FC55A423A4277" : 9223372036854775807,
+    "0E2B9AB9E1675595B5A022914FEE57AE5067EEF7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F9DBC1F2-5F45-4DBC-AA23-4BCD61B06583",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A63C570122D1F509480DE9C5054FC55A423A4277" : "aubreylane\/",
+    "0E2B9AB9E1675595B5A022914FEE57AE5067EEF7" : "BagTracker\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BagTracker",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BagTracker.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bcavenagh\/AubryLaneiOSApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E2B9AB9E1675595B5A022914FEE57AE5067EEF7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/dhruvsgit121\/aubreylane.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A63C570122D1F509480DE9C5054FC55A423A4277"
+    }
+  ]
+}
