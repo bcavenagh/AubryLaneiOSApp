@@ -27,10 +27,10 @@ class RightTableViewController: UITableViewController {
         self.tableView.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
             
         tableView.separatorStyle = .none
-        fetchPurse (){
-            self.createArray()
-            self.tableView.reloadData()
-        }
+//        fetchPurse (){
+//            self.createArray()
+//            self.tableView.reloadData()
+//        }
     }
     
     func fetchPurse(completion: @escaping () -> ()){

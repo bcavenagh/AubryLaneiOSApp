@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HistoryViewController: ViewController {
+class HistoryViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var dateTxtField: ALCustomTextField!
     @IBOutlet weak var selectedDateLbl: UILabel!
@@ -29,7 +29,6 @@ class HistoryViewController: ViewController {
         self.historyDataTblView.register(UINib.init(nibName: "HistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "historyCell")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "calendar"), style: .plain, target: self, action: #selector(HistoryViewController.dateChangeButtonPressed))
-        
         self.setDatePicker()
         
         // Do any additional setup after loading the view.
@@ -139,7 +138,6 @@ class HistoryViewController: ViewController {
         if let historyDataList = self.historyViewModel.historyListData{
             
             let historyData = historyDataList[indexPath.row]
-            
             historyCell.setHistoryDataWith(date: "\(historyData.gpsTime)", placeName: historyData.placeName)
             
             //                if historyData.placeName.characters.count == 0 && !historyData.isLocationCallMade {
@@ -170,6 +168,14 @@ class HistoryViewController: ViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }

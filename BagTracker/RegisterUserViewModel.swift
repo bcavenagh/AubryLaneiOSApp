@@ -10,11 +10,11 @@ import UIKit
 
 class RegisterUserViewModel: NSObject {
     
-    func validateRegisterUserWith(userName : String?, emailID : String?, password : String?, rePassWord : String?) -> String?{
+    func validateRegisterUserWith(userName : String?, emailID : String?, password : String?, rePassWord : String?, acceptedTC : Bool?) -> String?{
         
-        print("Email id is \(emailID) password is \(password)")
+        print("Email id is \(String(describing: emailID)) password is \(String(describing: password))")
         
-        print("user name is \(userName) rePassWord is \(rePassWord)")
+        print("user name is \(String(describing: userName)) rePassWord is \(String(describing: rePassWord))")
         
         if let emailID = emailID, let userName = userName, let password = password, let rePassWord = rePassWord{
             
@@ -41,6 +41,10 @@ class RegisterUserViewModel: NSObject {
             }
             else if password.characters.count != rePassWord.characters.count || password != rePassWord {
                 return "Password and rePassword not matching. Please try again."
+            }
+            else if acceptedTC == false{
+                print("Not accepted")
+                return "You must accept the Terms & Conditons"
             }
             return nil
         }

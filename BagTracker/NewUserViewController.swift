@@ -20,6 +20,8 @@ class NewUserViewController: ViewController, UINavigationControllerDelegate {
     @IBOutlet weak var emailCustomView: LoginCustomTextFields!
     
     let registerUserViewModel = RegisterUserViewModel()
+    @IBAction func tcBackButton_Clicked(segue:UIStoryboardSegue) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class NewUserViewController: ViewController, UINavigationControllerDelegate {
         
         termsConditionLabel.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(NewUserViewController.handleTapOnLabel(tapGesture:))))
         
-        //self.assignKeyBoardShowHideBlock()
+        self.assignKeyBoardShowHideBlock()
         
         // Do any additional setup after loading the view.
     }
@@ -57,7 +59,7 @@ class NewUserViewController: ViewController, UINavigationControllerDelegate {
     @IBAction func registerButtonPressed(_ sender: ALCustomButton) {
         
         
-        guard let errorMessage = registerUserViewModel.validateRegisterUserWith(userName: self.userNameCustomView.customTxtField.text, emailID: self.emailCustomView.customTxtField.text, password: self.passwordCustomView.customTxtField.text, rePassWord: self.rePasswordCustomView.customTxtField.text) else{
+        guard let errorMessage = registerUserViewModel.validateRegisterUserWith(userName: self.userNameCustomView.customTxtField.text, emailID: self.emailCustomView.customTxtField.text, password: self.passwordCustomView.customTxtField.text, rePassWord: self.rePasswordCustomView.customTxtField.text, acceptedTC: acceptedTC) else{
             
             //Make the Server Call...
             //ALConstantMethods.showProgressHUD(parentView: self.view)
@@ -76,7 +78,7 @@ class NewUserViewController: ViewController, UINavigationControllerDelegate {
     
     @IBAction func termsConditionCheckBoxButtonPressed(_ sender: UIButton) {
         toggleTermsAndConditions()
-        self.termsConditionCheckBox.isSelected = !self.termsConditionCheckBox.isSelected
+        //self.termsConditionCheckBox.isSelected = !self.termsConditionCheckBox.isSelected
     }
     
     func toggleTermsAndConditions(){

@@ -38,7 +38,7 @@ class LoginViewModel: NSObject {
     
     func logInUserWith(userName : String, password : String, callBack : @escaping ((Void) -> (Void))){
         
-        let parameters = "grant_type=password&username=\(userName)&password=\(password)&device=android"
+        let parameters = "grant_type=password&username=\(userName)&password=\(password)&device=iphone"
         
         loginDataManager.loginUserWith(parameter: parameters, callBack: {
             (accessToken, accessTokenType, userName, errorMessage) in

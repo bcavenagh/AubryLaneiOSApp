@@ -82,16 +82,16 @@ class BaseDataManager {
                     //Send The Response Error From The Web Service Call...
                     callBack(nil, ALCustomError.init(error: error))
                 }
-               else if let data = response.data{
+                else if let data = response.data{
                     let decoded = try JSONSerialization.jsonObject(with: data, options: [])
                     let currentConditions = decoded as! [String:Any]
                     //Send The Response Data From The Web Service Call...
                     callBack(currentConditions, nil)
                 }
             } catch {
-                    //Send The Response Error From The Web Service Call...
-                    callBack(nil, ALCustomError.init(error: (error as NSError?)!))
-              }
+                //Send The Response Error From The Web Service Call...
+                callBack(nil, ALCustomError.init(error: (error as NSError?)!))
+            }
         }
     }
     
@@ -114,6 +114,7 @@ class BaseDataManager {
         
         Alamofire.request(request).responseJSON {
             (response) in
+            
             
             //Parse The Response Data From The Web Service Call...
             do {
@@ -161,5 +162,4 @@ class BaseDataManager {
             }
         }
     }
-    
 }

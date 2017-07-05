@@ -14,8 +14,9 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var historyDateLbl: UILabel!
     
     func setHistoryDataWith(date : String?, placeName : String?){
-        self.historyDateLbl.text = date
-        self.historyPlaceLbl.text = placeName
+        
+        self.historyDateLbl!.text = date
+        self.historyPlaceLbl!.text = placeName
     }
     
     override func awakeFromNib() {

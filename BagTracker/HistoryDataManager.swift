@@ -13,7 +13,6 @@ class HistoryDataManager: NSObject {
     func fetchHistoryData(parameter : String, callBack : @escaping ((_ HistoryData :[HistoryModel]? , _ errorMessage : String?) -> ())){
         
         BaseDataManager.makePostRequestWith(URL: ALDataManager.getHistoryListAPIURL(), parameters: parameter, callBack: {(data, error) in
-            
             if let reterievedError = error {
                 callBack(nil, reterievedError.errorMessage)
             }

@@ -26,6 +26,7 @@ class BagModel {
     var simNumber : NSNumber?
     var speed : NSNumber?
     var locationName : String = ""
+    var batteryString : String?
     
     init(bagData : NSDictionary) {
         alarm = bagData.value(forKey: "alarm") as? String ?? ""
@@ -42,7 +43,7 @@ class BagModel {
         mileage = bagData.value(forKey: "mileage") as? NSNumber ?? NSNumber.init(value: 0.0)
         simNumber = bagData.value(forKey: "simNO") as? NSNumber ?? NSNumber.init(value: 0)
         speed = bagData.value(forKey: "speed") as? NSNumber ?? NSNumber.init(value: 0)
-        
+        batteryString = bagData.value(forKey: "batterystatus") as? String ?? ""
     }
     
     

@@ -25,5 +25,6 @@ class ReverseGeoCodeDataManager: NSObject {
                 callBack(referenceObject, "", nil)
             }
         })
+        
     }
 }

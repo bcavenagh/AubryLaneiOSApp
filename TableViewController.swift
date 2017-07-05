@@ -21,7 +21,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         
-        arrayOfCellData = [cellData(cell : 1, text : "User", image : #imageLiteral(resourceName: "BlankUserW")),
+        arrayOfCellData = [cellData(cell : 1, text : "User", image : #imageLiteral(resourceName: "profile_pic")),
                            cellData(cell : 2, text : "Home", image : #imageLiteral(resourceName: "HomeW")),
                            cellData(cell : 2, text : "History", image : #imageLiteral(resourceName: "HistoryW")),
                            cellData(cell : 2, text : "Emergency Contacts", image : #imageLiteral(resourceName: "FavoriteW")),
@@ -51,9 +51,9 @@ class TableViewController: UITableViewController {
         //if the cell is type 1 (TableViewCellUser.xib)
         if arrayOfCellData[indexPath.row].cell == 1{
             let cell = Bundle.main.loadNibNamed("TableViewCellUser", owner: self, options: nil)?.first as! TableViewCellUser
-            let ref = FIRDatabase.database().reference(fromURL: "https://test-database-ba3a2.firebaseio.com/")
-            let user = (FIRAuth.auth()?.currentUser?.uid)!
-            let userRef = ref.child("users").child(user)
+//            let ref = FIRDatabase.database().reference(fromURL: "https://test-database-ba3a2.firebaseio.com/")
+//            let user = (FIRAuth.auth()?.currentUser?.uid)!
+//            let userRef = ref.child("users").child(user)
             
             //Grabbing the image and text from array of cell data and setting up the Nib file
             cell.userImageView.image = arrayOfCellData[indexPath.row].image

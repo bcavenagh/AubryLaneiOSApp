@@ -11,11 +11,7 @@ import Firebase
 import MapKit
 import CoreLocation
 
-class CustomPointAnnotation: MKPointAnnotation {
-    var imageName: String!
-}
-
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var MenuButton: UIBarButtonItem!
     @IBOutlet weak var OptionalButton: UIBarButtonItem!

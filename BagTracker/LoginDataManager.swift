@@ -25,6 +25,7 @@ class LoginDataManager: NSObject {
                 else if let reterievedData = data, let _ = reterievedData["error"] as? String, let errorDescription = reterievedData["error_description"] as? String{
                     callBack(nil, nil, nil, errorDescription)
                 }
+                
             }
         })
     }

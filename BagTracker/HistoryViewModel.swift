@@ -9,7 +9,7 @@
 import UIKit
 
 class HistoryModel {
-
+    
     var gpsTime : String
     var latitude : CGFloat
     var longitude : CGFloat
@@ -32,7 +32,7 @@ class HistoryModel {
         
         
         ReverseGeoCodeDataManager.getReverseGeoCodeNameWith(referenceObject: self, latitude: "\(self.latitude)", longitude: "\(self.longitude)", callBack: {[weak self](referenceObject , formattedAddress, errorMessage) in
-
+            
             if let weakSelf = self{
                 
                 if let _ = errorMessage{
@@ -71,14 +71,14 @@ class HistoryViewModel: NSObject {
     func getSelectedDate() -> String{
         return self.getDateInServerFormat(date: currentSelectedDate)
     }
-        
+    
     func loadHistoryData(callBack : @escaping (() -> ())){
         
         if let bagId = ALGlobal.sharedInstance.bagLists?[ALGlobal.sharedInstance.currentSelectedDeviceIndex].bagID!{
             
             let parameters = "bagId=\(bagId)&fromdate=\(self.getSelectedDate())&todate=\(self.getNextDateFromSelectedDate)"
             
-             //let parameters = "bagId=\(bagId)&fromdate=09-MAY-2017&todate=10-MAY-2017"
+            //let parameters = "bagId=\(bagId)&fromdate=09-MAY-2017&todate=10-MAY-2017"
             
             historyDataManager.fetchHistoryData(parameter: parameters, callBack: {
                 (historyDataList, errorMessage) in

@@ -30,6 +30,7 @@ class ALConstantMethods: NSObject {
     
     class func getRegisteredUserName() -> String{
         return UserDefaults.standard.value(forKey: ALConstantsStrings.UserDefaultKeys.userNameKey) as! String
+        
     }
     
     class func switchLoginRegisterViewWith(_ controller : UINavigationController) {
