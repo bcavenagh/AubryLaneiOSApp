@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import MapKit
 import CoreLocation
+import FAQView
 
 class ViewController: UIViewController {
     
