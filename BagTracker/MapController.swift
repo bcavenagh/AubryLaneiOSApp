@@ -13,7 +13,7 @@ import UIKit
 class MapController: UIViewController {
     var latitude = 39.909319
     var longitude = -86.251950
-    var zoom : Float! = 16
+    var zoom : Float! = 50
     var bag = ALGlobal.sharedInstance.bagLists?[0]
     
     override func viewDidLoad() {

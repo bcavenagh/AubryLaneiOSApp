@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import BagTracker
 
 class BagTrackerTests: XCTestCase {
     

@@ -444,10 +444,22 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="psB-Ir-dhB">
                                 <rect key="frame" x="0.0" y="64" width="320" height="603"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ywa-aJ-xh9">
+                                <rect key="frame" x="163" y="587" width="141" height="29"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeChanged:" destination="TiI-46-nXS" eventType="valueChanged" id="YWk-Fg-Oeq"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rzn-1d-eD4" firstAttribute="top" secondItem="Ywa-aJ-xh9" secondAttribute="bottom" constant="8" id="1Ys-xb-cb4"/>
                             <constraint firstAttribute="trailing" secondItem="psB-Ir-dhB" secondAttribute="trailing" id="Cod-OI-3Fv"/>
+                            <constraint firstItem="Ywa-aJ-xh9" firstAttribute="trailing" secondItem="n46-RW-Rkz" secondAttribute="trailingMargin" id="ag4-bf-jIj"/>
                             <constraint firstItem="psB-Ir-dhB" firstAttribute="leading" secondItem="n46-RW-Rkz" secondAttribute="leading" id="cHE-kh-TTT"/>
                             <constraint firstAttribute="bottom" secondItem="psB-Ir-dhB" secondAttribute="bottom" id="kAK-4b-hFZ"/>
                             <constraint firstItem="psB-Ir-dhB" firstAttribute="top" secondItem="ZHo-N2-AFb" secondAttribute="bottom" id="z8V-Yh-amS"/>
@@ -471,6 +483,7 @@
                     <connections>
                         <outlet property="MenuButton" destination="bQB-YL-G7y" id="013-L0-hao"/>
                         <outlet property="OptionalButton" destination="vdf-Q0-Xxg" id="CiP-VR-bQ2"/>
+                        <outlet property="mapTypeSwitcher" destination="Ywa-aJ-xh9" id="GII-BI-bfh"/>
                         <outlet property="userMapView" destination="psB-Ir-dhB" id="eRJ-6T-2pJ"/>
                     </connections>
                 </viewController>
@@ -571,6 +584,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="h4U-WQ-Ccw" kind="custom" identifier="geofenceSegue" customClass="SWRevealViewControllerSeguePushController" id="DhC-yH-upd"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell9" id="Ea6-jp-Wab">
                                 <rect key="frame" x="0.0" y="380" width="375" height="44"/>
@@ -687,6 +703,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJ4-lv-fdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-718" y="1259"/>
+        </scene>
+        <!--Geo Fence View Controller-->
+        <scene sceneID="JBI-eB-mhU">
+            <objects>
+                <viewController id="dC6-BJ-hQY" customClass="GeoFenceViewController" customModule="BagTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FZK-sC-jXT"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Wh-dt-7LW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fKG-2Z-nRU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GgG-NS-PTz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eiJ-DB-oWp">
+                                <rect key="frame" x="218" y="631" width="141" height="29"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapChanged:" destination="dC6-BJ-hQY" eventType="valueChanged" id="X13-bq-w0W"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-qO-DXe">
+                                <rect key="frame" x="304" y="568" width="55" height="55"/>
+                                <color key="backgroundColor" red="0.54597981770833337" green="0.16221788194444445" blue="0.35142686631944442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Fo2-Jz-6Dr"/>
+                                    <constraint firstAttribute="width" constant="55" id="oc0-ZX-0Fj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="5" height="5"/>
+                                <state key="normal" image="Add">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addGeoFencePushed:" destination="dC6-BJ-hQY" eventType="touchUpInside" id="Zq7-c7-0cj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Wh-dt-7LW" firstAttribute="top" secondItem="GgG-NS-PTz" secondAttribute="bottom" id="9z5-rY-cAu"/>
+                            <constraint firstItem="eiJ-DB-oWp" firstAttribute="trailing" secondItem="fKG-2Z-nRU" secondAttribute="trailingMargin" id="Djn-vx-bwM"/>
+                            <constraint firstItem="GgG-NS-PTz" firstAttribute="top" secondItem="FZK-sC-jXT" secondAttribute="bottom" id="V5Y-Up-wcd"/>
+                            <constraint firstItem="7Wh-dt-7LW" firstAttribute="top" secondItem="eiJ-DB-oWp" secondAttribute="bottom" constant="8" id="W5s-zG-CXw"/>
+                            <constraint firstItem="wzg-qO-DXe" firstAttribute="trailing" secondItem="fKG-2Z-nRU" secondAttribute="trailingMargin" id="Wed-mV-GbS"/>
+                            <constraint firstAttribute="trailing" secondItem="GgG-NS-PTz" secondAttribute="trailing" id="giF-A8-tPV"/>
+                            <constraint firstItem="GgG-NS-PTz" firstAttribute="leading" secondItem="fKG-2Z-nRU" secondAttribute="leading" id="riP-mn-0ix"/>
+                            <constraint firstItem="eiJ-DB-oWp" firstAttribute="top" secondItem="wzg-qO-DXe" secondAttribute="bottom" constant="8" id="xqW-yP-agA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DdK-cJ-pFT">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="Nh1-9E-Ls9"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eeo-3L-Bb7">
+                            <rect key="frame" x="104" y="2.5" width="167" height="39"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
+                            <state key="normal" title="AUBRY LANE">
+                                <color key="titleColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" image="Purse" id="3mx-pH-2X1"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addGeoFenceButton" destination="wzg-qO-DXe" id="0xA-t8-FMl"/>
+                        <outlet property="mapTypeSwitcher" destination="eiJ-DB-oWp" id="p7f-RM-7dp"/>
+                        <outlet property="userMapView" destination="GgG-NS-PTz" id="ecB-bL-qgb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cH8-x4-Nch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455.2" y="1299.400299850075"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="T0u-PB-6df">
@@ -827,7 +920,7 @@
                                             <nil key="textColor"/>
                                             <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhS-MT-iow">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhS-MT-iow">
                                             <rect key="frame" x="327" y="2" width="40" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="trash"/>
@@ -835,7 +928,7 @@
                                                 <action selector="trashClicked:" destination="Ofo-C4-1yP" eventType="touchUpInside" id="8vj-uv-PwO"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfk-6y-LI7">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfk-6y-LI7">
                                             <rect key="frame" x="279" y="2" width="40" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="Edit">
@@ -1484,7 +1577,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at least 8 digits with letters and numbers" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiu-5h-Zjs">
-                                <rect key="frame" x="119.5" y="402.5" width="199.5" height="13"/>
+                                <rect key="frame" x="117" y="402.5" width="202" height="13"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -2063,8 +2156,27 @@ claims that may arise after the termination of this Agreement.
             </objects>
             <point key="canvasLocation" x="2352.8000000000002" y="-869.41529235382313"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EJj-SY-0jn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h4U-WQ-Ccw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3G0-0c-D3L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dC6-BJ-hQY" kind="relationship" relationship="rootViewController" id="RF6-aP-mXf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCN-Vx-XzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="1299.400299850075"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Add" width="25" height="25"/>
         <image name="AubryLaneLogo" width="750" height="420"/>
         <image name="Back" width="25" height="25"/>
         <image name="BlankUserW" width="50" height="50"/>

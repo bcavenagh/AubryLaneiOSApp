@@ -78,7 +78,7 @@ class BaseDataManager {
             
             //Parse The Response Data From The Web Service Call...
             do {
-                if let error = response.error as? NSError{
+                if let error = response.error as NSError?{
                     //Send The Response Error From The Web Service Call...
                     callBack(nil, ALCustomError.init(error: error))
                 }
@@ -118,7 +118,7 @@ class BaseDataManager {
             
             //Parse The Response Data From The Web Service Call...
             do {
-                if let error = response.error as? NSError{
+                if let error = response.error as NSError?{
                     //Send The Response Error From The Web Service Call...
                     callBack(nil, ALCustomError.init(error: error))
                 }
@@ -146,7 +146,7 @@ class BaseDataManager {
             
             //Parse The Response Data From The Web Service Call...
             do {
-                if let error = response.error as? NSError{
+                if let error = response.error as NSError?{
                     //Send The Response Error From The Web Service Call...
                     callBack(nil, ALCustomError.init(error: error))
                 }

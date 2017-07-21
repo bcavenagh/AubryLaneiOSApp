@@ -27,7 +27,7 @@ class AddContactViewController: UIViewController, MFMessageComposeViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         numberErrorLabel.text = ""
-
+        contactNumber.keyboardType = .numberPad
     }
     
     @IBAction func cancelButton_Clicked(_ sender: Any) {
@@ -35,9 +35,6 @@ class AddContactViewController: UIViewController, MFMessageComposeViewController
     }
     @IBAction func doneButton_Clicked(_ sender: Any) {
         let phoneNumber = contactNumber.text as String!
-        let name = contactName.text as String!
-        let newContact = Contact()
-        
         if(phoneNumber!.characters.count < 10){
             numberErrorLabel.text = "Phone number too short "
             print("Error: Too short")
@@ -45,38 +42,57 @@ class AddContactViewController: UIViewController, MFMessageComposeViewController
             numberErrorLabel.text = "Phone number too long "
             print("Error: Too Long")
         }else if(contactNumber.text?.isNumeric)!{
-            //save the contect to a local array for now and send a text message
-            contactIndex = 1
-            if(ALGlobal.sharedInstance.contactsExist()){
-                let filledDefaultsArray = ALGlobal.sharedInstance.globalDefaults.array(forKey: "emergencyContactName") as! [String]
-                contactIndex = filledDefaultsArray.count + 1
-            }
+
+            let alert = UIAlertController(title: "Important!", message: "You will be redirected to the Messages app shortly. Please do NOT edit the preset text message. Press the send button and the emergency contact will be added to your device.", preferredStyle: UIAlertControllerStyle.alert)
             
-            messageVC.body = "a\(contactIndex),\(phoneNumber!)";
-            messageVC.recipients = [ALGlobal.sharedInstance.globalDefaults.object(forKey: "devicePhoneNumber") as!
-                String]
-            messageVC.messageComposeDelegate = self;
-            self.present(messageVC, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:{ action in
+                self.addContact() }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
             
-            newContact.name = name
-            newContact.phone = phoneNumber
-            ALGlobal.sharedInstance.contactList.append(newContact)
-            ALGlobal.sharedInstance.populateArrays()
-            ALGlobal.sharedInstance.emergencyContactName.append(newContact.name!)
-            ALGlobal.sharedInstance.emergencyContactNumber.append(newContact.phone!)
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
         }else{
             numberErrorLabel.text = "Use numbers only"
             print("Error: Not Numeric")
         }
         
     }
+    func addContact(){
+        let phoneNumber = contactNumber.text as String!
+        let name = contactName.text as String!
+        let newContact = Contact()
+        
+        //save the contect to a local array for now and send a text message
+        contactIndex = 1
+        if(ALGlobal.sharedInstance.contactsExist()){
+            let filledDefaultsArray = ALGlobal.sharedInstance.globalDefaults.array(forKey: "emergencyContactName") as! [String]
+            contactIndex = filledDefaultsArray.count + 1
+        }
+        
+        messageVC.body = "a\(contactIndex),\(phoneNumber!)";
+        messageVC.recipients = [ALGlobal.sharedInstance.globalDefaults.object(forKey: "devicePhoneNumber") as!
+            String]
+        messageVC.messageComposeDelegate = self;
+        self.present(messageVC, animated: true, completion: nil)
+        
+        newContact.name = name
+        newContact.phone = phoneNumber
+        ALGlobal.sharedInstance.contactList.append(newContact)
+        ALGlobal.sharedInstance.populateArrays()
+        ALGlobal.sharedInstance.emergencyContactName.append(newContact.name!)
+        ALGlobal.sharedInstance.emergencyContactNumber.append(newContact.phone!)
+    }
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         switch (result.rawValue) {
         case MessageComposeResult.cancelled.rawValue:
             print("Message was cancelled")
+            ALGlobal.sharedInstance.emergencyContactName.remove(at: ALGlobal.sharedInstance.emergencyContactName.count-1)
+            ALGlobal.sharedInstance.emergencyContactNumber.remove(at: ALGlobal.sharedInstance.emergencyContactName.count-1)
             messageVC.dismiss(animated: true, completion: nil)
         case MessageComposeResult.failed.rawValue:
             print("Message failed")
+            ALGlobal.sharedInstance.emergencyContactName.remove(at: ALGlobal.sharedInstance.emergencyContactName.count-1)
+            ALGlobal.sharedInstance.emergencyContactNumber.remove(at: ALGlobal.sharedInstance.emergencyContactName.count-1)
             messageVC.dismiss(animated: true, completion: nil)
         case MessageComposeResult.sent.rawValue:
             print("Message was sent")
@@ -87,5 +103,4 @@ class AddContactViewController: UIViewController, MFMessageComposeViewController
         }
     }
     
-
 }

@@ -51,15 +51,6 @@ class LoginController: UIViewController {
             })
             return
         }
-//        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion:{
-//         (user, error) in
-//            if error != nil{
-//                print(error!)
-//                self.loginLabel.text = "Invalid credentials. Try again."
-//                return
-//            }
-//            self.performSegue(withIdentifier: "loginSuccess", sender:self)
-//        })
     }
 
 }

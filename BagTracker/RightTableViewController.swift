@@ -72,10 +72,11 @@ class RightTableViewController: UITableViewController {
         
         if indexPath.row == 0{
             cellAdded.PurseImageView.image = #imageLiteral(resourceName: "Add")
-            cellAdded.PurseLabel.text = "Add Purse"
+            cellAdded.PurseLabel.text = "Add Purse\n(Coming Soon)"
             //Setting color of the cell and the label text
             cellAdded.backgroundColor = UIColor(red: 209/255, green: 151/255, blue: 72/255, alpha: 1)
             cellAdded.PurseLabel.textColor = UIColor.white
+            cellAdded.isUserInteractionEnabled = false
             
             //Set the color of the selected menu item
             let bgColorView = UIView()

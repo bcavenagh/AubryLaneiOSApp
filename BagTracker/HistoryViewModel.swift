@@ -20,12 +20,25 @@ class HistoryModel {
     init(historyData : NSDictionary) {
         
         gpsTime = "\(historyData["gpsTime"] as? Date ?? Date())"
+        let dateTry = historyData["gpsTime"] as! String
         
-        let timeComponents = (gpsTime as NSString).components(separatedBy: " ")
-        if  timeComponents.count == 3 {
-            gpsTime = "\(timeComponents[1])"
-        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss"
+        let date = dateFormatter.date(from: dateTry)!
+        /////
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute, .second], from: date)
         
+        let hour = components.hour!
+        let minute = components.minute!
+        
+        let timeString = "\(String(describing: hour)):\(String(describing: minute))"
+        /////
+        print(timeString)
+        print("formatted Date: \(date)")
+        print("gps time: \(gpsTime)")
+
+        gpsTime = timeString
         latitude = historyData["la"] as? CGFloat ?? CGFloat(0.0)
         longitude = historyData["lo"] as? CGFloat ?? CGFloat(0.0)
         speed = historyData["speed"] as? NSNumber ?? NSNumber.init(value: 0)

@@ -50,7 +50,6 @@ class ViewController: UIViewController {
     }
     
     func customizeNavBar(){
-        //Change the color of the images red: 209/255, green: 151/255, blue: 72/255, alpha: 1
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.tintColor = UIColor(red: 209/255, green: 151/255, blue: 72/255, alpha: 1)
         //Change the color of the top main bar

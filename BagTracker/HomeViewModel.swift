@@ -46,17 +46,6 @@ class BagModel {
         batteryString = bagData.value(forKey: "batterystatus") as? String ?? ""
     }
     
-    
-//    func getUserLocationName(callBack : @escaping ((Void) -> (Void))){
-//        let geoCoder = CLGeocoder()
-//        geoCoder.reverseGeocodeLocation(CLLocation.init(latitude: CLLocationDegrees.init(self.latitude), longitude: CLLocationDegrees.init(self.longitude)), completionHandler: {(placeMark, error) in
-//            if let firstPlaceMark = placeMark?.first{
-//                self.locationName = "\(firstPlaceMark.name ?? "") \(firstPlaceMark.subThoroughfare ?? "") \(firstPlaceMark.locality ?? "") \(firstPlaceMark.administrativeArea ?? "") \(firstPlaceMark.subAdministrativeArea ?? "") \(firstPlaceMark.isoCountryCode ?? "")"
-//                callBack()
-//            }
-//        })
-//    }
-    
 }
 
 

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 struct cellData {
     var cell: Int!
@@ -51,25 +50,12 @@ class TableViewController: UITableViewController {
         //if the cell is type 1 (TableViewCellUser.xib)
         if arrayOfCellData[indexPath.row].cell == 1{
             let cell = Bundle.main.loadNibNamed("TableViewCellUser", owner: self, options: nil)?.first as! TableViewCellUser
-//            let ref = FIRDatabase.database().reference(fromURL: "https://test-database-ba3a2.firebaseio.com/")
-//            let user = (FIRAuth.auth()?.currentUser?.uid)!
-//            let userRef = ref.child("users").child(user)
             
             //Grabbing the image and text from array of cell data and setting up the Nib file
-            cell.userImageView.image = arrayOfCellData[indexPath.row].image
+            cell.userImageView.image = #imageLiteral(resourceName: "userLogo")
             
             //Fetching user data and updating cell with information
             cell.userLabel.text = ALConstantMethods.getRegisteredUserName()
-            
-//            userRef.observe(.value, with: { (snapshot) in
-//                if let dictionary = snapshot.value as? [String: AnyObject]{
-//                    let firstName = dictionary["firstName"] as! String
-//                    cell.userLabel.text = firstName
-//                    let lastName = dictionary["lastName"] as! String
-//                    cell.userLabel.text?.append(" " + lastName)
-//                    
-//                }
-//            }, withCancel: nil)
             
             //Setting color of the cell and the label text
             cell.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
@@ -79,7 +65,7 @@ class TableViewController: UITableViewController {
             let bgColorView = UIView()
             bgColorView.backgroundColor = UIColor(red: 148/255, green: 55/255, blue: 86/255, alpha: 1)
             cell.selectedBackgroundView = bgColorView
-            
+            cell.isUserInteractionEnabled = false
             return cell
         }
             
@@ -148,7 +134,7 @@ class TableViewController: UITableViewController {
             case 4: //For Find My Purse
                 performSegue(withIdentifier: "mapSegue", sender: nil)
             case 5: //For Geo Fence
-                performSegue(withIdentifier: "mapSegue", sender: nil)
+                performSegue(withIdentifier: "geofenceSegue", sender: nil)
             case 6: //For Battery Status
                 performSegue(withIdentifier: "batterySegue", sender: nil)
             case 7:
@@ -174,16 +160,6 @@ class TableViewController: UITableViewController {
         alert.addAction(cancelAction)
         alert.addAction(logoutAction)
         self.present(alert, animated: true, completion: nil)
-//        do{
-//            try FIRAuth.auth()?.signOut()
-//        } catch let logoutError{
-//            print(logoutError)
-//        }
-//        
-//        let vc : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "loginView")
-//        if FIRAuth.auth()?.currentUser?.uid == nil{
-//            present(vc as! UIViewController, animated: true, completion: nil)
-//        }
     }
     
 }

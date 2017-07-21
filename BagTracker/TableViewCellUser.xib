@@ -21,14 +21,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PW1-mL-s9P">
-                        <rect key="frame" x="110" y="15" width="100" height="100"/>
+                        <rect key="frame" x="90" y="15" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="SdR-62-ruB"/>
                             <constraint firstAttribute="width" secondItem="PW1-mL-s9P" secondAttribute="height" multiplier="1:1" id="dD8-Cg-dCw"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBs-Wx-Xec">
-                        <rect key="frame" x="8" y="120" width="304" height="25"/>
+                        <rect key="frame" x="8" y="120" width="264" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="9DZ-AP-QDq"/>
                         </constraints>
@@ -40,9 +40,9 @@
                 <constraints>
                     <constraint firstItem="PW1-mL-s9P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="6E4-Lo-3QK"/>
                     <constraint firstItem="WBs-Wx-Xec" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="JYR-0l-RjA"/>
-                    <constraint firstItem="WBs-Wx-Xec" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="NPQ-oQ-pLC"/>
                     <constraint firstItem="WBs-Wx-Xec" firstAttribute="top" secondItem="PW1-mL-s9P" secondAttribute="bottom" constant="5" id="Nb3-GU-lZu"/>
-                    <constraint firstItem="PW1-mL-s9P" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Rdl-pt-Sov"/>
+                    <constraint firstItem="PW1-mL-s9P" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-20" id="Rdl-pt-Sov"/>
+                    <constraint firstItem="WBs-Wx-Xec" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-20" id="vk8-5R-KHE"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

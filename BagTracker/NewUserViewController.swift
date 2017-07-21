@@ -22,7 +22,7 @@ class NewUserViewController: ViewController, UINavigationControllerDelegate {
     let registerUserViewModel = RegisterUserViewModel()
     @IBAction func tcBackButton_Clicked(segue:UIStoryboardSegue) {
     }
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -14,6 +14,7 @@
 		8B4E82E51EE71C9200969EB1 /* TableViewCellUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E82E31EE71C9200969EB1 /* TableViewCellUser.xib */; };
 		8B4E82E81EE71D9400969EB1 /* TableViewCellTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E82E61EE71D9400969EB1 /* TableViewCellTab.swift */; };
 		8B4E82E91EE71D9400969EB1 /* TableViewCellTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E82E71EE71D9400969EB1 /* TableViewCellTab.xib */; };
+		8B8216911F2235ED008AAB98 /* GeoFenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8216901F2235ED008AAB98 /* GeoFenceViewController.swift */; };
 		8BA94A0D1EEEF8F400D0BF22 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA94A0C1EEEF8F400D0BF22 /* RegisterViewController.swift */; };
 		8BB07ABA1EEEE6F7007230CF /* NHRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB07AB81EEEE6F7007230CF /* NHRangeSlider.swift */; };
 		8BB07ABB1EEEE6F7007230CF /* NHRangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB07AB91EEEE6F7007230CF /* NHRangeSliderView.swift */; };
@@ -92,6 +93,7 @@
 		8B4E82E31EE71C9200969EB1 /* TableViewCellUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellUser.xib; sourceTree = "<group>"; };
 		8B4E82E61EE71D9400969EB1 /* TableViewCellTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTab.swift; sourceTree = "<group>"; };
 		8B4E82E71EE71D9400969EB1 /* TableViewCellTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellTab.xib; sourceTree = "<group>"; };
+		8B8216901F2235ED008AAB98 /* GeoFenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoFenceViewController.swift; sourceTree = "<group>"; };
 		8BA94A0C1EEEF8F400D0BF22 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8BB07AB81EEEE6F7007230CF /* NHRangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRangeSlider.swift; sourceTree = "<group>"; };
 		8BB07AB91EEEE6F7007230CF /* NHRangeSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRangeSliderView.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 				8BFC27741EEED276008E79F2 /* SettingsViewController.swift */,
 				8BA94A0C1EEEF8F400D0BF22 /* RegisterViewController.swift */,
 				8BD29C741F06A9AE00F29EC4 /* NewUserViewController.swift */,
+				8B8216901F2235ED008AAB98 /* GeoFenceViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				8BFC27731EEED26C008E79F2 /* HelpViewController.swift in Sources */,
 				8BD29C631F06954C00F29EC4 /* HomeViewController.swift in Sources */,
 				8BB9A9091EE6DF4F009D3052 /* AppDelegate.swift in Sources */,
+				8B8216911F2235ED008AAB98 /* GeoFenceViewController.swift in Sources */,
 				8BECDDE61EFC9DB800B8826B /* AddContactViewController.swift in Sources */,
 				8BD29C881F06B14500F29EC4 /* ReverseGeoCodeDataManager.swift in Sources */,
 				8BC2CF341EE788A500F8E0A2 /* PurseTableViewCell.swift in Sources */,

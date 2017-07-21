@@ -24,7 +24,11 @@ class ALGlobal: NSObject {
     var emergencyContactName = [String]()
     var emergencyContactNumber = [String]()
     
+    var geoFenceRadius = 0.0
+    
     func populateArrays(){
+        emergencyContactName = []
+        emergencyContactNumber = []
         if(ALGlobal.sharedInstance.globalDefaults.object(forKey: "emergencyContactName") != nil){
             let defaultContacts = ALGlobal.sharedInstance.globalDefaults.object(forKey: "emergencyContactName") as! [String]
             var i = 0
