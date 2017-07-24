@@ -508,7 +508,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="KlW-J4-1w4" kind="custom" identifier="userSegue" customClass="SWRevealViewControllerSeguePushController" id="iK1-W7-VOR"/>
+                                    <segue destination="KlW-J4-1w4" kind="custom" identifier="sideButtonSegue" customClass="SWRevealViewControllerSeguePushController" id="iK1-W7-VOR"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell2" id="MLS-6P-LzW">
@@ -659,28 +659,70 @@
             </objects>
             <point key="canvasLocation" x="-431.19999999999999" y="465.51724137931041"/>
         </scene>
-        <!--User View Controller-->
+        <!--Side Button View Controller-->
         <scene sceneID="fML-eA-El3">
             <objects>
-                <viewController id="6NB-SW-0ch" customClass="UserViewController" customModule="BagTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="c14-BR-kyM"/>
-                        <viewControllerLayoutGuide type="bottom" id="LN1-Yy-NTu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NZh-dr-pbd">
+                <viewController id="6NB-SW-0ch" customClass="SideButtonViewController" customModule="BagTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YMG-gi-YXj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0R-1B-msu">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sideButtonContactCell" rowHeight="65" id="kc1-xf-jee" customClass="SideButtonContactTableViewCell" customModule="BagTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kc1-xf-jee" id="aCi-Cs-nYE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URb-hm-iWd">
+                                            <rect key="frame" x="8" y="3" width="57" height="57"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="URb-hm-iWd" secondAttribute="height" multiplier="1:1" id="PAa-pr-8O6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvb-s8-ZaV">
+                                            <rect key="frame" x="73" y="8" width="52" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc0-iW-NGn">
+                                            <rect key="frame" x="268" y="6" width="44" height="51"/>
+                                            <state key="normal" title="Select"/>
+                                            <connections>
+                                                <action selector="selectedContactPressed:" destination="kc1-xf-jee" eventType="touchUpInside" id="AUe-I3-yDn"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-bM-5CT">
+                                            <rect key="frame" x="73" y="39" width="35" height="17"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WSn-bM-5CT" secondAttribute="bottom" constant="0.5" id="0to-zY-Gqd"/>
+                                        <constraint firstAttribute="bottom" secondItem="URb-hm-iWd" secondAttribute="bottom" constant="4.5" id="5TU-El-pEO"/>
+                                        <constraint firstItem="URb-hm-iWd" firstAttribute="top" secondItem="aCi-Cs-nYE" secondAttribute="top" constant="3" id="Bdo-Zk-0qa"/>
+                                        <constraint firstItem="Cvb-s8-ZaV" firstAttribute="top" secondItem="aCi-Cs-nYE" secondAttribute="topMargin" id="IEA-Os-mhf"/>
+                                        <constraint firstItem="URb-hm-iWd" firstAttribute="leading" secondItem="aCi-Cs-nYE" secondAttribute="leading" constant="8" id="OTw-pT-uBu"/>
+                                        <constraint firstAttribute="bottom" secondItem="rc0-iW-NGn" secondAttribute="bottom" constant="7.5" id="OXn-Wo-wiJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="rc0-iW-NGn" secondAttribute="trailing" constant="8" id="bIQ-S9-f1s"/>
+                                        <constraint firstItem="Cvb-s8-ZaV" firstAttribute="leading" secondItem="URb-hm-iWd" secondAttribute="trailing" constant="8" id="bWk-sz-DAX"/>
+                                        <constraint firstItem="WSn-bM-5CT" firstAttribute="leading" secondItem="URb-hm-iWd" secondAttribute="trailing" constant="8" id="dMJ-g6-5RZ"/>
+                                        <constraint firstItem="rc0-iW-NGn" firstAttribute="top" secondItem="aCi-Cs-nYE" secondAttribute="top" constant="6" id="l5x-Jv-WLf"/>
+                                        <constraint firstItem="Cvb-s8-ZaV" firstAttribute="leading" secondItem="URb-hm-iWd" secondAttribute="trailing" constant="8" id="m2d-OL-Kia"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkImage" destination="URb-hm-iWd" id="Ih0-5g-4Vp"/>
+                                    <outlet property="contactLabel" destination="Cvb-s8-ZaV" id="CQX-U0-eyo"/>
+                                    <outlet property="contactNumberLabel" destination="WSn-bM-5CT" id="KIM-xf-KZr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="zqB-6J-IPV">
                         <nil key="title"/>
@@ -697,12 +739,13 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="contactsTable" destination="YMG-gi-YXj" id="STw-6G-BHQ"/>
                         <outlet property="menuButton" destination="tCN-MW-nXx" id="ae2-Om-1Ur"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJ4-lv-fdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-718" y="1259"/>
+            <point key="canvasLocation" x="-3832" y="2249.3253373313346"/>
         </scene>
         <!--Geo Fence View Controller-->
         <scene sceneID="JBI-eB-mhU">
@@ -1236,7 +1279,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqm-hz-SsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543" y="1259"/>
+            <point key="canvasLocation" x="-4736" y="2252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x6F-gs-xOf">

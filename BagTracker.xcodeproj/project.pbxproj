@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B0A13991EEF1D4300FC9FA7 /* AddPurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A13981EEF1D4300FC9FA7 /* AddPurseViewController.swift */; };
+		8B24CA651F2667DA0025E6AC /* SideButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24CA641F2667DA0025E6AC /* SideButtonViewController.swift */; };
+		8B24CA691F266A670025E6AC /* SideButtonContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24CA681F266A670025E6AC /* SideButtonContactTableViewCell.swift */; };
 		8B2EFF701F013FFE003F0B4C /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EFF6F1F013FFE003F0B4C /* ContactCell.swift */; };
 		8B4E82DB1EE719D100969EB1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E82DA1EE719D100969EB1 /* TableViewController.swift */; };
 		8B4E82E41EE71C9200969EB1 /* TableViewCellUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E82E21EE71C9200969EB1 /* TableViewCellUser.swift */; };
@@ -57,7 +59,6 @@
 		8BECDDE61EFC9DB800B8826B /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDE51EFC9DB800B8826B /* AddContactViewController.swift */; };
 		8BECDDEA1EFCA88100B8826B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDE91EFCA88100B8826B /* Contact.swift */; };
 		8BECDDF41EFCB72600B8826B /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDF31EFCB72600B8826B /* ContactsViewController.swift */; };
-		8BFC27681EEEC2AC008E79F2 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC27671EEEC2AC008E79F2 /* UserViewController.swift */; };
 		8BFC276A1EEECEE5008E79F2 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC27691EEECEE5008E79F2 /* RevealViewController.swift */; };
 		8BFC276D1EEED217008E79F2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC276C1EEED217008E79F2 /* HistoryViewController.swift */; };
 		8BFC27711EEED25F008E79F2 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC27701EEED25F008E79F2 /* BatteryViewController.swift */; };
@@ -87,6 +88,8 @@
 /* Begin PBXFileReference section */
 		12E3A5B8678B2C9D5A408677 /* Pods-BagTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BagTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BagTracker/Pods-BagTracker.release.xcconfig"; sourceTree = "<group>"; };
 		8B0A13981EEF1D4300FC9FA7 /* AddPurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPurseViewController.swift; sourceTree = "<group>"; };
+		8B24CA641F2667DA0025E6AC /* SideButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideButtonViewController.swift; sourceTree = "<group>"; };
+		8B24CA681F266A670025E6AC /* SideButtonContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideButtonContactTableViewCell.swift; sourceTree = "<group>"; };
 		8B2EFF6F1F013FFE003F0B4C /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		8B4E82DA1EE719D100969EB1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		8B4E82E21EE71C9200969EB1 /* TableViewCellUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellUser.swift; sourceTree = "<group>"; };
@@ -144,7 +147,6 @@
 		8BECDDE51EFC9DB800B8826B /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		8BECDDE91EFCA88100B8826B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		8BECDDF31EFCB72600B8826B /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		8BFC27671EEEC2AC008E79F2 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8BFC27691EEECEE5008E79F2 /* RevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
 		8BFC276C1EEED217008E79F2 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8BFC27701EEED25F008E79F2 /* BatteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				8B4E82E61EE71D9400969EB1 /* TableViewCellTab.swift */,
 				8B4E82E71EE71D9400969EB1 /* TableViewCellTab.xib */,
 				8B2EFF6F1F013FFE003F0B4C /* ContactCell.swift */,
+				8B24CA681F266A670025E6AC /* SideButtonContactTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -354,7 +357,6 @@
 				8BB9A93B1EE6E18B009D3052 /* ViewController.swift */,
 				8BD29C621F06954C00F29EC4 /* HomeViewController.swift */,
 				8BCE20F31EF80F74003F0883 /* LoginController.swift */,
-				8BFC27671EEEC2AC008E79F2 /* UserViewController.swift */,
 				8BB9A93D1EE6E8E4009D3052 /* MapController.swift */,
 				8BFC276C1EEED217008E79F2 /* HistoryViewController.swift */,
 				8BECDDE71EFCA6DD00B8826B /* Contact Controllers */,
@@ -364,6 +366,7 @@
 				8BA94A0C1EEEF8F400D0BF22 /* RegisterViewController.swift */,
 				8BD29C741F06A9AE00F29EC4 /* NewUserViewController.swift */,
 				8B8216901F2235ED008AAB98 /* GeoFenceViewController.swift */,
+				8B24CA641F2667DA0025E6AC /* SideButtonViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -568,11 +571,12 @@
 				8BECDDF41EFCB72600B8826B /* ContactsViewController.swift in Sources */,
 				8BD29C961F06B17B00F29EC4 /* HomeViewModel.swift in Sources */,
 				8BB9A93E1EE6E8E4009D3052 /* MapController.swift in Sources */,
+				8B24CA651F2667DA0025E6AC /* SideButtonViewController.swift in Sources */,
+				8B24CA691F266A670025E6AC /* SideButtonContactTableViewCell.swift in Sources */,
 				8BD29C981F06B18500F29EC4 /* LoginViewModel.swift in Sources */,
 				8BECDDEA1EFCA88100B8826B /* Contact.swift in Sources */,
 				8BD29C921F06B17200F29EC4 /* HistoryViewModel.swift in Sources */,
 				8BD29C941F06B17700F29EC4 /* RegisterUserViewModel.swift in Sources */,
-				8BFC27681EEEC2AC008E79F2 /* UserViewController.swift in Sources */,
 				8BB9A93C1EE6E18B009D3052 /* ViewController.swift in Sources */,
 				8BFC276D1EEED217008E79F2 /* HistoryViewController.swift in Sources */,
 				8BECDDE21EFAC47700B8826B /* Purse.swift in Sources */,

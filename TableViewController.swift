@@ -20,7 +20,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         
-        arrayOfCellData = [cellData(cell : 1, text : "User", image : #imageLiteral(resourceName: "profile_pic")),
+        arrayOfCellData = [cellData(cell : 1, text : "User", image : nil),
                            cellData(cell : 2, text : "Home", image : #imageLiteral(resourceName: "HomeW")),
                            cellData(cell : 2, text : "History", image : #imageLiteral(resourceName: "HistoryW")),
                            cellData(cell : 2, text : "Emergency Contacts", image : #imageLiteral(resourceName: "FavoriteW")),
@@ -123,8 +123,8 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
         switch indexPath.row {
-            case 0: //For User Profile
-                performSegue(withIdentifier: "userSegue", sender: nil)
+            case 0: break //For User Profile
+            
             case 1: //For Home
                 performSegue(withIdentifier: "mapSegue", sender: nil)
             case 2: //For History
@@ -138,7 +138,7 @@ class TableViewController: UITableViewController {
             case 6: //For Battery Status
                 performSegue(withIdentifier: "batterySegue", sender: nil)
             case 7:
-                performSegue(withIdentifier: "settingsSegue", sender: nil)
+                performSegue(withIdentifier: "sideButtonSegue", sender: nil)
             //NO 8 BECAUSE THATS EMPTY SPACING ROW
             case 9: //For Help
                 performSegue(withIdentifier: "helpSegue", sender: nil)

@@ -21,7 +21,6 @@ class HistoryDataManager: NSObject {
                     
                     if status{
                         var historyList = [HistoryModel]()
-                        print(data)
                         for data in bagsList{
                             historyList.append(HistoryModel.init(historyData: data as! NSDictionary))
                         }
