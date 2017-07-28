@@ -37,7 +37,6 @@
 		8BCE20F41EF80F74003F0883 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCE20F31EF80F74003F0883 /* LoginController.swift */; };
 		8BD29C611F04493900F29EC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD29C601F04493900F29EC4 /* CoreLocation.framework */; };
 		8BD29C631F06954C00F29EC4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C621F06954C00F29EC4 /* HomeViewController.swift */; };
-		8BD29C751F06A9AE00F29EC4 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C741F06A9AE00F29EC4 /* NewUserViewController.swift */; };
 		8BD29C7E1F06B12800F29EC4 /* ALCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C7D1F06B12800F29EC4 /* ALCustomTextField.swift */; };
 		8BD29C801F06B13500F29EC4 /* ALCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C7F1F06B13500F29EC4 /* ALCustomButton.swift */; };
 		8BD29C821F06B13E00F29EC4 /* ALConstantMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD29C811F06B13E00F29EC4 /* ALConstantMethods.swift */; };
@@ -91,6 +90,7 @@
 		8B24CA641F2667DA0025E6AC /* SideButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideButtonViewController.swift; sourceTree = "<group>"; };
 		8B24CA681F266A670025E6AC /* SideButtonContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideButtonContactTableViewCell.swift; sourceTree = "<group>"; };
 		8B2EFF6F1F013FFE003F0B4C /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		8B46A57E1F2B7AC9002DC3C2 /* BagTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BagTracker.entitlements; sourceTree = "<group>"; };
 		8B4E82DA1EE719D100969EB1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		8B4E82E21EE71C9200969EB1 /* TableViewCellUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellUser.swift; sourceTree = "<group>"; };
 		8B4E82E31EE71C9200969EB1 /* TableViewCellUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellUser.xib; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 		8BCE20F31EF80F74003F0883 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		8BD29C601F04493900F29EC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8BD29C621F06954C00F29EC4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		8BD29C741F06A9AE00F29EC4 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		8BD29C7D1F06B12800F29EC4 /* ALCustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALCustomTextField.swift; sourceTree = "<group>"; };
 		8BD29C7F1F06B13500F29EC4 /* ALCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALCustomButton.swift; sourceTree = "<group>"; };
 		8BD29C811F06B13E00F29EC4 /* ALConstantMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALConstantMethods.swift; sourceTree = "<group>"; };
@@ -222,6 +221,7 @@
 				72A2150F6F53A923A37C978D /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		8BB9A9061EE6DF4F009D3052 /* Products */ = {
 			isa = PBXGroup;
@@ -236,6 +236,7 @@
 		8BB9A9071EE6DF4F009D3052 /* BagTracker */ = {
 			isa = PBXGroup;
 			children = (
+				8B46A57E1F2B7AC9002DC3C2 /* BagTracker.entitlements */,
 				8BD29C7C1F06B11A00F29EC4 /* Imported Materials */,
 				8BECDDE41EFAF1CA00B8826B /* Views */,
 				8BECDDE31EFAF0FD00B8826B /* Models */,
@@ -364,7 +365,6 @@
 				8BFC27721EEED26C008E79F2 /* HelpViewController.swift */,
 				8BFC27741EEED276008E79F2 /* SettingsViewController.swift */,
 				8BA94A0C1EEEF8F400D0BF22 /* RegisterViewController.swift */,
-				8BD29C741F06A9AE00F29EC4 /* NewUserViewController.swift */,
 				8B8216901F2235ED008AAB98 /* GeoFenceViewController.swift */,
 				8B24CA641F2667DA0025E6AC /* SideButtonViewController.swift */,
 			);
@@ -445,6 +445,11 @@
 						DevelopmentTeam = GD3A25QKJT;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					8BB9A9181EE6DF4F009D3052 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -599,7 +604,6 @@
 				8BD29C871F06B14500F29EC4 /* LoginDataManager.swift in Sources */,
 				8BD29C9F1F06B33B00F29EC4 /* HistoryTableViewCell.swift in Sources */,
 				8BD29C801F06B13500F29EC4 /* ALCustomButton.swift in Sources */,
-				8BD29C751F06A9AE00F29EC4 /* NewUserViewController.swift in Sources */,
 				8BD29C7E1F06B12800F29EC4 /* ALCustomTextField.swift in Sources */,
 				8B0A13991EEF1D4300FC9FA7 /* AddPurseViewController.swift in Sources */,
 				8BD29C8A1F06B15600F29EC4 /* HistoryDataManager.swift in Sources */,
@@ -764,6 +768,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BagTracker/BagTracker.entitlements;
 				DEVELOPMENT_TEAM = GD3A25QKJT;
 				INFOPLIST_FILE = BagTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -781,6 +786,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BagTracker/BagTracker.entitlements;
 				DEVELOPMENT_TEAM = GD3A25QKJT;
 				INFOPLIST_FILE = BagTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

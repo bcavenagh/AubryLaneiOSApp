@@ -18,7 +18,6 @@ class SideButtonViewController: ViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadData()
     }
     func loadData(){
@@ -80,10 +79,24 @@ class SideButtonViewController: ViewController, UITableViewDataSource, UITableVi
             cell.contactNumberLabel.text = formattedPhoneNumber
         }
         cell.contactLabel.text = contactName
-        cell.checkImage = nil
+        //cell.contactSelectedImage = nil
         cell.selectContactAction = { [weak self] (cell) in
             self?.selectContact(phone: phoneNumber!, name: contactName!, cell: cell, cellIndex: indexPath.row)
         }
+        
+        if(ALGlobal.sharedInstance.globalDefaults.object(forKey: "selectedContactIndex") != nil){
+            ALGlobal.sharedInstance.setSelectedContact()
+        }
+        if(indexPath.row == ALGlobal.sharedInstance.selectedContact){
+            cell.selectButton.isUserInteractionEnabled = false
+            cell.selectButton.setTitle("",for: .normal)
+            cell.contactSelectedImage.image = UIImage(named: ("contactCheck"))
+        }else{
+            cell.selectButton.setTitle("Select",for: .normal)
+            cell.selectButton.isUserInteractionEnabled = true
+            cell.contactSelectedImage.image = nil
+        }
+        
         return cell
     }
     func validateNumber(phone: String!) -> Bool{
@@ -98,8 +111,7 @@ class SideButtonViewController: ViewController, UITableViewDataSource, UITableVi
         
         // add the actions (buttons)
         alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler:{ action in
-            self.sendSelectText(phone: phone, name: name, row: cellIndex)
-            
+            self.showTextMessageWarning(phone: phone, name: name, row: cellIndex)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
         
@@ -113,7 +125,12 @@ class SideButtonViewController: ViewController, UITableViewDataSource, UITableVi
             String]
         messageVC.messageComposeDelegate = self;
         self.present(messageVC, animated: true, completion: nil)
-        
+        saveContact(row: row)
+    }
+    func saveContact(row: Int){
+        ALGlobal.sharedInstance.selectedContact = row
+        ALGlobal.sharedInstance.globalDefaults.set(row, forKey: "selectedContactIndex")
+        contactsTable.reloadData()
     }
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         switch (result.rawValue) {
@@ -126,9 +143,18 @@ class SideButtonViewController: ViewController, UITableViewDataSource, UITableVi
         case MessageComposeResult.sent.rawValue:
             print("Message was sent")
             messageVC.dismiss(animated: true, completion: nil)
-            self.dismiss(animated: true, completion: nil)
+            
         default:
             break;
         }
+    }
+    func showTextMessageWarning(phone: String, name: String, row: Int){
+        let alert = UIAlertController(title: "Important!", message: "You will be redirected to the Messages app shortly. Please do NOT edit the preset text message. Press the send button and the emergency contact will be added to your device.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:{ action in
+            self.sendSelectText(phone: phone, name: name, row: row) }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }

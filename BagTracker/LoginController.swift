@@ -13,9 +13,12 @@ class LoginController: UIViewController {
 
     
     //Login Information
+    @IBOutlet weak var emailTextField: LoginCustomTextFields!
+    @IBOutlet weak var passwordTextField: LoginCustomTextFields!
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var _email: UITextField!
     @IBOutlet weak var _password: UITextField!
+    
     
     let loginViewModel = LoginViewModel()
     let loginDataManager = LoginDataManager()
@@ -27,11 +30,11 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func login_Clicked(_ sender: Any) {
-        guard let email = _email.text, let password = _password.text else{
+        
+        guard let email = emailTextField.customTxtField.text, let password = passwordTextField.customTxtField.text else{
             print("Invalid Form")
             return
         }

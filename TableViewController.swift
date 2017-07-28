@@ -24,7 +24,7 @@ class TableViewController: UITableViewController {
                            cellData(cell : 2, text : "Home", image : #imageLiteral(resourceName: "HomeW")),
                            cellData(cell : 2, text : "History", image : #imageLiteral(resourceName: "HistoryW")),
                            cellData(cell : 2, text : "Emergency Contacts", image : #imageLiteral(resourceName: "FavoriteW")),
-                           cellData(cell : 2, text : "Find My Purse", image : #imageLiteral(resourceName: "PurseW")),
+                           cellData(cell : 2, text : "Find My Amulet", image : #imageLiteral(resourceName: "PurseW")),
                            cellData(cell : 2, text : "Geo Fence", image : #imageLiteral(resourceName: "GeoFenceW")),
                            cellData(cell : 2, text : "Amulet Battery Status", image : #imageLiteral(resourceName: "BatteryW")),
                            cellData(cell : 2, text : "Side Phone Button", image : #imageLiteral(resourceName: "clickButtonW")),

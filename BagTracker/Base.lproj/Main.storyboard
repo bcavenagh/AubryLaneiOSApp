@@ -8,14 +8,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Roboto-Bold.ttf">
-            <string>Roboto-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Reveal View Controller-->
         <scene sceneID="5qA-eQ-Dgb">
@@ -53,6 +47,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Narcia" translatesAutoresizingMaskIntoConstraints="NO" id="elj-df-GNp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="jp1-nQ-yHA">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
@@ -63,30 +60,12 @@
                                     <navigationItem title="LOGIN / REGISTER" id="ilz-UQ-j2D"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-W7-6fq">
-                                <rect key="frame" x="46" y="204" width="282" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ofa-6M-fD0"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ee6-lY-ygI">
-                                <rect key="frame" x="46" y="256" width="282" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="lwP-tA-CeH"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmU-rZ-Zwt">
                                 <rect key="frame" x="46" y="331" width="282" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iSp-Aj-7Z0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -104,7 +83,7 @@
                                     <color key="titleColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bN3-RY-f6K" kind="presentation" id="MLc-Q2-cLG"/>
+                                    <segue destination="dud-55-2B8" kind="presentation" id="iEW-8s-Ika"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8h-Gh-vcq">
@@ -116,7 +95,7 @@
                                 <color key="textColor" red="0.92549020049999997" green="0.23529411850000001" blue="0.1019607857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AubryLaneLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ZEY-jQ-MXV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AubryLaneLogoTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="ZEY-jQ-MXV">
                                 <rect key="frame" x="94" y="79" width="187" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="Rwj-qR-Ey1"/>
@@ -124,7 +103,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFo-dY-f7R">
-                                <rect key="frame" x="227" y="290" width="101" height="17"/>
+                                <rect key="frame" x="227" y="292" width="101" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="3bq-v2-l1P"/>
                                 </constraints>
@@ -136,37 +115,69 @@
                                     <segue destination="EH3-JE-ozH" kind="presentation" id="AcL-Lh-WNn"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obh-rp-8dv" customClass="LoginCustomTextFields" customModule="BagTracker" customModuleProvider="target">
+                                <rect key="frame" x="67" y="204" width="240" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.39721211472602741" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ztq-5B-a1i"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="textFieldIconImage" value="BlankUserW"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldPlaceHolder" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldKeyboardType">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMC-Ki-Pyq" customClass="LoginCustomTextFields" customModule="BagTracker" customModuleProvider="target">
+                                <rect key="frame" x="67" y="254" width="240" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.39721211472602741" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="app-AR-bhW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldPlaceHolder" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="textFieldIconImage" value="password"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldKeyboardType">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="FmU-rZ-Zwt" secondAttribute="trailing" constant="31" id="1Ng-zT-oyg"/>
-                            <constraint firstItem="ee6-lY-ygI" firstAttribute="leading" secondItem="d8F-6o-vci" secondAttribute="leadingMargin" constant="30" id="46q-4F-Gr8"/>
-                            <constraint firstItem="SCK-W7-6fq" firstAttribute="top" secondItem="ZEY-jQ-MXV" secondAttribute="bottom" constant="20" id="6EJ-Vk-62z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FEC-Hy-2cV" secondAttribute="trailing" constant="31" id="7FU-dn-iz2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ee6-lY-ygI" secondAttribute="trailing" constant="31" id="8CZ-kK-P2u"/>
+                            <constraint firstItem="BMC-Ki-Pyq" firstAttribute="top" secondItem="obh-rp-8dv" secondAttribute="bottom" constant="20" id="BPB-sh-Cpy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="R8h-Gh-vcq" secondAttribute="trailing" constant="31" id="BcP-oF-bVb"/>
+                            <constraint firstItem="R8h-Gh-vcq" firstAttribute="top" secondItem="BMC-Ki-Pyq" secondAttribute="bottom" constant="15" id="JFs-kQ-k8S"/>
+                            <constraint firstItem="elj-df-GNp" firstAttribute="leading" secondItem="d8F-6o-vci" secondAttribute="leading" id="KLs-xi-XoC"/>
                             <constraint firstItem="FEC-Hy-2cV" firstAttribute="top" secondItem="FmU-rZ-Zwt" secondAttribute="bottom" constant="8" id="LTu-e6-lBm"/>
+                            <constraint firstItem="elj-df-GNp" firstAttribute="top" secondItem="d8F-6o-vci" secondAttribute="top" id="Olt-Gw-0Nf"/>
+                            <constraint firstItem="XFo-dY-f7R" firstAttribute="top" secondItem="BMC-Ki-Pyq" secondAttribute="bottom" constant="8" id="PTk-3z-6Pe"/>
+                            <constraint firstAttribute="trailing" secondItem="elj-df-GNp" secondAttribute="trailing" id="RqU-Vg-Z96"/>
                             <constraint firstItem="R8h-Gh-vcq" firstAttribute="leading" secondItem="d8F-6o-vci" secondAttribute="leadingMargin" constant="30" id="Rqb-8j-FuV"/>
+                            <constraint firstItem="obh-rp-8dv" firstAttribute="leading" secondItem="d8F-6o-vci" secondAttribute="leadingMargin" constant="51" id="Zf8-AT-FPY"/>
+                            <constraint firstItem="obh-rp-8dv" firstAttribute="top" secondItem="ZEY-jQ-MXV" secondAttribute="bottom" constant="20" id="axx-Fw-wZM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="obh-rp-8dv" secondAttribute="trailing" constant="52" id="c1m-DZ-eDQ"/>
                             <constraint firstItem="FEC-Hy-2cV" firstAttribute="leading" secondItem="d8F-6o-vci" secondAttribute="leadingMargin" constant="30" id="gGk-Zc-0OS"/>
                             <constraint firstItem="ZEY-jQ-MXV" firstAttribute="centerX" secondItem="d8F-6o-vci" secondAttribute="centerX" id="gZw-hR-bXz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XFo-dY-f7R" secondAttribute="trailing" constant="31" id="hD4-2j-sDg"/>
-                            <constraint firstItem="SCK-W7-6fq" firstAttribute="leading" secondItem="d8F-6o-vci" secondAttribute="leadingMargin" constant="30" id="jwe-nz-oj2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SCK-W7-6fq" secondAttribute="trailing" constant="31" id="kb0-iG-yBk"/>
+                            <constraint firstItem="BMC-Ki-Pyq" firstAttribute="leading" secondItem="d8F-6o-vci" secondAttribute="leadingMargin" constant="51" id="kQi-i0-hAf"/>
                             <constraint firstItem="jp1-nQ-yHA" firstAttribute="top" secondItem="Hbz-pw-PeM" secondAttribute="bottom" id="kbu-QL-LFm"/>
                             <constraint firstItem="ZEY-jQ-MXV" firstAttribute="top" secondItem="jp1-nQ-yHA" secondAttribute="bottom" constant="15" id="m23-yU-Scs"/>
                             <constraint firstItem="jp1-nQ-yHA" firstAttribute="leading" secondItem="d8F-6o-vci" secondAttribute="leading" id="m2M-Ev-Abf"/>
                             <constraint firstItem="FmU-rZ-Zwt" firstAttribute="top" secondItem="R8h-Gh-vcq" secondAttribute="bottom" constant="8" id="nCu-ks-wmf"/>
                             <constraint firstAttribute="trailing" secondItem="jp1-nQ-yHA" secondAttribute="trailing" id="svV-wu-iVu"/>
-                            <constraint firstItem="XFo-dY-f7R" firstAttribute="top" secondItem="ee6-lY-ygI" secondAttribute="bottom" constant="4" id="tar-bV-R2d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BMC-Ki-Pyq" secondAttribute="trailing" constant="52" id="tWD-Mq-dsf"/>
                             <constraint firstItem="FmU-rZ-Zwt" firstAttribute="leading" secondItem="d8F-6o-vci" secondAttribute="leadingMargin" constant="30" id="uww-p8-4uD"/>
-                            <constraint firstItem="ee6-lY-ygI" firstAttribute="top" secondItem="SCK-W7-6fq" secondAttribute="bottom" constant="22" id="xhj-yc-zus"/>
-                            <constraint firstItem="R8h-Gh-vcq" firstAttribute="top" secondItem="ee6-lY-ygI" secondAttribute="bottom" constant="13" id="yuw-bL-JzM"/>
+                            <constraint firstItem="jQQ-dw-qv6" firstAttribute="top" secondItem="elj-df-GNp" secondAttribute="bottom" id="wn2-BZ-Ukx"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="_email" destination="SCK-W7-6fq" id="s4h-hI-9hs"/>
-                        <outlet property="_password" destination="ee6-lY-ygI" id="jW0-gG-W6V"/>
+                        <outlet property="emailTextField" destination="obh-rp-8dv" id="UQr-bh-dxV"/>
                         <outlet property="loginLabel" destination="R8h-Gh-vcq" id="2U0-Y8-Bq6"/>
+                        <outlet property="passwordTextField" destination="BMC-Ki-Pyq" id="5pe-n0-KGB"/>
                         <segue destination="lJS-I1-G7p" kind="presentation" identifier="loginSuccess" id="lsx-Iw-zd7"/>
                     </connections>
                 </viewController>
@@ -278,150 +289,31 @@
                                         <barButtonItem key="leftBarButtonItem" image="Back" id="Iiu-ei-q31">
                                             <color key="tintColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
+                                                <action selector="backButton_ClickedWithSegue:" destination="pUZ-2m-VLs" id="t1b-Sa-d2D"/>
                                                 <segue destination="TAB-QA-Ubt" kind="unwind" unwindAction="forgotPasswordBackButton_ClickedWithSegue:" id="cYV-bv-bW5"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-lz-wD8">
-                                <rect key="frame" x="46" y="204" width="282" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKD-dl-S29">
-                                <rect key="frame" x="46" y="242" width="282" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AubryLaneLogo" translatesAutoresizingMaskIntoConstraints="NO" id="oey-JJ-k6m">
-                                <rect key="frame" x="94" y="79" width="187" height="105"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="105" id="afh-7N-Rud"/>
-                                    <constraint firstAttribute="width" secondItem="oey-JJ-k6m" secondAttribute="height" multiplier="187:105" id="vSB-8F-bNh"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GcJ-Tv-Dfx">
-                                <rect key="frame" x="46" y="280" width="282" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Xym-ys-F5c"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIn-EO-HAo">
-                                <rect key="frame" x="46" y="318" width="282" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="aJ1-V3-bbY"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THA-FC-1ST">
-                                <rect key="frame" x="46" y="372" width="282" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNZ-fV-YHg">
-                                <rect key="frame" x="46" y="455" width="282" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hkn-ma-6kk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Create Account">
-                                    <color key="titleColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="createAccount_Clicked:" destination="dud-55-2B8" eventType="touchUpInside" id="OHf-mZ-yc3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI2-aE-aNC">
-                                <rect key="frame" x="46" y="410" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="htN-av-aIc"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="unchecked"/>
-                                <connections>
-                                    <action selector="acceptTCBox_Clicked:" destination="dud-55-2B8" eventType="touchUpInside" id="RSX-Ex-Gk9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pO6-XA-QWt">
-                                <rect key="frame" x="77" y="410" width="143" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Accept Terms &amp; Conditions">
-                                    <color key="titleColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="acceptTCText_Clicked:" destination="dud-55-2B8" eventType="touchUpInside" id="bDY-vD-VX6"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At least 8 digits with letters and numbers " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nik-Ou-3jP">
-                                <rect key="frame" x="90" y="352" width="236" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="6W7-dx-WjS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvM-7s-ajI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="THA-FC-1ST" secondAttribute="trailing" constant="31" id="02f-C0-m0V"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZIn-EO-HAo" secondAttribute="trailing" constant="31" id="0Yu-9Y-fBJ"/>
-                            <constraint firstItem="5b3-lz-wD8" firstAttribute="top" secondItem="oey-JJ-k6m" secondAttribute="bottom" constant="20" id="1ur-bb-swB"/>
-                            <constraint firstItem="ZIn-EO-HAo" firstAttribute="centerX" secondItem="dK0-OG-e81" secondAttribute="centerX" id="1zW-aB-04m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZKD-dl-S29" secondAttribute="trailing" constant="31" id="62B-55-98j"/>
-                            <constraint firstItem="5b3-lz-wD8" firstAttribute="centerX" secondItem="dK0-OG-e81" secondAttribute="centerX" id="6mg-BN-Z3h"/>
-                            <constraint firstItem="GcJ-Tv-Dfx" firstAttribute="top" secondItem="ZKD-dl-S29" secondAttribute="bottom" constant="8" symbolic="YES" id="8pK-Pc-II2"/>
-                            <constraint firstItem="THA-FC-1ST" firstAttribute="leading" secondItem="5b3-lz-wD8" secondAttribute="leading" id="AGO-5U-eyk"/>
-                            <constraint firstItem="GI2-aE-aNC" firstAttribute="leading" secondItem="dK0-OG-e81" secondAttribute="leadingMargin" constant="30" id="C08-pE-LlP"/>
-                            <constraint firstItem="pO6-XA-QWt" firstAttribute="top" secondItem="THA-FC-1ST" secondAttribute="bottom" constant="8" id="CKH-II-B8y"/>
-                            <constraint firstItem="5b3-lz-wD8" firstAttribute="leading" secondItem="dK0-OG-e81" secondAttribute="leadingMargin" constant="30" id="E9s-dH-jY8"/>
-                            <constraint firstItem="GcJ-Tv-Dfx" firstAttribute="centerX" secondItem="dK0-OG-e81" secondAttribute="centerX" id="HVL-9q-I7B"/>
-                            <constraint firstItem="oey-JJ-k6m" firstAttribute="top" secondItem="HtP-Nd-o52" secondAttribute="bottom" constant="15" id="ITC-Kp-GTr"/>
-                            <constraint firstItem="THA-FC-1ST" firstAttribute="top" secondItem="Nik-Ou-3jP" secondAttribute="bottom" constant="8" id="Ikh-1S-bVl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Nik-Ou-3jP" secondAttribute="trailing" constant="33" id="La0-rE-6K4"/>
-                            <constraint firstItem="oey-JJ-k6m" firstAttribute="centerX" secondItem="dK0-OG-e81" secondAttribute="centerX" id="MQG-oZ-G7K"/>
-                            <constraint firstItem="ZKD-dl-S29" firstAttribute="leading" secondItem="dK0-OG-e81" secondAttribute="leadingMargin" constant="30" id="O6Y-UG-rcw"/>
-                            <constraint firstItem="GI2-aE-aNC" firstAttribute="leading" secondItem="5b3-lz-wD8" secondAttribute="leading" id="SGX-oO-nfh"/>
-                            <constraint firstItem="ZIn-EO-HAo" firstAttribute="centerX" secondItem="dK0-OG-e81" secondAttribute="centerX" id="W6o-l1-dK3"/>
-                            <constraint firstItem="THA-FC-1ST" firstAttribute="leading" secondItem="dK0-OG-e81" secondAttribute="leadingMargin" constant="30" id="ama-Ul-5wz"/>
+                            <constraint firstItem="4QF-K3-oDG" firstAttribute="top" secondItem="LvM-7s-ajI" secondAttribute="bottom" id="F82-LA-n3M"/>
+                            <constraint firstItem="LvM-7s-ajI" firstAttribute="top" secondItem="HtP-Nd-o52" secondAttribute="bottom" id="JLN-Uu-8Ea"/>
+                            <constraint firstAttribute="trailing" secondItem="LvM-7s-ajI" secondAttribute="trailing" id="Vsr-aV-Ebh"/>
                             <constraint firstItem="HtP-Nd-o52" firstAttribute="top" secondItem="5CJ-dd-zq0" secondAttribute="bottom" id="bIO-6L-F7o"/>
-                            <constraint firstItem="pO6-XA-QWt" firstAttribute="leading" secondItem="GI2-aE-aNC" secondAttribute="trailing" constant="6" id="fsb-Kg-qAE"/>
-                            <constraint firstItem="PNZ-fV-YHg" firstAttribute="centerX" secondItem="dK0-OG-e81" secondAttribute="centerX" id="gkl-ix-GYV"/>
-                            <constraint firstItem="THA-FC-1ST" firstAttribute="centerX" secondItem="dK0-OG-e81" secondAttribute="centerX" id="iT9-Yg-RU5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PNZ-fV-YHg" secondAttribute="trailing" constant="31" id="iUS-vK-swm"/>
-                            <constraint firstItem="Nik-Ou-3jP" firstAttribute="top" secondItem="ZIn-EO-HAo" secondAttribute="bottom" constant="4" id="il0-vh-b5Y"/>
-                            <constraint firstItem="ZIn-EO-HAo" firstAttribute="leading" secondItem="5b3-lz-wD8" secondAttribute="leading" id="jYg-iH-ffH"/>
-                            <constraint firstItem="PNZ-fV-YHg" firstAttribute="leading" secondItem="dK0-OG-e81" secondAttribute="leadingMargin" constant="30" id="lI0-mO-zzf"/>
-                            <constraint firstItem="ZIn-EO-HAo" firstAttribute="top" secondItem="GcJ-Tv-Dfx" secondAttribute="bottom" constant="8" id="lMf-4Z-Ogw"/>
-                            <constraint firstItem="ZKD-dl-S29" firstAttribute="leading" secondItem="5b3-lz-wD8" secondAttribute="leading" id="oQz-Nr-p4J"/>
-                            <constraint firstItem="GcJ-Tv-Dfx" firstAttribute="leading" secondItem="dK0-OG-e81" secondAttribute="leadingMargin" constant="30" id="pIr-f6-JUC"/>
-                            <constraint firstItem="ZKD-dl-S29" firstAttribute="centerX" secondItem="dK0-OG-e81" secondAttribute="centerX" id="pRL-Sl-SlY"/>
-                            <constraint firstItem="ZIn-EO-HAo" firstAttribute="leading" secondItem="dK0-OG-e81" secondAttribute="leadingMargin" constant="30" id="skY-DA-k65"/>
-                            <constraint firstItem="PNZ-fV-YHg" firstAttribute="top" secondItem="pO6-XA-QWt" secondAttribute="bottom" constant="19" id="uCo-Jz-gLO"/>
+                            <constraint firstItem="LvM-7s-ajI" firstAttribute="leading" secondItem="dK0-OG-e81" secondAttribute="leading" id="scK-2g-Jti"/>
                             <constraint firstAttribute="trailing" secondItem="HtP-Nd-o52" secondAttribute="trailing" id="uJB-lm-04H"/>
-                            <constraint firstItem="ZKD-dl-S29" firstAttribute="top" secondItem="5b3-lz-wD8" secondAttribute="bottom" constant="8" id="v44-aT-Zrf"/>
                             <constraint firstItem="HtP-Nd-o52" firstAttribute="leading" secondItem="dK0-OG-e81" secondAttribute="leading" id="var-ho-Gpg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GcJ-Tv-Dfx" secondAttribute="trailing" constant="31" id="xlY-yq-kUH"/>
-                            <constraint firstItem="GI2-aE-aNC" firstAttribute="top" secondItem="THA-FC-1ST" secondAttribute="bottom" constant="8" id="ybu-Uu-gR2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5b3-lz-wD8" secondAttribute="trailing" constant="31" id="zOC-zr-QVz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="_registerEmail" destination="5b3-lz-wD8" id="kWf-9m-LPw"/>
-                        <outlet property="_registerFirstName" destination="ZKD-dl-S29" id="1Wb-4z-MIm"/>
-                        <outlet property="_registerLastName" destination="GcJ-Tv-Dfx" id="H9o-zf-Sgu"/>
-                        <outlet property="_registerPassword" destination="ZIn-EO-HAo" id="Xb5-0T-f82"/>
-                        <outlet property="_registerPasswordConfirm" destination="THA-FC-1ST" id="7qX-hU-HMk"/>
-                        <outlet property="acceptTCBox" destination="GI2-aE-aNC" id="rvt-I3-UNe"/>
-                        <outlet property="createAccount" destination="PNZ-fV-YHg" id="ocp-kc-0Yr"/>
+                        <outlet property="registerWebView" destination="LvM-7s-ajI" id="yla-Xs-LX8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUZ-2m-VLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -675,50 +567,50 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URb-hm-iWd">
-                                            <rect key="frame" x="8" y="3" width="57" height="57"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="URb-hm-iWd" secondAttribute="height" multiplier="1:1" id="PAa-pr-8O6"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvb-s8-ZaV">
-                                            <rect key="frame" x="73" y="8" width="52" height="25.5"/>
+                                            <rect key="frame" x="43" y="8" width="52" height="25.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-bM-5CT">
+                                            <rect key="frame" x="43" y="31.5" width="35" height="17"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc0-iW-NGn">
-                                            <rect key="frame" x="268" y="6" width="44" height="51"/>
+                                            <rect key="frame" x="268" y="8" width="44" height="48.5"/>
                                             <state key="normal" title="Select"/>
                                             <connections>
                                                 <action selector="selectedContactPressed:" destination="kc1-xf-jee" eventType="touchUpInside" id="AUe-I3-yDn"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-bM-5CT">
-                                            <rect key="frame" x="73" y="39" width="35" height="17"/>
-                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URb-hm-iWd">
+                                            <rect key="frame" x="10" y="20" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="URb-hm-iWd" secondAttribute="height" multiplier="1:1" id="PAa-pr-8O6"/>
+                                                <constraint firstAttribute="height" constant="25" id="sth-MK-LGP"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="WSn-bM-5CT" secondAttribute="bottom" constant="0.5" id="0to-zY-Gqd"/>
-                                        <constraint firstAttribute="bottom" secondItem="URb-hm-iWd" secondAttribute="bottom" constant="4.5" id="5TU-El-pEO"/>
-                                        <constraint firstItem="URb-hm-iWd" firstAttribute="top" secondItem="aCi-Cs-nYE" secondAttribute="top" constant="3" id="Bdo-Zk-0qa"/>
-                                        <constraint firstItem="Cvb-s8-ZaV" firstAttribute="top" secondItem="aCi-Cs-nYE" secondAttribute="topMargin" id="IEA-Os-mhf"/>
-                                        <constraint firstItem="URb-hm-iWd" firstAttribute="leading" secondItem="aCi-Cs-nYE" secondAttribute="leading" constant="8" id="OTw-pT-uBu"/>
-                                        <constraint firstAttribute="bottom" secondItem="rc0-iW-NGn" secondAttribute="bottom" constant="7.5" id="OXn-Wo-wiJ"/>
-                                        <constraint firstAttribute="trailing" secondItem="rc0-iW-NGn" secondAttribute="trailing" constant="8" id="bIQ-S9-f1s"/>
-                                        <constraint firstItem="Cvb-s8-ZaV" firstAttribute="leading" secondItem="URb-hm-iWd" secondAttribute="trailing" constant="8" id="bWk-sz-DAX"/>
-                                        <constraint firstItem="WSn-bM-5CT" firstAttribute="leading" secondItem="URb-hm-iWd" secondAttribute="trailing" constant="8" id="dMJ-g6-5RZ"/>
-                                        <constraint firstItem="rc0-iW-NGn" firstAttribute="top" secondItem="aCi-Cs-nYE" secondAttribute="top" constant="6" id="l5x-Jv-WLf"/>
-                                        <constraint firstItem="Cvb-s8-ZaV" firstAttribute="leading" secondItem="URb-hm-iWd" secondAttribute="trailing" constant="8" id="m2d-OL-Kia"/>
+                                        <constraint firstItem="Cvb-s8-ZaV" firstAttribute="top" secondItem="aCi-Cs-nYE" secondAttribute="top" constant="8" id="3AB-rS-JNj"/>
+                                        <constraint firstItem="WSn-bM-5CT" firstAttribute="leading" secondItem="URb-hm-iWd" secondAttribute="trailing" constant="8" id="Ixb-bW-fKg"/>
+                                        <constraint firstItem="URb-hm-iWd" firstAttribute="leading" secondItem="aCi-Cs-nYE" secondAttribute="leadingMargin" constant="2" id="J5Z-eK-xXR"/>
+                                        <constraint firstItem="rc0-iW-NGn" firstAttribute="top" secondItem="aCi-Cs-nYE" secondAttribute="topMargin" id="KhP-Fd-wMK"/>
+                                        <constraint firstItem="rc0-iW-NGn" firstAttribute="trailing" secondItem="aCi-Cs-nYE" secondAttribute="trailingMargin" id="PY9-jf-zZh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WSn-bM-5CT" secondAttribute="bottom" constant="8" id="bOk-Wl-GrS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rc0-iW-NGn" secondAttribute="bottom" id="d03-FH-eC3"/>
+                                        <constraint firstItem="URb-hm-iWd" firstAttribute="centerY" secondItem="aCi-Cs-nYE" secondAttribute="centerY" id="ikT-ee-vpw"/>
+                                        <constraint firstItem="Cvb-s8-ZaV" firstAttribute="leading" secondItem="URb-hm-iWd" secondAttribute="trailing" constant="8" id="wzl-Qo-Yf5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="checkImage" destination="URb-hm-iWd" id="Ih0-5g-4Vp"/>
                                     <outlet property="contactLabel" destination="Cvb-s8-ZaV" id="CQX-U0-eyo"/>
                                     <outlet property="contactNumberLabel" destination="WSn-bM-5CT" id="KIM-xf-KZr"/>
+                                    <outlet property="contactSelectedImage" destination="URb-hm-iWd" id="Zkw-B9-Lkv"/>
+                                    <outlet property="selectButton" destination="rc0-iW-NGn" id="DCJ-nQ-nfE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -745,7 +637,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJ4-lv-fdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3832" y="2249.3253373313346"/>
+            <point key="canvasLocation" x="-720" y="4110"/>
         </scene>
         <!--Geo Fence View Controller-->
         <scene sceneID="JBI-eB-mhU">
@@ -756,14 +648,14 @@
                         <viewControllerLayoutGuide type="bottom" id="7Wh-dt-7LW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fKG-2Z-nRU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GgG-NS-PTz">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="603"/>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eiJ-DB-oWp">
-                                <rect key="frame" x="218" y="631" width="141" height="29"/>
+                                <rect key="frame" x="163" y="631" width="141" height="29"/>
                                 <segments>
                                     <segment title="Standard"/>
                                     <segment title="Satellite"/>
@@ -773,7 +665,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-qO-DXe">
-                                <rect key="frame" x="304" y="568" width="55" height="55"/>
+                                <rect key="frame" x="249" y="568" width="55" height="55"/>
                                 <color key="backgroundColor" red="0.54597981770833337" green="0.16221788194444445" blue="0.35142686631944442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Fo2-Jz-6Dr"/>
@@ -805,7 +697,7 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="Nh1-9E-Ls9"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eeo-3L-Bb7">
-                            <rect key="frame" x="104" y="2.5" width="167" height="39"/>
+                            <rect key="frame" x="76.5" y="2.5" width="167" height="39"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
                             <state key="normal" title="AUBRY LANE">
@@ -814,6 +706,8 @@
                         </button>
                         <barButtonItem key="rightBarButtonItem" image="Purse" id="3mx-pH-2X1"/>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="667"/>
                     <connections>
                         <outlet property="addGeoFenceButton" destination="wzg-qO-DXe" id="0xA-t8-FMl"/>
                         <outlet property="mapTypeSwitcher" destination="eiJ-DB-oWp" id="p7f-RM-7dp"/>
@@ -822,7 +716,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cH8-x4-Nch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455.2" y="1299.400299850075"/>
+            <point key="canvasLocation" x="-720" y="2740"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="T0u-PB-6df">
@@ -926,7 +820,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jy-TI-zbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-719.20000000000005" y="1983.9580209895055"/>
+            <point key="canvasLocation" x="-720" y="1299"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="qlg-Ap-s2g">
@@ -1028,7 +922,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCF-Ss-04I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-719.20000000000005" y="2794.4527736131936"/>
+            <point key="canvasLocation" x="-720" y="2028"/>
         </scene>
         <!--Add Contact View Controller-->
         <scene sceneID="c8s-Gw-k1G">
@@ -1144,7 +1038,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oko-iT-j0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="525.60000000000002" y="2793.5532233883059"/>
+            <point key="canvasLocation" x="134" y="2029"/>
         </scene>
         <!--Add Purse View Controller-->
         <scene sceneID="c8K-um-IAs">
@@ -1279,7 +1173,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqm-hz-SsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4736" y="2252"/>
+            <point key="canvasLocation" x="-1544" y="4110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x6F-gs-xOf">
@@ -1299,7 +1193,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71e-WI-VC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543" y="1984"/>
+            <point key="canvasLocation" x="-1544" y="1299"/>
         </scene>
         <!--Battery View Controller-->
         <scene sceneID="k7I-cI-QXs">
@@ -1322,7 +1216,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPo-Vt-5SW" customClass="KDCircularProgress" customModule="BagTracker" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="195"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfw-bs-ul6">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfw-bs-ul6">
                                                         <rect key="frame" x="15.5" y="47.5" width="165" height="101"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="101" id="Izs-tZ-VtK"/>
@@ -1340,10 +1234,10 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                                        <real key="value" value="90"/>
+                                                        <integer key="value" value="0"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                                        <real key="value" value="-90"/>
+                                                        <integer key="value" value="-90"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="progressThickness">
@@ -1417,7 +1311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCw-zE-6KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-719.20000000000005" y="3570.7646176911549"/>
+            <point key="canvasLocation" x="-720" y="3443"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="jbe-O8-io4">
@@ -1428,7 +1322,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M9F-8L-SaK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Yfv-Hd-Pj4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1436,7 +1330,7 @@
                     <navigationItem key="navigationItem" id="Jxh-td-Zcm">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Obj-zc-Rse">
-                            <rect key="frame" x="104" y="7" width="167" height="30"/>
+                            <rect key="frame" x="76.5" y="7" width="167" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
                             <state key="normal" title="AUBRY LANE">
@@ -1446,11 +1340,11 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
+                    <size key="freeformSize" width="320" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrf-hZ-a9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-719.20000000000005" y="4322.788605697152"/>
+            <point key="canvasLocation" x="-720" y="4833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t23-wY-MQA">
@@ -1470,7 +1364,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ha9-Cz-pmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543" y="4323"/>
+            <point key="canvasLocation" x="-1544" y="4833"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="tUk-Le-Dah">
@@ -1485,7 +1379,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9a-dK-Ioj">
-                                <rect key="frame" x="166" y="323" width="64" height="21"/>
+                                <rect key="frame" x="128" y="323" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1515,7 +1409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7I-4L-iiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-719" y="5097"/>
+            <point key="canvasLocation" x="-720" y="5551"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="adN-kP-S2E">
@@ -1535,7 +1429,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5MB-pq-g81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543" y="5098"/>
+            <point key="canvasLocation" x="-1544" y="5552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HaR-W6-VPd">
@@ -1555,7 +1449,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6I-hL-OSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543" y="2796"/>
+            <point key="canvasLocation" x="-1544" y="2029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9m1-Pl-ZXp">
@@ -1575,629 +1469,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQl-jp-MR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543" y="3571"/>
-        </scene>
-        <!--New User View Controller-->
-        <scene sceneID="HDc-6v-xN5">
-            <objects>
-                <viewController id="bN3-RY-f6K" customClass="NewUserViewController" customModule="BagTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tr8-Sf-AYg"/>
-                        <viewControllerLayoutGuide type="bottom" id="9ZG-vx-acG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FY7-ZY-cTN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfy-RF-TBM" customClass="LoginBGCustomView" customModule="BagTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="backGroundImage" value="aubrylane_splash"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="aubryLaneIconImage" value="aubraylane_logo"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INK-m6-NLL" customClass="ALCustomButton" customModule="BagTracker" customModuleProvider="target">
-                                <rect key="frame" x="38" y="588" width="300" height="42"/>
-                                <color key="backgroundColor" red="0.82352941180000006" green="0.59607843140000005" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="94G-3i-gKs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
-                                <state key="normal" title="CREATE ACCOUNT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="registerButtonPressed:" destination="bN3-RY-f6K" eventType="touchUpInside" id="QW4-0d-510"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at least 8 digits with letters and numbers" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiu-5h-Zjs">
-                                <rect key="frame" x="117" y="402.5" width="202" height="13"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8p-lM-3Wu" userLabel="UserNameCustomView" customClass="LoginCustomTextFields" customModule="BagTracker" customModuleProvider="target">
-                                <rect key="frame" x="56" y="224" width="263" height="54"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="textFieldIconImage" value="BlankUserW"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldPlaceHolder" value="Username"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vhf-E8-7hF" userLabel="emailCustomView" customClass="LoginCustomTextFields" customModule="BagTracker" customModuleProvider="target">
-                                <rect key="frame" x="56" y="284" width="263" height="54"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="textFieldIconImage" value="mail"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldKeyboardType">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldPlaceHolder" value="email"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YE-eM-7dD" userLabel="passwordCustomView" customClass="LoginCustomTextFields" customModule="BagTracker" customModuleProvider="target">
-                                <rect key="frame" x="56" y="344" width="263" height="54"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="textFieldIconImage" value="password"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldKeyboardType">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldPlaceHolder" value="Password"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7b-Iu-ucu" userLabel="rePasswordCustomView" customClass="LoginCustomTextFields" customModule="BagTracker" customModuleProvider="target">
-                                <rect key="frame" x="56" y="424" width="263" height="54"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="textFieldIconImage" value="password"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="textFieldKeyboardType">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldPlaceHolder" value="Re-enter Password"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzL-52-VU0">
-                                <rect key="frame" x="66" y="488" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="24Z-FV-W5I"/>
-                                    <constraint firstAttribute="width" secondItem="xzL-52-VU0" secondAttribute="height" multiplier="1:1" id="3Lk-sN-uRn"/>
-                                </constraints>
-                                <state key="normal" image="uncheckedW"/>
-                                <state key="selected" image="select-check"/>
-                                <connections>
-                                    <action selector="termsConditionCheckBoxButtonPressed:" destination="bN3-RY-f6K" eventType="touchUpInside" id="1Tz-cr-6ea"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkB-WM-CNC">
-                                <rect key="frame" x="90" y="493" width="229" height="10"/>
-                                <attributedString key="attributedText">
-                                    <fragment content=" I Accept the">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="11" name="SignPainter-HouseScript"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.72941176470588232" green="0.0" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="11" name="SignPainter-HouseScript"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Terms and Conditions">
-                                        <attributes>
-                                            <color key="NSColor" red="0.82352941176470584" green="0.59607843137254901" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="11" name="SignPainter-HouseScript"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="RoT-et-yyF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Znb-j3-9UF"/>
-                                </constraints>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="0.0"/>
-                                    <color key="textColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="CREATE A NEW ACCOUNT" id="Igh-VE-eSk">
-                                        <barButtonItem key="leftBarButtonItem" image="Back" id="3S6-j1-Kr5">
-                                            <color key="tintColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <segue destination="rsJ-n0-vvK" kind="unwind" unwindAction="forgotPasswordBackButton_ClickedWithSegue:" id="ANs-mL-HYg"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="O8p-lM-3Wu" firstAttribute="centerY" secondItem="FY7-ZY-cTN" secondAttribute="centerY" multiplier="0.75" id="0tb-J8-bc7"/>
-                            <constraint firstItem="kiu-5h-Zjs" firstAttribute="trailing" secondItem="0YE-eM-7dD" secondAttribute="trailing" id="4Fa-ux-sLL"/>
-                            <constraint firstItem="Vhf-E8-7hF" firstAttribute="height" secondItem="O8p-lM-3Wu" secondAttribute="height" id="8Cg-XJ-1yS"/>
-                            <constraint firstAttribute="trailing" secondItem="qfy-RF-TBM" secondAttribute="trailing" id="9yQ-DE-REY"/>
-                            <constraint firstItem="u7b-Iu-ucu" firstAttribute="centerY" secondItem="FY7-ZY-cTN" secondAttribute="centerY" multiplier="1.35" id="BX2-WW-LUi"/>
-                            <constraint firstItem="u7b-Iu-ucu" firstAttribute="leading" secondItem="0YE-eM-7dD" secondAttribute="leading" id="Buo-nT-fa3"/>
-                            <constraint firstItem="9ZG-vx-acG" firstAttribute="top" secondItem="qfy-RF-TBM" secondAttribute="bottom" id="Bzq-8P-Gwu"/>
-                            <constraint firstItem="0YE-eM-7dD" firstAttribute="centerY" secondItem="FY7-ZY-cTN" secondAttribute="centerY" multiplier="1.11" id="DHa-PW-FKY"/>
-                            <constraint firstItem="0YE-eM-7dD" firstAttribute="height" secondItem="Vhf-E8-7hF" secondAttribute="height" id="G9N-R2-ups"/>
-                            <constraint firstItem="RoT-et-yyF" firstAttribute="top" secondItem="Tr8-Sf-AYg" secondAttribute="bottom" id="Gn8-sJ-k8y"/>
-                            <constraint firstItem="0YE-eM-7dD" firstAttribute="leading" secondItem="Vhf-E8-7hF" secondAttribute="leading" id="HMZ-9F-xMS"/>
-                            <constraint firstItem="kiu-5h-Zjs" firstAttribute="top" secondItem="0YE-eM-7dD" secondAttribute="bottom" constant="4.5" id="JCQ-N9-quJ"/>
-                            <constraint firstItem="O8p-lM-3Wu" firstAttribute="height" secondItem="FY7-ZY-cTN" secondAttribute="height" multiplier="0.08" id="JSZ-Rf-r2l"/>
-                            <constraint firstItem="9ZG-vx-acG" firstAttribute="top" secondItem="INK-m6-NLL" secondAttribute="bottom" constant="37" id="LBN-K3-rNG"/>
-                            <constraint firstItem="xzL-52-VU0" firstAttribute="leading" secondItem="u7b-Iu-ucu" secondAttribute="leading" constant="10" id="Li5-Ja-TsB"/>
-                            <constraint firstItem="AkB-WM-CNC" firstAttribute="leading" secondItem="xzL-52-VU0" secondAttribute="trailing" constant="4" id="MSd-rF-WRA"/>
-                            <constraint firstItem="Vhf-E8-7hF" firstAttribute="centerY" secondItem="FY7-ZY-cTN" secondAttribute="centerY" multiplier="0.93" id="Qfk-N0-7oG"/>
-                            <constraint firstItem="AkB-WM-CNC" firstAttribute="trailing" secondItem="u7b-Iu-ucu" secondAttribute="trailing" id="Qsm-lE-wM6"/>
-                            <constraint firstItem="Vhf-E8-7hF" firstAttribute="trailing" secondItem="O8p-lM-3Wu" secondAttribute="trailing" id="VKa-Fm-3fi"/>
-                            <constraint firstItem="INK-m6-NLL" firstAttribute="width" secondItem="FY7-ZY-cTN" secondAttribute="width" multiplier="0.8" id="XgF-Gv-0B9"/>
-                            <constraint firstItem="O8p-lM-3Wu" firstAttribute="centerX" secondItem="FY7-ZY-cTN" secondAttribute="centerX" id="Zro-h0-Pbe"/>
-                            <constraint firstItem="qfy-RF-TBM" firstAttribute="leading" secondItem="FY7-ZY-cTN" secondAttribute="leading" id="cyp-po-5mx"/>
-                            <constraint firstItem="RoT-et-yyF" firstAttribute="leading" secondItem="FY7-ZY-cTN" secondAttribute="leading" id="dwK-E2-Sm8"/>
-                            <constraint firstItem="O8p-lM-3Wu" firstAttribute="width" secondItem="FY7-ZY-cTN" secondAttribute="width" multiplier="0.7" id="fFn-jH-vrC"/>
-                            <constraint firstAttribute="trailing" secondItem="RoT-et-yyF" secondAttribute="trailing" id="fxy-nm-34A"/>
-                            <constraint firstItem="Vhf-E8-7hF" firstAttribute="leading" secondItem="O8p-lM-3Wu" secondAttribute="leading" id="heU-Fo-P5m"/>
-                            <constraint firstItem="qfy-RF-TBM" firstAttribute="top" secondItem="Tr8-Sf-AYg" secondAttribute="bottom" constant="-20" id="iaV-0T-U9N"/>
-                            <constraint firstItem="0YE-eM-7dD" firstAttribute="trailing" secondItem="Vhf-E8-7hF" secondAttribute="trailing" id="jsb-gC-8xD"/>
-                            <constraint firstItem="AkB-WM-CNC" firstAttribute="centerY" secondItem="xzL-52-VU0" secondAttribute="centerY" id="kz8-ZQ-Egb"/>
-                            <constraint firstItem="u7b-Iu-ucu" firstAttribute="trailing" secondItem="0YE-eM-7dD" secondAttribute="trailing" id="leB-Ns-zlf"/>
-                            <constraint firstItem="INK-m6-NLL" firstAttribute="centerX" secondItem="FY7-ZY-cTN" secondAttribute="centerX" id="oxv-Y5-kY6"/>
-                            <constraint firstItem="u7b-Iu-ucu" firstAttribute="height" secondItem="0YE-eM-7dD" secondAttribute="height" id="r9z-sa-Pgc"/>
-                            <constraint firstItem="xzL-52-VU0" firstAttribute="top" secondItem="u7b-Iu-ucu" secondAttribute="bottom" constant="10" id="wxg-KI-WzH"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="emailCustomView" destination="Vhf-E8-7hF" id="NQJ-vm-dDw"/>
-                        <outlet property="passwordCustomView" destination="0YE-eM-7dD" id="Dp2-0v-bX8"/>
-                        <outlet property="rePasswordCustomView" destination="u7b-Iu-ucu" id="mXh-tm-Pcl"/>
-                        <outlet property="termsConditionCheckBox" destination="xzL-52-VU0" id="wYd-U1-wzc"/>
-                        <outlet property="termsConditionLabel" destination="AkB-WM-CNC" id="gKA-4k-fpL"/>
-                        <outlet property="userNameCustomView" destination="O8p-lM-3Wu" id="KuT-Uw-5mb"/>
-                        <segue destination="7j0-ZE-UC2" kind="presentation" identifier="showTermsScreen" modalTransitionStyle="flipHorizontal" id="AbA-hp-C8P"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hyX-hp-sZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="rsJ-n0-vvK" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1604" y="-869.41529235382313"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="oWr-l6-vpE">
-            <objects>
-                <viewController id="7j0-ZE-UC2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QFw-q3-aPW"/>
-                        <viewControllerLayoutGuide type="bottom" id="m7u-lP-B6p"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nbM-zA-NM9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J8C-Ae-Y8T">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">AUBRY LANE SERVICE AGREEMENT
-
-GENERAL TERMS &amp; CONDITIONS
-
-
-By using any product sold by Aubry Lane, LLC, or its Affiliates as named in this Agreement (“Aubry Lane Product”), or any Service (as defined in Section 2 below) sold or provided in association therewith, you agree to be bound by the complete terms and conditions of this Agreement, including without limitation, limitations of use, disclaimer of warranty, limitation of liability, binding arbitration provisions and class action waivers. If you do not agree to these terms and conditions, do not use any Aubry Lane Product or service and cancel this Agreement in accordance with Section 1.1.3.
-
-
-This Agreement and its included terms and conditions are intended for users and purchasers of Aubry Lane, LLC products and services located in the United States of America, including its territories and possessions (collectively, the “United States“). If you have purchased, accessed or used an Aubry Lane, LLC product or service outside the United States, additional regulations and laws may apply to you. Aubry Lane, LLC makes no representations that its products or services are permitted in any nation other than the United States. It is your responsibility to ensure your use of any Aubry Lane, LLC product or service is in compliance with all laws and regulations of any nation other than the United States in which you use such product or service.
-
-
-INTRODUCTION.
-
-
-You understand and agree that:
-
-1.1            Aubry Lane Service Agreement.
-
-
-1.1.1         Agreement Terms. The Aubry Lane Service Agreement (“Agreement”) between you and Aubry Lane, LLC or the appropriate affiliated company for your region as specified elsewhere in this Agreement (for convenience referred to as “Aubry Lane”) consists of (i) the specific terms of the service plan(s) to which you have subscribed to at any given time (including the plan’s pricing and usage and the terms and conditions applicable to the particular services included in the service plan, all as described in the applicable plan) (collectively, “Service Plans”), (ii) these General Terms and Conditions (“General Terms”), and (iii) any other writings or documents that the applicable Service Plans or these General Terms state is part of the Agreement, all of which are incorporated herein by this reference.
-
-
-1.1.2         Acceptance of Agreement. Acceptance by you of the Agreement occurs upon the earlier of: (i) your acceptance of the Agreement electronically when selecting and ordering a Service Plan online, or (ii) your activation or use of the Services. The term of the Agreement begins when you accept the Agreement and ends when the Services are terminated in accordance with this to the Agreement.
-
-
-1.1.3         Initial Cancellation Period. You may terminate this Agreement within thirty (30) days after activating service without paying a termination fee. Upon the occurrence of any such termination, you shall be responsible for fees and charges incurred through the termination date as well as an administrative fee in the amount of 20% of the first month’s contracted service fees. You may be required to return any purchased Aubry Lane Products and accessories and you may be charged a restocking fee. First-year service fees are not refundable.
-
-
-1.1.4         Changes to Agreement.
-
-
-The current version of these General Terms and other applicable policies shall be available on the Aubry Lane website. The “Aubry Lane website” means the website located at Aubrylane.com which is comprised of various web pages, tools, information, content, and features operated by Aubry Lane. Aubry Lane may change the General Terms or other parts of the Agreement from time to time, provided that Aubry Lane will not increase the pricing for the Services set forth in a Service Plan during the Initial Plan Term (as defined in Section 3.1) unless you consent. When Aubry Lane makes changes (other than rate increases for the Services), Aubry Lane will give notice to you by posting the revised General Terms or other parts of the Agreement, including any applicable policies, on the Aubry Lane website. Aubry Lane may also notify you directly of a change, but Aubry Lane is not obligated to do so unless the change is a rate increase for the Services set forth in your Service Plan to take effect after the Initial Plan Term. You agree to visit the Aubry Lane website periodically and accept ongoing responsibility for being fully informed of the changing content of the Aubry Lane website, including, without limitation, changes in these General Terms and other parts of the Agreement. The earliest any rate increases for the Services shall be effective is immediately following the Initial Plan Term, provided Aubry Lane has given at least thirty (30) days’ notice of the rate increases; thereafter, Aubry Lane may make further rate increases which will be effective thirty (30) days after Aubry Lane notifies you of same. Changes to any other terms and conditions, whether made during or following the Initial Plan Term, shall be effective on the date of posting on the Aubry Lane website. If Aubry Lane changes these General Terms or any other part of the Agreement in a way that is not acceptable to you, your sole recourse is to terminate the Agreement by giving written notice of termination to Aubry Lane within thirty (30) days after notification of the change, in the case of a rate increase for the Services set forth in your Service Plan after the Initial Plan Term, or within thirty (30) days of the date the unacceptable change was posted to the Aubry Lane website, in the case of all other changes. Unless you give written notice within such thirty (30) day period, you accept the changes and agree to abide by them by continuing to use the Services.
-
-
-You agree that you cannot change this Agreement and that no statement or representation (oral or written) of any sales agent, brand ambassador, consultant, distributor, representative, contractor, or employee of Aubry Lane made to you can change this Agreement.
-
-
-1.2            Coverage. You may use your Aubry Lane Product anywhere there is coverage (subject to service coverage limitations as described herein and any applicable restrictions due to local laws, licensing requirements and regulations). For example, in certain nations, the GPS accuracy of your Aubry Lane Product may be limited or degraded (or not allowed) in accordance with local regulations restricting the accuracy of GPS performance for devices. Coverage areas may change from time to time and be different depending upon the specific Aubry Lane product you are using. Please check the Aubry Lane website for the current coverage areas for your specific Aubry Lane product.
-
-
-1.3            Limitations. Services may utilize coordinates from the U.S. Government’s GPS Satellite Constellation and its onboard GPS chip to determine your position in conjunction with certain other private satellite and GPS providers (together with the U.S. Government’s GPS Satellite Constellation, the “Satellite Systems”), which are owned and operated by entities unrelated to Aubry Lane, and interconnecting wireline or wireless networks to transmit your messages. The Satellite Systems’ availability is limited by the technology, environmental conditions and other factors that affect radio transmissions including limitations on the geographic satellite service coverage. Services may become limited or temporarily unavailable without notice from time to time. Aubry Lane does not own or control the service providers that operate the links between the satellite ground stations, including satellite antennas and supporting equipment, and the Satellite Systems satellites, nor does Aubry Lane own or control the GPS Satellite Constellation, and cannot be responsible for any Service interruptions or interference that are associated with those Satellite Systems or ground stations and the interconnecting networks. Further, Aubry Lane does not own or control the telecommunications providers who receive the e-mail and short message service (“SMS”) messages that may be generated from and/or displayed by Aubry Lane Products, and is not responsible for any delays or lack of response by other telecommunications providers related to these messages. Satellite service is inherently subject to transmission and reception limitations caused by: (i) your location, including conditions that obstruct the line of sight between you and the Satellite Systems; (ii) the condition of the Satellite Systems, ground stations and other service provider equipment; (iii) the condition of your Aubry Lane Product; (iv) weather conditions, atmospheric conditions, magnetic interference, and environmental conditions, and (v) other conditions beyond Aubry Lane’s or the Satellite Systems’ control.
-
-
-SERVICE.
-
-You must at a minimum subscribe to an Aubry Lane “1st year Service” plan (as identified on the Aubry Lane website) to utilize your Aubry Lane Product. You may also select additional bundled and/or optional services available in your region to be part of your Service Plan (as purchased and agreed to by you and identified on the Aubry Lane website). The services included in the Aubry Lane 1st year Service for your Aubry Lane Product and the additional bundled and/or optional services available to you, including the terms and conditions applicable to each, will be described in detail in your Service Plan. Collectively, the Aubry Lane 1st year Service and all of the additional and/or optional services included in your Service Plan are referred to throughout this Agreement as “Services”. Any Services referenced but not defined in these General Terms shall have the meaning set forth in the Service Plan.
-
-2.1            Emergency Use. You may use your Aubry Lane Product for emergency purposes by programming your device to contact 911 or the emergency response service of your choice. Should you so program your Aubry Lane Product to communicate with 911 emergency services or any other individual or emergency response service, such communications and functionality is subject to the terms of this Agreement, including, without limitation, the limitations of liability set forth in Section 6. Aubry Lane cannot guarantee or ensure that you will be able to connect to 911 or any individual or other emergency service provider or that 911 or any individual or other emergency service provider will be available at all times in all locations where your Aubry Lane Product is located. It is also possible that at some times and some locations 911 or any individual or other emergency service provider will not receive your transmission or that your transmission will be delayed. 911 or any individual or other emergency service provider shall determine when, how, even if, to assist you or conduct a search and rescue in accordance with their standard policies and procedures, subject to such constraints as operational limitations, available resources, technical feasibility, meteorological conditions, medical, safety concerns whether for you or the emergency responder(s), and/or other considerations. In no event does the Agreement create a duty to rescue. Aubry Lane does not encourage or condone any individual to provide emergency assistance or rescue activities. In the event of an emergency, please contact the appropriate local emergence response agency.
-
-2.1.1              Theft Tracking. Aubry Lane Products may be remotely activated to track the geolocation of your Aubry Lane Product, depending on the Services you contract with Aubry Lane to receive. Such a remote activation of your Aubry Lane Product may be used in case of theft or loss in such a way that the Aubry Lane Product transmits signals, along with applicable data information, including available location coordinates identified by your Aubry Lane Product such that appropriate authorities may be contacted and provided the approximate location of your Aubry Lane Product, subject to technological limitations, as described previously. Aubry Lane is not liable for the performance or lack of performance of the monitoring systems, Satellite Services, telecommunications services, or similar services not primarily operated or under the control of Aubry Lane.
-
-2.1.2         No Liability for Acts of Emergency Service Providers . Aubry Lane has not agreed to take any action with respect to emergency notification or rescue other than that identified herein, and Aubry Lane is released from all responsibility to take any further action whatsoever. In addition, Aubry Lane is not liable for the performance or lack of performance of any emergency service.
-
-2.1.3         Additional Charges Emergency Transmissions. You are solely responsible for any charges that may be assessed by emergency responders for either actual or false emergency transmissions, rescue requests, signals, and/or in relation to search and rescue activities resulting from you or your authorized users’ use of any Aubry Lane Product. Should you deliberately or negligently misuse any emergency service, Aubry Lane reserves the right to assess a fee in order to recoup any incurred costs in relation to any response to such misuse. Negligent and deliberate misuse includes, but is not limited to, calling an emergency response service, as applicable, to “see if it works” or otherwise knowingly calling any emergency or rescue entity when no emergency situation exists. Should it be determined by Aubry Lane that you have deliberately or negligently misused the Aubry Lane Product, Aubry Lane shall, without further notice, bill your credit card the appropriate fee and you shall be responsible to pay any such fee, including but not limited to an acceleration of all fees under your then current Service Plan. Aubry Lane and all emergency services provider shall have such other rights and remedies against you for such misuse as may be available at law, and you agree to indemnify, defend and hold harmless Aubry Lane and any and all emergency services providers and their affiliates, licensors, licensees, and suppliers and their respective directors, officers, shareholders, members, employees, representatives, and agents from any liabilities or penalties arising from such misuse.
-
-
-2.2            Responsibility for Data and Content. You are solely responsible for any data or content that you send via your Aubry Lane Product, including any consequences of such messaging. You shall not send any content in violation of applicable law or the restrictions in Section 8.
-
-
-2.3            Active Tracking. “Active Tracking” is an Aubry Lane Service that may be available as part of, and as further described in, your Service Plan. For your safety and the safety of others, when using Active Tracking, you agree not to use the asset’s coordinates that are sent to you to track down the asset and attempt to regain possession of it. The asset being traced may be in a dangerous location or condition and any effort by you to track down the asset may result in damage to the asset and/or injury or death to you and others involved in tracking down the asset.
-
-
-2.3.1         False Active Tracking. Please note that Aubry Lane reserves the right to suspend all of the Services associated with your Aubry Lane Product, if your Aubry Lane Product sends false Active Tracking notifications and you fail to take immediate action to prevent further false Active Tracking notifications. If Aubry Lane does suspend all of the Services associated with your Aubry Lane Product pursuant to this Section 2.3.1, you will be required to reset your Aubry Lane Product and call Aubry Lane Customer Service before all of the Services associated with your Aubry Lane Product resume operation. Please note that you will continue to be billed and remain liable for all Services associated with your Aubry Lane Product while such Services are suspended pursuant to this Section 2.3.1.
-
-
-2.4            Aubry Lane Equipment Replacement Program. Please see the Aubry Lane Equipment Replacement Program, including any applicable warranty or service contract, for the applicable terms and condition. Pricing and terms may vary by region.
-
-
-2.5            Additional Fees. Additional fees may apply for optional services that require Aubry Lane to transmit messages from your Aubry Lane Product to an external service provider. Such fees may be charged separate from the associated service or may be bundled within the total cost of the associated service and are subject to change from time to time. Such fees are non-refundable, and shall not be pro-rated should you subscribe to or terminate your optional service mid-term. Additionally, such fees may continue to be charged with each renewal unless canceled by you in accordance with Section 3.4. If you did not purchase the associated external service from Aubry Lane, then it is your responsibility to ensure that your external service is current and active.
-
-
-2.6            No Tampering. Tampering or physical or technological manipulation of the Aubry Lane Products, including related SIM cards and cellular data (“Tampering”), by you, in any way, is strictly prohibited. Any charges, debts, or costs incurred by Aubry Lane as a result of Tampering with your Aubry Lane Product shall be your sole responsibility and you hereby agree to indemnify Aubry Lane for same. Any Tampering with your Aubry Lane Product shall constitute a breach of this Agreement entitling Aubry Lane to terminate your Services and this Agreement, charge you for all resulting charges, debts, or costs resulting from your Tampering, as well as accelerate for immediate payment all remaining fees and costs due under your Service Plan or those fees that would have been due under your current plan if it extended an additional twelve (12) months, whichever is greater.
-
-
-PLAN.
-
-
-Your Service Plan consists of the Services selected by you either when you activate your Aubry Lane Product or any that you may add during your Term. All Service Plans are pre-paid plans with charges for the Services to be paid in advance.
-
-
-3.1            Term. You agree to remain as a subscriber for the minimum period stated in your Service Plan, or if no Term is specifically stated in your Service Plan, you agree to remain as a subscriber for a term of twelve (12) months starting on the date of service activation (the “Initial Plan Term”). Available Service Plans may include: (i) an annual plan with prepayment monthly prior to each month of Services (“Monthly Prepaid Plan”), or (ii) an annual plan with prepayment for the entire year prior to each year of Services (“Annual Prepaid Plan”), all as further described in the applicable Service Plan.
-
-
-3.2            Renewal.
-
-
-3.2.1         Renewal of Monthly Prepaid Plans. At the end of the Initial Plan Term, the Monthly Prepaid Plan will automatically convert to a month-to-month Service Plan at rates and charges that may be higher than the rates and charges during your Initial Plan Term, provided you have not exercised your right to terminate the Service Plan at the end of the Initial Plan Term under Section 3.4. Charges under the month-to-month Service Plan will be billed and paid monthly in advance. Month-to-month Service Plans will be charged at a rate of $18.00 per month, or as otherwise identified on the Aubry Lane website as of the date of renewal.
-
-
-3.2.2         Renewal of Annual Prepaid Plans. At the end of the Initial Plan Term, the Annual Prepaid Plan will automatically renew for additional one (1) year terms (each a “Renewal Term”) at rates and charges that may be higher than the rates and charges during your Initial Plan Term or the prior Renewal Term, provided you have not exercised your right to terminate the Service Plan at the end of the Initial Plan Term or any Renewal Term under Section 3.4. Charges for any Renewal Term will be billed and paid yearly in advance. Charges for service during yearly Renewal Terms will be $249 or as otherwise identified on the Aubry Lane website as of the date of renewal.
-
-
-3.3            Fees Non-Refundable. Pre-paid Service Plan fees are non-refundable unless (i) Aubry Lane cancels the service, provided none of the causes for termination under Section 3.6.2 exist, or (ii) you cancel your Service Plan under Section 3.4, provided none of the causes for termination under Section 3.6.2 exist, in which event you will receive a pro rata refund for the unused portion of the Service Plan. Pre-paid Service Plans may not be transferred to a third party account; however, upon your request, they may be transferred to another Aubry Lane Product within your own account.
-
-
-3.4            Cancellation by You. To cancel your Service Plan, whether a Monthly Prepaid Plan or an Annual Prepaid Plan, at the end of the Initial Plan Term, you must notify Aubry Lane in writing at least thirty (30) days prior to the end of your Initial Plan Term. Once a Monthly Prepaid Plan converts to a month-to-month Service Plan, you may terminate the Service Plan effective at the end of a service month provided you give notice to Aubry Lane in writing at least thirty (30) days prior to the end of such service month. During any Renewal Term, you may terminate an Annual Prepaid Plan effective at the end of such Renewal Term provided you give notice to Aubry Lane in writing at least thirty (30) days prior to the end of such Renewal Term. In addition to your termination rights provided above, if at any time Aubry Lane gives notice to you in the manner provided in Section 1.1.4(a) of a change to the Agreement which you do not accept, you may terminate a Monthly Prepaid Plan or an Annual Prepaid Plan effective at the end of a service month by providing notice of termination to Aubry Lane in writing within thirty (30) days of Aubry Lane notifying you directly of the change or Aubry Lane posting the change on the Aubry Lane website, as applicable under Section 1.1.4(a), provided it is understood and agreed that the earliest possible effective termination date as a result of a rate increase to take effect immediately following the Initial Plan Term is the end of the Initial Plan Term. For purposes of this Section 3.4, to notify Aubry Lane in writing, you must email your notice of cancellation to returns@aubrylane.com and provide your name, your address and the ESN from the Aubry Lane Product for which you want to cancel Services. Please contact Aubry Lane customer service for the location of the ESN for your Aubry Lane Product. Subscribers on monthly payment plans will be billed immediately for all remaining amounts due should they cancel their Service Plan prior to the expiration of its Initial Plan Term.
-
-
-3.5            Changes to Services by Aubry Lane or its Service Providers. You agree that Aubry Lane or its service providers (including, without limitation, [EXAMPLE: Google Maps, AT&amp;T, Open Maps, Nation Safe Drivers Globalstar, GEOS, etc]) (collectively, the “Service Providers”) may make changes to the Services in order to comply with applicable laws, to maintain or improve the Services or for other business reasons, in their complete discretion, without notice to you and without liability for any changes in your ability to use the Services or the Aubry Lane Products, including compatibility issues with the Aubry Lane Products, as a result of such changes.
-
-
-3.6            Suspension or Termination by Aubry Lane.
-
-
-3.6.1         Aubry Lane may suspend this Agreement and the provision of Services to you without notice and without terminating this Agreement if Aubry Lane determines that your usage endangers people or property, your usage is in violation of applicable law or this Agreement or if your payment is returned or rejected.
-
-
-3.6.2         If you fail to pay any sum due for any Services or equipment purchased or rented from Aubry Lane, or violate the terms, conditions, laws, rules or regulations governing the use of the Services, Aubry Lane may reduce, suspend, or permanently terminate your Services and Service Plan, which reduction, suspension or termination may be without prior notice. Aubry Lane may also terminate your Services and Service Plan at any time without notice if:
-
-
-Aubry Lane has not received your first payment by the due date on your first bill;
-
-Aubry Lane ceases to provide service in your area;
-
-Aubry Lane has reason to believe you have used an Aubry Lane Product or Service in a way that Aubry Lane believes violates this Agreement or any terms and conditions of your Service Plan;
-
-you behave in an abusive, derogatory, or similarly unreasonable manner with any of our representatives;
-
-Aubry Lane discovers or has reason to believe that you are underage;
-
-you provided inaccurate credit information or Aubry Lane has reason to believe your credit has deteriorated and you refuse to pay any requested advance payment or deposit;
-
-Aubry Lane determines that you are using Services in a manner which might adversely affect Aubry Lane’s service to others;
-
-you or another Service Provider notifies Aubry Lane that your Aubry Lane Product has been lost or stolen or has disappeared from your possession or control;
-
-a law enforcement agency notifies Aubry Lane that probable cause exists to believe that you have used or will use Services in violation of or to violate the law, and requests action to protect the public’s health, safety or welfare;
-
-your Aubry Lane Product’s ESN and/or mobile text number has been duplicated or is otherwise associated or potentially associated with illegal or fraudulent use of service;
-
-another Service Provider notifies Aubry Lane that your Aubry Lane Product was determined to be associated or potentially associated with illegal or fraudulent use of service or disconnected from service for non-payment of, or owing unpaid, service charges; or
-
-Aubry Lane determines that your application for Services included information that was fraudulent, false or materially incomplete.
-
-3.6.3         If Aubry Lane suspends this Agreement and the provision of Services for non-payment, Aubry Lane may, at its sole option, reactivate Services under a Service Plan upon payment by you in full of the past due amount, including any interest associated with the late payment, and Aubry Lane’s then-current reactivation fee as published on the Aubry Lane website.
-
-
-3.6.4         You agree that Aubry Lane may terminate this Agreement and the provision of Services to you at any time without notice or liability to you and for any reason.
-
-
-3.7            Your Responsibility Post-Cancellation or Termination by Aubry Lane. Most Aubry Lane Products, including but not limited to the Aubry Lane AmuletTM, can only transmit data; they cannot receive data. This means that Aubry Lane cannot send a command to your Aubry Lane Product to prevent it from sending data over a cellular or satellite network. THEREFORE, IF YOUR SERVICE IS CANCELED PURSUANT TO SECTION 3.4 OR TERMINATED PURSUANT TO SECTION 3.6, THEN YOU AGREE TO IMMEDIATELY TURN OFF THE POWER ON YOUR AUBRY LANE PRODUCT. THIS ACTION IS NECESSARY TO ENSURE THAT YOUR AUBRY LANE PRODUCT NO LONGER SENDS INFORMATION OVER ANY CELLULAR OR SATELLITE NETWORK. IF YOU FAIL TO DO SO, ADDITIONAL CHARGES WILL APPLY AND AUBRY LANE SHALL HAVE SUCH OTHER RIGHTS AND REMEDIES AGAINST YOU AS MAY BE AVAILABLE FOR SUCH FAILURE. UNDER NO CIRCUMSTANCES MAY YOU USE ANY AUBRY LANE SERVICE WITH A CELLULAR PLAN THAT IS NOT PROVIDED BY AUBRY LANE.
-
-
-3.8            Additional Charges. As may be applicable with respect to certain Aubry Lane Products, your cell phone service provider and/or internet provider may charge you or your recipient’s additional fees in relation to any messages, e-mails and/or data sent by you, including but not limited to international roaming fees (collectively “Data Plan Fees”). Please familiarize yourself with any such applicable plans, services and associated fees before using your Aubry Lane Product. Please familiarize yourself with any such applicable international roaming services and associated fees before using your Aubry Lane Product outside the United States. You are responsible for any Data Plan Fees assessed by your cell phone service provider and/or internet provider.
-
-
-PAYMENT.
-
-
-4.1            Timely Payments. You agree to pay, on time, any applicable rates and charges, including, without limitation, activation, usage, cancellation, and disconnection fees, plus any applicable taxes, as provided in your Service Plan. Payments shall be made in US dollars. If your plan is a Monthly Prepaid Plan, Aubry Lane will send a monthly bill for Services prior to each month of Services, and if your plan is an Annual Prepaid Plan, Aubry Lane will send an annual bill for Services prior to the year of Services.
-
-
-4.2            Late Payments. You agree to pay Aubry Lane a late charge at Aubry Lane’s then-current late payment rate as published on the Aubry Lane website if your bill is not paid within ten (10) days after the due date. Currently, the late payment rate is the lesser of (i) [5% ]per month or (ii) the maximum legal rate. Payments not received within ten (10) days after the due date will accrue interest from and after the due date through the date of payment and will be billed on subsequent invoices and statements. Aubry Lane may refer delinquent accounts to attorneys and/or collection agencies. To the full extent allowed by law, you agree to pay or reimburse Aubry Lane all of Aubry Lane’s collection costs, including without limitation the standard fees of any collection agency, reasonable attorney and legal fees, and any other costs incurred by Aubry Lane in exercising any of its rights under this Agreement.
-
-
-4.3            Promotions. If you use a promotion code for your purchase, you certify that you qualify for the applicable promotion. You agree to the terms of the promotion, including any time limitations, and you agree to provide your credit card information for any additional services and to extend the Services beyond the promotional period.
-
-
-4.4            Data Transmission / No Credits. Data transmissions rely on satellite communication systems, which are subject to the limitations described in Section 1.3. Due to these limitations, Aubry Lane makes no representation as to the success of any data transmission. Regardless of whether a data transmission is successful, no refunds will be given nor shall Aubry Lane be liable for any damages that may result from any dropped data transmission of any type. Any metrics or other statistical information provided by Aubry Lane regarding data transmissions are provided on a global basis and may not apply to your individual circumstances.
-
-
-4.5            Taxes. Your Service Plan price for the Services does not include sales, usage, excise, goods and services, harmonized sales, property or any other taxes now or hereafter imposed, directly or indirectly, by any governmental authority or agency with respect to the Service. You are required to pay these taxes.
-
-
-4.6            Credit Approval / Credit Card Trial Authorization. Initiation or continuation of the Services is subject to credit approval by Aubry Lane and requires direct payment by credit card or an authorized guarantee of payment by a valid accepted credit card. Credit cards from outside of the United States will be accepted only after verification with the issuing bank. If you are a customer whose billing address is located outside of the United States or a customer without established credit, Aubry Lane may not allow you to participate in a Monthly Prepaid Plan. Instead, Aubry Lane may require that you subscribe to an Annual Prepaid Plan. Verification of credit cards issued by banks outside of the United States may delay order processing. Aubry Lane may decline any credit card transaction. Aubry Lane may seek authorization of your credit card account prior to your first activation/purchase to validate that you can charge the applicable fees to access the Services, which will result in an authorization amount (which may vary by card issuer but is typically a de minimis amount) appearing on your statement to reduce your available balance by the authorization amount until your card’s next billing cycle. Please contact your card issuer if you have additional questions regarding when this amount will be removed from your statement. By authorizing Aubry Lane to charge a credit card trial authorization for the fees associated with your subscription, you are authorizing Aubry Lane to automatically continue charging that card (or any replacement card if the original card is renewed, lost, stolen, or changed for any reason by the card issuer, and the issuer informs Aubry Lane of the new replacement card account) for all fees or charges associated with your subscription including any renewal fees. You authorize the card issuer to pay any amounts described herein and authorize Aubry Lane, or any other company that acts as a billing agent for Aubry Lane, to continue to attempt to charge all sums described herein to your credit card account until such amounts are paid in full.
-
-
-4.7            Credit Card Authorization. BY AUTHORIZING AUBRY LANE TO DEBIT YOUR CREDIT CARD, YOU REPRESENT THAT YOU ARE THE AUTHORIZED OWNER OR USER OF YOUR CREDIT CARD AND THAT YOU ARE A RESPONSIBLE PARTY FOR THAT CARD. YOU GRANT AUBRY LANE ACCESS TO AND THE RIGHT TO REVIEW THE INFORMATION IN, AND YOUR REFERENCES SUBMITTED WITH, THE SERVICE PLAN, AND OBTAIN YOUR CREDIT REPORTS AND CREDIT HISTORY, AND/OR ALL OTHER RELEVANT INFORMATION AND MATERIALS THAT AUBRY LANE REASONABLY BELIEVES IS DESIRABLE FOR THE PURPOSE OF IDENTIFYING YOUR FINANCIAL STATUS AND CREDITWORTHINESS. AUBRY LANE SHALL HAVE THE RIGHT TO CONTINUE TO MONITOR YOUR CREDIT RATING AND CREDIT HISTORY DURING THE TERM. FURTHER, YOU AUTHORIZE AUBRY LANE OR AN AFFILIATE COMPANY TO DEBIT YOUR CREDIT CARD IN ORDER TO RENEW YOUR SERVICES PRIOR TO THE START OF EVERY SERVICE TERM, UP UNTIL SUCH TIME THAT YOU CANCEL THE SERVICES IN ACCORDANCE WITH SECTION 3.4.
-
-
-4.8            E-commerce Purchases. If you purchased your Aubry Lane Product and/or service certificates on the Aubry Lane website, you will be responsible for the actual taxes applicable for your location based on the Aubry Lane Product(s) and/or accessories purchased.
-
-
-4.9            Returns. Should you need information on how to return an unopened Aubry Lane Product and/or accessories purchased from the Aubry Lane website, please see the FAQ section of the Aubry Lane website for full information on returns and shipping, as well as general information.
-
-
-LIMITED WARRANTY; DISCLAIMER OF WARRANTIES.
-
-
-5.1            Limited Warranty for the Aubry Lane Product. THE LIMITED WARRANTY ACCOMPANYING YOUR AUBRY LANE PRODUCT IS THE ONLY WARRANTY PROVIDED IN RELATION TO YOUR AUBRY LANE PRODUCT. YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE AUBRY LANE PRODUCT IS AT YOUR SOLE RISK OTHER THAN SUCH LIMITED WARRANTY. EXCEPT AS SPECIFIED IN THE LIMITED WARRANTY, AUBRY LANE DISCLAIMS ALL EXPRESS OR IMPLIED WARRANTIES FOR YOUR AUBRY LANE PRODUCT, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES REGARDING THE CONDITION, DESIGN, SPECIFICATIONS, WORKMANSHIP, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OF YOUR AUBRY LANE PRODUCT, OR ANY WARRANTIES YOUR AUBRY LANE PRODUCT IS FREE FROM LATENT DEFECTS OR DEFICIENCIES, OR THAT YOUR AUBRY LANE PRODUCT IS FREE FROM INFRINGEMENT OF ANY PATENT, TRADEMARK, COPYRIGHT OR PROPRIETARY RIGHT OF ANY THIRD PARTY. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED FROM AUBRY LANE OR ELSEWHERE, WILL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THE LIMITED WARRANTY. THE PRODUCT DOCUMENTATION, INCLUDING ALL DOCUMENTATION INCORPORATED BY REFERENCE HEREIN, SUCH AS DOCUMENTATION PROVIDED OR MADE AVAILABLE AT THE AUBRY LANE WEBSITE, IS PROVIDED “AS IS” AND “AS AVAILABLE” AND WITHOUT CONDITION, ENDORSEMENT, REPRESENTATION OR WARRANTY OF ANY KIND BY AUBRY LANE OR ITS AFFILIATES. AUBRY LANE ASSUMES NO RESPONSIBILITY FOR ANY TYPOGRAPHICAL, TECHNICAL, OR OTHER INACCURACIES, ERRORS OR OMISSIONS IN THIS DOCUMENTATION.
-
-
-Aubry Lane is not liable to you for changes in operation, equipment, or technology that cause your Aubry Lane Products or any related software to be rendered obsolete or require modification.
-
-
-THE APPLICABILITY OF THE ABOVE LIMITATIONS AND EXCLUSIONS MAY VARY FROM STATE TO STATE AND/OR FROM COUNTRY TO COUNTRY, SO THE ABOVE LIMITATION MAY NOT APPLY TO YOU. THE LIMITED WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY ALSO HAVE OTHER RIGHTS WHICH VARY BY JURISDICTION. NOTWITHSTANDING THE FOREGOING, TO THE EXTENT REQUIRED BY APPLICABLE LAW, AUBRY LANE LIMITS THE DURATION OF ANY IMPLIED WARRANTIES TO THE DURATION OF THE LIMITED WARRANTY FOR THE APPLICABLE AUBRY LANE PRODUCT.
-
-
-THE TERMS AND CONDITIONS OF THE APPLICABLE LIMITED WARRANTY FOR YOUR AUBRY LANE PRODUCT MAY BE UPDATED BY AUBRY LANE AT ANY TIME AND WITHOUT NOTICE. IF THERE IS ANY CONFLICT BETWEEN THE TERMS CONTAINED IN THIS AGREEMENT AND THE TERMS CONTAINED AT http://www.aubrylane.com/terms-conditions, THEN THE TERMS CONTAINED AT http://www.aubrylane.com/terms-conditions SHALL SUPERSEDE AND REPLACE THE TERMS CONTAINED IN THIS AGREEMENT.
-
-
-5.2.           Disclaimer of Warranty for the Services and Software. YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE SERVICES AND ANY ASSOCIATED SOFTWARE IS AT YOUR SOLE RISK. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SERVICES AND ANY ASSOCIATED SOFTWARE ARE PROVIDED “AS IS” AND “AS AVAILABLE” AND ALL OTHER WARRANTIES, REPRESENTATIONS, AND CONDITIONS (EXPRESS OR IMPLIED) INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES REGARDING CONDITION, WORKMANSHIP, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, THAT THE SERVICES AND/OR ANY ASSOCIATED SOFTWARE WILL MEET YOUR REQUIREMENTS, THAT THE OPERATION WILL BE WITHOUT INTERRUPTION OR ERROR-FREE, OF SATISFACTORY QUALITY, OF QUIET ENJOYMENT, THAT ANY DEFECTS IN THE SOFTWARE WILL BE CORRECTED, OF NON-INFRINGEMENT OF THIRD PARTY RIGHTS OR ANY OTHER EXPRESS OR IMPLIED WARRANTY ARISING BY STATUTE OR OTHERWISE IN LAW OR FROM A COURSE OF DEALING OR USAGE OF TRADE, ARE HEREBY EXPRESSLY EXCLUDED FROM THIS AGREEMENT AND DISCLAIMED BY AUBRY LANE AND ALL SERVICE PROVIDERS TO THE FULLEST EXTENT PERMITTED BY LAW. AUBRY LANE AND SUCH SERVICE PROVIDERS MAKE NO WARRANTY IN RELATION TO THE AVAILABILITY, SUITABILITY OR ACCURACY OF THE SERVICES, ANY ASSOCIATED SOFTWARE, OR IN RELATION TO AVAILABILITY, SUITABILITY OR MAINTENANCE OF THE SATELLITE SYSTEMS USED BY THE AUBRY LANE PRODUCT TO TRANSMIT DATA TRANSMISSIONS, INCLUDING EMERGENCY SIGNALS AND/OR HELP TRANSMISSIONS FOR SERVICE PROVIDER ASSISTANCE. AUBRY LANE AND THE SERVICE PROVIDERS MAKE NO WARRANTIES RESPECTING ANY HARM THAT MAY BE CAUSED BY TRANSMISSION OF A COMPUTER VIRUS, HACKING BY A THIRD PARTY, WORM, TIME BOMB, LOGIC BOMB, OR OTHER SUCH COMPUTER PROGRAM. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY ANY DISTRIBUTOR, RESELLER OR ITS AUTHORIZED REPRESENTATIVE SHALL CREATE A WARRANTY. YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR PRODUCT, OTHER DEVICE, OR LOSS OF DATA THAT RESULTS FROM USE OF THE SERVICE. THE SOFTWARE IS NOT INTENDED FOR USE IN THE OPERATION OF NUCLEAR FACILITIES, LIFE SUPPORT SYSTEMS, AIRCRAFT NAVIGATION OR COMMUNICATION SYSTEMS, AIR TRAFFIC CONTROL SYSTEMS, OR ANY OTHER ACTIVITIES IN WHICH THE FAILURE OF THE SOFTWARE COULD LEAD TO DEATH, PERSONAL INJURY, OR SEVERE PHYSICAL OR ENVIRONMENTAL DAMAGE.
-
-
-LIMITATION OF LIABILITY.
-
-
-6.1            TO THE FULLEST EXTENT PERMITTED BY LAW, AUBRY LANE AND ITS SERVICE PROVIDERS AND THEIR AFFILIATES, AND THEIR RESPECTIVE EMPLOYEES, DIRECTORS, OFFICERS, AGENTS AND SUPPLIERS HEREBY EXPRESSLY EXCLUDE AND DISCLAIM ANY LIABILITY FOR ANY DAMAGES OR CLAIMS, INCLUDING INJURY OR DEATH, AND ANY INDIRECT, SPECIAL, CONSEQUENTIAL, INCIDENTAL, RELIANCE, EXEMPLARY OR PUNITIVE LOSS, DAMAGE, COSTS OR EXPENSES (INCLUDING LOSS OF INCOME, MEDICAL AND OTHER EXPENSES, LOSS OF GUIDANCE, CARE AND COMPANIONSHIP) WHICH MAY ARISE OUT OF OR IN CONNECTION WITH THE PROVISION OF THE AUBRY LANE PRODUCT OR SERVICES (INCLUDING ANY DELAY IN PROVIDING OR FAILURE TO PROVIDE THE SERVICES) OR ITS USE BY YOU OR BY ANOTHER PERSON WHETHER OR NOT AUTHORIZED BY YOU TO UTILIZE THE SERVICES. AUBRY LANE AND ITS SERVICE PROVIDERS AND THEIR AFFILIATES, AND THEIR RESPECTIVE EMPLOYEES, DIRECTORS, OFFICERS, AGENTS AND SUPPLIERS EXCLUDE ALL LIABILITY, WHETHER RESULTING FROM CONTRACT, TORT (INCLUDING LIABILITY FOR NEGLIGENCE OR BREACH OF STATUTORY DUTY) OR OTHERWISE IN RESPECT OF ANY LOSS, DAMAGE, COSTS, EXPENSES OR OTHER CLAIMS RESULTING FROM THE ACTS OR OMISSIONS OF SUCH PARTIES, FOR ANY FAULTS, FAILURES OR INADEQUACIES OF THE SATELLITE SYSTEMS OR THE SERVICES WHETHER PROVIDED BY AUBRY LANE OR ITS SERVICE PROVIDERS, INCLUDING, WITHOUT LIMITATION, ANY FAILURE OR DELAY IN THE PROVISION OF SERVICES CAUSED BY:
-
-
-6.1.1         MATTERS OUTSIDE OF AUBRY LANE’S OR ITS SERVICE PROVIDERS’ OR THEIR AFFILIATES’ REASONABLE CONTROL, WHICH SHALL INCLUDE, BUT ARE NOT LIMITED TO, OUTBREAK OF HOSTILITIES, RIOT, CIVIL DISTURBANCE, ACTS OF TERRORISM, FIRE, EXPLOSION, FLOOD, SNOW, FOG OR OTHER INCLEMENT WEATHER CONDITIONS, FAILURE OF TELECOMMUNICATIONS OR SATELLITE SYSTEMS, ELECTRICAL POWER FAILURES OR FLUCTUATIONS, SURGES IN THE ELECTRICAL MAINS OR CURRENTS, DAMAGE CAUSED BY ELECTROMAGNETIC INTERFERENCE, THEFT, MALICIOUS DAMAGE, STRIKE, LOCK OUT OR INDUSTRIAL ACTION OF ANY KIND; OR ATTEMPTED THEFT, THEFT, ROBBERY, BATTERY, MUGGING, THREAT OF VIOLENCE OR ACTUAL VIOLENCE, POLICE ACTION OR CONFISCATION BY LAW ENFORCEMENT.
-
-
-6.1.2         FAILURE, DELAY OR INACCURACY OF THE GPS SATELLITES AND SATELLITE SYSTEMS IN PROVIDING LOCATION COORDINATES; OR
-
-
-6.1.3    FAILURE, DELAY OR INACCURACY OF THE AUBRY LANE PRODUCT TO PROCESS AND/OR TRANSMIT DATA TRANSMISSIONS, INCLUDING EMERGENCY SIGNAL(S), SERVICE PROVIDER HELP TRANSMISSIONS, AND/OR LOCATION COORDINATES, TO THE SATELLITE SYSTEMS, AUBRY LANE, OR ANY OTHER PARTY; OR
-
-
-6.1.4         FAILURE OF OR DELAY IN THE SATELLITE SYSTEMS AND/OR GROUND STATIONS TO PROCESS DATA TRANSMISSIONS, INCLUDING BUT NOT LIMITED TO EMERGENCY SIGNAL(S), SERVICE PROVIDER HELP TRANSMISSIONS, LOCATION COORDINATES, PREPROGRAMMED MESSAGES AND/OR GOOGLE MAPS DISPLAY, AND TO TRANSMIT SUCH TRANSMISSIONS TO THE IDENTIFIED POINTS OF CONTACT AND/OR EMERGENCY SERVICE PROVIDERS; OR
-
-
-6.1.5         FAILURE OF OR DELAY IN ANY E-MAIL OR CELLPHONE PROVIDER TO TRANSMIT THE MESSAGE TO YOU, OR FAILURE OF OR DELAY IN ANY PERSON OR ENTITIES RESPONSE TO AN EMERGENCY OR RESCUE RELATED TRANSMISSION; OR
-
-
-6.1.6         FAILURE OF OR DELAY IN ANY EQUIPMENT TO TRANSMIT ANY AUBRY LANE MESSAGE(S); OR
-
-
-6.1.7         FAILURE OF OR DELAY IN ANY ELECTRONIC DEVICE OR COMPONENT INCLUDING THE AUBRY LANE PRODUCT TO TRANSMIT ANY AUBRY LANE MESSAGE(S); OR
-
-
-6.1.8         FAILURE OF OR DELAY ON BEHALF OF THE AUBRY LANE SERVICE PROVIDERS TO PERFORM THE APPLICABLE SERVICES FOR WHICH EACH IS CONTRACTED; OR
-
-
-6.1.9         FAILURE TO OBTAIN A CLEAR LINE OF SIGHT TOWARD THE SATELLITE SYSTEMS; OR
-
-
-6.1.10      FAILURE TO PROPERLY INSTALL OR CONFIGURE THE AUBRY LANE PRODUCTS; OR
-
-
-6.1.11      FAILURE OF AUBRY LANE OR ITS SERVICE PROVIDERS TO PROVIDE THE SERVICE(S), INCLUDING EMERGENCY RELATED SERVICES, DUE TO THE SERVICE(S) HAVING BEEN CANCELLED PURSUANT TO SECTIONS 2.3.1, 3.4 OR 3.6; OR
-
-
-6.1.12      NON-COMPATIBILITY OF AUBRY LANE PRODUCTS WITH SMARTPHONE OPERATING SYSTEMS AND THIRD PARTY SOFTWARE; OR
-
-
-6.1.13      FAILURE OR INADEQUACY OF POWER SUPPLY FOR AUBRY LANE PRODUCTS AND/OR ASSOCIATED PRODUCTS INCLUDING BUT NOT LIMITED TO THIRD-PARTY ACCESSORIES AND SMARTPHONES.
-
-
-6.2            IN NO EVENT SHALL THE TOTAL, MAXIMUM, AGGREGATE LIABILITY OF AUBRY LANE AND ITS SERVICE PROVIDERS FOR ALL CLAIMS UNDER A SERVICE PLAN ARISING OUT OF OR RELATING TO THE SERVICES OR THIS AGREEMENT EXCEED THE TOTAL AMOUNT PAID BY YOU FOR SERVICES UNDER A SERVICE PLAN DURING THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
-
-
-6.3            THE LIMITATIONS IN THIS SECTION 6 SHALL APPLY TO ALL CLAIMS, DAMAGES, LOSSES, COSTS AND EXPENSES HOWSOEVER CAUSED AND WHETHER FOR BREACH OF CONTRACT, IN TORT, BY WAY OF NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND EVEN IF SUCH DAMAGES WERE REASONABLY FORESEEABLE.
-
-
-YOUR AUBRY LANE PRODUCT.
-
-
-7.1            Your Aubry Lane Product. All Aubry Lane Products are manufactured for, and assembled by, Aubry Lane LLC, headquartered at 5333 West 86th Street, Indianapolis, Indiana 46268.
-
-
-7.2            Copyrights, Intellectual Property, Patents and Documentation. All Aubry Lane Products and Aubry Lane Services, and all content (including software, photographs, graphs, videos, graphics and music or sounds) included with the Aubry Lane Products, Aubry Lane Services, or referenced in Product or Services documentation, are protected by copyright, trademark, patent or other proprietary rights (“Intellectual Property”) of Aubry Lane or other parties. As between you and Aubry Lane, you agree that Aubry Lane owns all Intellectual Property in your Aubry Lane Product, Aubry Lane Services and Aubry Lane content, and you shall not attempt to challenge the validity or enforceability of any such rights. Additional information concerning the Intellectual Property and the applicable Intellectual Property policies applicable to the Aubry Lane Product and Services can be found at the Aubry Lane website. THE TERMS AND CONDITIONS OF THE AUBRY LANE WEBSITE’S INTELLECTUAL PROPERTY POLICY FORMS PART OF THIS AGREEMENT AND MAY BE UPDATED BY AUBRY LANE AT ANY TIME AND WITHOUT NOTICE. You may not copy, modify, remove, delete, augment, reverse engineer, publish, transmit, or create derivative works, from, or in any way exploit, any of the Aubry Lane content, in whole or in part, without Aubry Lane’s written permission. Aubry Lane Products, Aubry Lane Services, and the Product and Services documentation may reference various trademarks, names or brands, owned by Aubry Lane or other parties. These trademarks are the valuable property of the trademark owner, and may be used only with permission of the respective trademark owner. All Aubry Lane Products described herein are the products of Aubry Lane, LLC.
-
-
-7.3            Software License. The software (including firmware) included in your Aubry Lane Product is licensed to you, not sold. You are granted a limited, non-transferable, non-exclusive license to use the software in connection with your use of your Aubry Lane Product in accordance with the Agreement. If your Aubry Lane Product requires that you agree to a separate End User License Agreement, then you agree to be bound by the terms of the End User License Agreement. This End User License Agreement can be found on the Aubry Lane website.
-
-
-YOUR OBLIGATIONS.
-
-
-8.1            Familiarization with your Aubry Lane Product. You agree to familiarize yourself with the operation of your Aubry Lane Product, including reading our Aubry Lane User Guide. You agree you will use the Aubry Lane Product only in accordance with those instructions. Aubry Lane strongly recommends that you also view all applicable Aubry Lane instructional video available on the Aubry Lane website, the FAQs available on the Aubry Lane website and practice properly using your Aubry Lane AmuletTM.
-
-
-8.2            Use of Aubry Lane Tracking. YOU AGREE THAT AUBRY LANE Theft Tracking AND Active Tracking IS DESIGNED, AND SHOULD BE USED, FOR ASSET TRACKING ONLY. AUBRY LANE Theft Tracking AND Active Tracking SHOULD NOT BE OPERATED WHILE ATTACHED TO THE HUMAN BODY OR IN VIOLATION OF ANY LAW AND YOU WILL NOT USE AUBRY LANE Theft Tracking AND Active Tracking IN SUCH A MANNER.
-
-
-8.3            Personal Use. Your Service Plan is for personal, recreational or non-commercial use only. You shall not sell, rent, lease or otherwise charge for the Aubry Lane Product and/or the Services or any information or services associated with or derived from the Aubry Lane Product and/or the Services. Any exception to this provision shall require the prior written consent of Aubry Lane.
-
-
-8.4            Restriction Prohibiting Commercial Tracking of Personnel and/or Assets. Your Aubry Lane Product may not be used at any time or under any circumstances for the commercial tracking of personnel or assets. Unauthorized commercial use may result in additional charges per data transmission. Aubry Lane may also immediately terminate the Services without refund and exercise all other remedies available.
-
-
-8.6            Misuse. You agree that you will not use the Services or the Aubry Lane Product (i) to abuse or misuse any Services; (ii) to utilize your Aubry Lane Product for the commercial tracking of assets and/or personnel, (iii) to send messages that are offensive, defamatory, abusive or obscene or intended to harass, (iv) to transmit viruses or other disabling, damaging or harmful code, (v) for any purpose in violation of the Agreement or law, (vi) in any manner that infringes or misappropriates third party rights, or (vii) in any manner which overloads or unreasonably interferes with the Services or the Satellite Systems. You agree to use the Services only with the Aubry Lane Product and not to use any other equipment in connection with the Services unless expressly approved by Aubry Lane. You agree not to tamper with the electronic components of any Aubry Lane Products. Failure to adhere to these restrictions may result in termination of this Agreement by Aubry Lane, and Aubry Lane may exercise all other remedies available.
-
-
-8.7            Authorized Users. You are solely responsible, and assume any liability, for any user authorized by you to utilize the Aubry Lane Product and/or the Services. You are also responsible for the compliance with this Agreement by your authorized users. In addition, you agree to pass usage instructions and Service Plan terms and conditions to all of your authorized users. You must carefully read the applicable terms for any optional and/or bundled service to identify if additional restrictions apply.
-
-
-8.8            Lost, Stolen or Destroyed Aubry Lane Products. You are responsible for use by anyone else of your Aubry Lane Product, and you will immediately contact Aubry Lane at 317.644.7343 or Info@aubrylane.com if your AUBRY LANE Product is lost, stolen or destroyed. You are responsible for the cost of replacing your Aubry Lane Product and for all fees and charges incurred before you notify us and for two hours thereafter. ***What do you mean by 2 hours?[1]
-
-
-8.9            Indemnity. To the maximum extent permitted by law, you agree to indemnify, defend and hold harmless Aubry Lane and the Service Providers and each of their affiliates, licensors, licensees, and suppliers and their respective directors, officers, shareholders, members, employees, representatives and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorney’s fees) arising out of or in connection with (i) your or anyone’s use of your Aubry Lane Product, the Services and any associated software, (ii) any breach of any of the terms and conditions of this Agreement, (iii) any injury or death to you or loss of property, or (iv) any negligent, reckless or tortuous act or omission committed by you or any user of an Aubry Lane Product and/or the Services.
-
-
-8.10          FCC Restrictions. FCC regulations may prohibit or restrict your using the Aubry Lane Product in a civil aircraft unless the Aubry Lane Product has a direct physical connection to the aircraft cabin or cockpit communications system.
-
-AUBRY LANE USER ACCOUNT, WEBSITES.
-
-
-9.1            Aubry Lane Websites. Your use of the Aubry Lane website, including all associated pages, and your Aubry Lane user account and/or any microsite applicable to your region, including the use of SMS, e-mail messages or other features, as applicable, is governed by the terms and conditions of use contained on each such website, including the terms and conditions governing your use of the all embedded software.
-
-
-9.2            Complete and Accurate Information. You acknowledge and accept that the information required in your Aubry Lane user account, including your Registration Data, contact information, designated contacts, social connectivity settings, supported service options and pre-programmed messages, is essential for proper provision of the Services. You accordingly certify that the information supplied by you is accurate in all respects. It is your responsibility to ensure that the information supplied by you remains accurate, complete and up to date. Changing your address from one country to another country (for example from the US to Canada) may require service level changes and might incur additional charges on your account. When composing Aubry Lane messages, you acknowledge and agree that it is your sole responsibility to ensure that you select the intended designated contact from your available contacts and are satisfied with the content of your Aubry Lane message prior to sending it. Please contact customer care for assistance.
-
-
-9.3            Content License from You. You agree that you are solely responsible for (and that Aubry Lane has no responsibility to you or to any third party for) any content that you create, transmit or display while using the Services or technology used in association with any Aubry Lane Product or Service and any associated software and for the consequences of your actions by doing so. You acknowledge that Aubry Lane transmissions, messages and/or communications may include your location information. You acknowledge and agree that by submitting, transmitting to, posting or displaying any content to any software or device controlled by Aubry Lane, you give Aubry Lane a perpetual, irrevocable, worldwide, royalty-free, and non-exclusive license to reproduce, adapt, modify, create derivative works of, translate, publish, publicly perform, publicly display and distribute any content which you submit, post or display on or through, the Services and any associated software. Furthermore, you agree that this license includes a right for Aubry Lane to make such content available to other companies, organizations or individuals as required for the provision of the Services and/or any social connectivity sites designated by you. In order to provide the Services, Aubry Lane may be required to transmit or distribute your content over various public networks and in various media. Aubry Lane may also be required to make changes to your content if so required by the technical requirements of connecting networks, devices, services or media.
-
-
-9.5            Third Party Licenses and Content. If, as part of your use of the Services and any associated software, you download a piece of software, access software online, or purchase goods, which are provided by a third party then your use of these other services, software or goods may be subject to separate terms between you and the third party provider. You agree to comply with such terms. This third party content may be protected by intellectual property rights which are owned by the third party. Any reference or links to any third party content does not necessarily constitute or imply its endorsement, sponsorship or recommendation by Aubry Lane or its licensors. Third party product and service information are the sole responsibility of each individual third party vendor. In addition, it is possible that you may find some third party content offensive, indecent or objectionable, and that, in this respect, you use the Services at your own risk. Any opinions, advice, statements, services, offers, or other information or content expressed or made available by third parties are those of the respective authors and not of Aubry Lane. Aubry Lane neither endorses nor is responsible for the accuracy or reliability of any opinion, advice, information or statement by anyone other than authorized Aubry Lane employees acting in their official capacities. You understand and acknowledge that Aubry Lane is not responsible for and does not monitor third party content for accuracy or reliability.
-
-
-9.6            Web Browsers. You must have a compatible web browser to access your Aubry Lane user account via the internet at the Aubry Lane website. Check the FAQ section of the Aubry Lane website or contact Aubry Lane Customer Service for the most recent list of compatible web browsers.
-
-
-9.7            Privacy, Data Protection. Aubry Lane is committed to maintaining your private information. In order to access the Services, you will be required to provide information about yourself (such as identification or contact details). You agree that any registration information you give to Aubry Lane will always be accurate, correct and up to date. You agree and understand that you are responsible for maintaining the confidentiality of passwords associated with any account you use to access the software and the Services. Accordingly, you agree that you will be solely responsible for all activities that occur under your account. If you become aware of any unauthorized use of your password or of your account, you agree to immediately notify Aubry Lane. Aubry Lane will keep your personal data confidential, provided however that Aubry Lane may provide such information, including your name, registration information, location and message history, to the Emergency Services Provider, emergency responders, immediate family members, and other Service Providers, and may disclose such information as otherwise provided in this Agreement. Aubry Lane may also provide your information to any Aubry Lane Service Provider that is required for the Aubry Lane Service Provider to provide your service, including your name, registration information, location and message history. Aubry Lane may also share with third parties certain pieces of non-personal, aggregated information, meaning that information from many users is grouped together and is disclosed in such a way that it does not reveal the identity of any particular user, such as Aubry Lane User demographic data or Aubry Lane usage data for marketing, advertising or other business purposes. Aubry Lane may collect information about your transmissions, including location, to monitor service quality; however, Aubry Lane will generally not monitor the content of your transmissions and messages unless law enforcement requires or required by law or for security concerns for the contacts of others. Aubry Lane may provide your tracking messages per your selections. Aubry Lane may provide your billing information to its parent company and subsidiaries if required for provision of the Services, or to a credit bureau in order to determine your credit-worthiness, or to a collection agency should your account become past due, or to the emergency services provider, in the event that you deliberately or negligently misuse any emergency service. With the exception of information provided to Service Providers, aggregated information, and/or billing information Aubry Lane will not sell or otherwise pass your personal information to third parties, except if required by law or pertinent to judicial or governmental investigations or proceedings or if Aubry Lane considers it necessary to do so to prevent risk of death or serious personal injury to you or others. You consent to the foregoing collection, use and disclosure of your personal information and to Aubry Lane’s collection, use and disclosure of your personal information as set out in this Section 9.7. You also consent to the privacy policies listed at the Aubry Lane website and pertaining to your use of those websites.
-
-
-9.8            Third Party Content. Any opinions, advice, statements, services, offers, or other information or content expressed or made available by third parties and other users on Aubry Lane Shared Pages, the Aubry Lane website and/or associated websites are those of the respective authors and not of Aubry Lane. Aubry Lane neither endorses nor is responsible for the accuracy or reliability of any opinion, advice, information or statement made on the Aubry Lane website by anyone other than authorized Aubry Lane employees acting in their official capacities. You understand and acknowledge that Aubry Lane is not responsible for and does not monitor third party content for accuracy or reliability.
-
-
-GENERAL
-
-
-10.1          Compliance with U.S. Export Regulations. The Aubry Lane Product and services may be subject to the U.S. Export Administration Regulations https://www.bis.doc.gov/index.php/regulations/export-administration-regulations-ear enforced by the U.S. Bureau of Industry and Security https://www.bis.doc.gov, as well as regulations enforced by the U.S. Office of Foreign Assets Control https://www.treasury.gov/about/organizational-structure/offices/Pages/Office-of-Foreign-Assets-Control.aspx. You will comply fully with these requirements, as well as all applicable requirements under the export and import laws and regulations of other countries. Without limitation, all parties acquiring the Aubry Lane Products and services are responsible for obtaining all licenses or other approvals from the U.S. Government necessary for acquiring, exporting, reselling, reexporting or otherwise transferring the Aubry Lane Products and services. This includes restrictions and prohibitions against any transfer to (i) anyone on the U.S. Government’s Consolidated Screening List https://build.export.gov/main/ecr/eg_main_023148, (ii) any country subject to U.S. economic sanctions, or (iii) any end use involving the development, production, or use of nuclear power, missiles, or chemical or biological weapons.
-
-
-10.2          Governing Law, Venue, &amp; Jury Waiver. Unless otherwise specified herein, this Agreement is governed by the laws of the State of Indiana without giving effect to conflicts of laws principles. The parties agree that the exclusive jurisdiction and venue for any Claim (as defined herein) shall be either the state civil courts located within Marion County, Indiana, or the United States District Court for the Southern District of Indiana, unless a different forum is expressly set forth herein. The parties expressly consent to, and irrevocably and unconditionally waive any objection to, exclusive jurisdiction and venue in either of said forums. IF THE CLAIM IS SUBMITTED TO LITIGATION UNDER THIS PARAGRAPH, THE PARTIES AGREE AND HEREBY WAIVE ANY RIGHT TO A TRIAL BY JURY IN CONNECTION WITH ANY SUCH PROCEEDING.
-
-
-10.3          Arbitration.
-
-10.4.1      Aubry Lane and you agree to arbitrate all disputes, claim, or controversy arising now or in the future under or relating in any way to this Agreement or the Aubry Lane Products or related Services (“Claim”). This agreement to arbitrate is intended to be broadly interpreted. It includes, but is not limited to:
-
-claims arising out of or relating to any aspect of the relationship between us, whether based in contract, tort, statute, fraud, misrepresentation or any other legal theory;
-
-claims that arose before this or any prior Agreement (including, but not limited to, claims relating to advertising);
-
-claims that are currently the subject of purported class action litigation in which you are not a member of a certified class; and
-
-claims that may arise after the termination of this Agreement.
-
-10.3.2      References to “Aubry Lane “you,” and “us” include our respective subsidiaries, affiliates, agents, employees, predecessors in interest, successors, and assigns, as well as all authorized or unauthorized users or beneficiaries of Services or Aubry Lane Products under this or prior Agreements between us. Notwithstanding the foregoing, either party may bring an individual action in small claims court. This arbitration agreement does not preclude you from bringing issues to the attention of federal, state, or local agencies, including, for example, the Federal Communications Commission. Such agencies can, if the law allows, seek relief against us on your behalf. You agree that, by entering into this Agreement, you and Aubry Lane are each waiving the right to participate in a class action. This Agreement evidences a transaction in interstate commerce, and thus the Federal Arbitration Act governs the interpretation and enforcement of this provision. This arbitration provision shall survive termination of this Agreement.
-
-10.3.3      A party who intends to seek arbitration must first send to the other, by certified mail, a written Notice of Dispute (“Notice”). The Notice to Aubry Lane should be addressed to sbuechler@taftlaw.com (“Notice Address”). The Notice must (a) describe the nature and basis of the claim or dispute; and (b) set forth the specific relief sought (“Demand”). If Aubry Lane and you do not reach an agreement to resolve the claim within 30 days after the Notice is received, you or Aubry Lane may commence an arbitration proceeding. During the arbitration, the amount of any settlement offer made by Aubry Lane or you shall not be disclosed to the arbitrator until after the arbitrator determines the amount, if any, to which you or Aubry Lane is entitled.
-
-
-10.3.4      The arbitrator may award declaratory or injunctive relief only in favor of the individual party seeking relief and only to the extent necessary to provide relief warranted by that party’s individual claim. YOU AND Aubry Lane AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. Further, unless both you and Aubry Lane agree otherwise, the arbitrator may not consolidate more than one person’s claims, and may not otherwise preside over any form of a representative or class proceeding. NOTWITHSTANDING ANY OTHER PROVISION OF THE AGREEMENT, THE ARBITRATOR SHALL NOT HAVE THE POWER TO DETERMINE THAT CLASS ARBITRATION IS PERMISSIBLE. THE ARBITRATOR ALSO SHALL NOT HAVE THE POWER TO PRESIDE OVER CLASS OR COLLECTIVE ARBITRATION, OR TO AWARD ANY FORM OF CLASSWIDE OR COLLECTIVE REMEDY. If this specific provision is found to be unenforceable, then the entirety of this arbitration provision shall be null and void. NO AAA RULE WILL APPLY IF IT CONFLICTS WITH THE PROVISIONS OF THIS PARAGRAPH.
-
-
- 
-
-10.3.5      Notwithstanding any provision in this Agreement to the contrary, we agree that if Aubry Lane makes any future change to this arbitration provision (other than a change to the Notice Address) during your Service Commitment, you may reject any such change by sending us written notice within 30 days of the change to the Arbitration Notice Address provided above. By rejecting any future change, you are agreeing that you will arbitrate any dispute between us in accordance with the language of this provision. This Arbitration Agreement shall survive: (i) termination or changes in the Agreement, and the relationship between you and Aubry Lane concerning the Agreement; and (ii) the bankruptcy of any party or any similar proceeding initiated by you or on your behalf. If any portion of this Arbitration provision is deemed invalid or unenforceable, the remaining portions shall nevertheless remain in force.
-
-
-10.4          Notices and Customer Service. Except as specified elsewhere herein, all legal notices to Aubry Lane must be sent to: Office@aubrylane.com or 5333 West 86th Street, Indianapolis, In 46268. For questions or concerns, please contact Aubry Lane customer service at Support@aubrylane.com or 317.644.6343 or such other contact information as may be posted on the Aubry Lane website, from time to time.
-
-
-10.5          Entire Agreement. This Agreement constitutes the entire agreement between the Parties with respect to the subject matter hereof. Any headings are provided for convenience only.
-
-
-10.6          No Waiver, Survival. The failure of Aubry Lane to exercise or enforce any right under this Agreement shall not constitute a waiver of such right. All rights and remedies granted to Aubry Lane are cumulative and not alternate. Any provisions that expressly or by their nature should survive termination of this Agreement, including payment obligations, disclaimer of warranty, rights of indemnity and limitation of liability, shall survive such termination. This Agreement shall not be deemed to create any rights in favor of any third parties or any obligations of Aubry Lane to any third parties.
-
-
-10.7          Assignment. You may not assign this Agreement or any of your rights or obligations hereunder without the express written consent of Aubry Lane. Aubry Lane may assign this Agreement and any of its rights and obligations hereunder without your notice or consent. This Agreement inures to the benefit of and is binding on the parties’ respective successors and permitted assigns.
-
-
-10.8          Reformation, Severability. In the event any provision of this Agreement is inconsistent with or contrary to any applicable law, rule, or regulation, the provision shall be deemed to be modified to the extent required to comply with the law, rule, or regulation, and this Agreement, as so modified, shall continue in full force and effect.
-
-
-10.9          References to Websites. The Agreement includes references to various third party websites for additional information. You acknowledge that such information may cease to be located at the particular third party web address that is referenced in the Agreement. In that case, it is your responsibility to identify the new location of the relevant information, and if you are unable to locate such information, you may contact Aubry Lane for assistance within a reasonable time.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="ob1-eQ-x3T">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="mK3-54-jtG"/>
-                                </constraints>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="0.0"/>
-                                    <color key="textColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Terms &amp; Conditions" id="gDL-rK-bnZ">
-                                        <barButtonItem key="leftBarButtonItem" image="Back" id="v7x-pO-r47">
-                                            <color key="tintColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <segue destination="zxB-RE-0Qd" kind="unwind" unwindAction="tcBackButton_ClickedWithSegue:" id="pxf-xF-gH4"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ob1-eQ-x3T" firstAttribute="leading" secondItem="nbM-zA-NM9" secondAttribute="leading" id="SMb-rN-XgB"/>
-                            <constraint firstAttribute="trailing" secondItem="J8C-Ae-Y8T" secondAttribute="trailing" id="VaG-u7-Sqf"/>
-                            <constraint firstAttribute="trailing" secondItem="ob1-eQ-x3T" secondAttribute="trailing" id="ZdF-UW-7nd"/>
-                            <constraint firstItem="m7u-lP-B6p" firstAttribute="top" secondItem="J8C-Ae-Y8T" secondAttribute="bottom" id="eZd-F3-j4b"/>
-                            <constraint firstItem="ob1-eQ-x3T" firstAttribute="top" secondItem="QFw-q3-aPW" secondAttribute="bottom" id="rSk-QM-v1E"/>
-                            <constraint firstItem="J8C-Ae-Y8T" firstAttribute="top" secondItem="ob1-eQ-x3T" secondAttribute="bottom" id="t6s-KL-WRn"/>
-                            <constraint firstItem="J8C-Ae-Y8T" firstAttribute="leading" secondItem="nbM-zA-NM9" secondAttribute="leading" id="zHc-le-xY9"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ud-F3-OPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="zxB-RE-0Qd" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="2352.8000000000002" y="-869.41529235382313"/>
+            <point key="canvasLocation" x="-1544" y="3443"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EJj-SY-0jn">
@@ -2215,19 +1487,19 @@ claims that may arise after the termination of this Agreement.
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCN-Vx-XzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="1299.400299850075"/>
+            <point key="canvasLocation" x="-1543" y="2740"/>
         </scene>
     </scenes>
     <resources>
         <image name="Add" width="25" height="25"/>
         <image name="AubryLaneLogo" width="750" height="420"/>
+        <image name="AubryLaneLogoTransparent" width="1501" height="840"/>
         <image name="Back" width="25" height="25"/>
         <image name="BlankUserW" width="50" height="50"/>
         <image name="Edit" width="32" height="32"/>
         <image name="Menu" width="25" height="25"/>
+        <image name="Narcia" width="800" height="1199"/>
         <image name="Purse" width="25" height="25"/>
-        <image name="aubraylane_logo" width="89" height="50"/>
-        <image name="aubrylane_splash" width="480" height="800"/>
         <image name="barButtonItem:FbD-YA-ffu:image" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
@@ -2414,14 +1686,10 @@ E34ThxOME5QTlxOcE6sTrxO2E74TyxPQE9IT1BPZE+ET5BPpE/ET9BQGFAkUDgAAAAAAAAIBAAAAAAAA
 AEEAAAAAAAAAAAAAAAAAABQQA
 </mutableData>
         </image>
-        <image name="mail" width="50" height="50"/>
         <image name="password" width="50" height="50"/>
-        <image name="select-check" width="27" height="27"/>
         <image name="trash" width="25" height="25"/>
-        <image name="unchecked" width="25" height="25"/>
-        <image name="uncheckedW" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BFv-NH-CV6"/>
+        <segue reference="5jz-0q-oWU"/>
     </inferredMetricsTieBreakers>
 </document>

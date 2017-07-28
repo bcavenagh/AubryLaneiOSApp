@@ -22,7 +22,7 @@ import UIKit
     @IBInspectable var textFieldPlaceHolder : String?{
         didSet{
             self.customTxtField.placeholder = textFieldPlaceHolder
-            self.customTxtField.attributedPlaceholder = NSAttributedString(string: self.customTxtField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.lightGray])
+            self.customTxtField.attributedPlaceholder = NSAttributedString(string: self.customTxtField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white])
         }
     }
     

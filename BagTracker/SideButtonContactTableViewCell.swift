@@ -12,12 +12,14 @@ class SideButtonContactTableViewCell: UITableViewCell {
 
     @IBOutlet weak var contactNumberLabel: UILabel!
     @IBOutlet weak var contactLabel: UILabel!
-    @IBOutlet weak var checkImage: UIImageView!
+    
+    @IBOutlet weak var contactSelectedImage: UIImageView!
     var selectContactAction: ((UITableViewCell) -> Void)?
     
     @IBAction func selectedContactPressed(_ sender: Any) {
         selectContactAction?(self)
     }
+    @IBOutlet weak var selectButton: UIButton!
 
 
 }

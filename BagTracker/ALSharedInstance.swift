@@ -25,6 +25,7 @@ class ALGlobal: NSObject {
     var emergencyContactNumber = [String]()
     
     var geoFenceRadius = 0.0
+    var selectedContact = -1
     
     func populateArrays(){
         emergencyContactName = []
@@ -67,4 +68,8 @@ class ALGlobal: NSObject {
             return UserDefaults.standard.bool(forKey: ALConstantsStrings.UserDefaultKeys.userLoggedInKey)
         }
     }
+    func setSelectedContact(){
+        selectedContact = globalDefaults.object(forKey: "selectedContactIndex") as! Int
+    }
+    
 }

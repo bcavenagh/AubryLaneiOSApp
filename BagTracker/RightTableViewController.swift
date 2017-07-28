@@ -71,8 +71,8 @@ class RightTableViewController: UITableViewController {
         let cellAdded = Bundle.main.loadNibNamed("PurseTableViewCell", owner: self, options: nil)?.first as! PurseTableViewCell
         
         if indexPath.row == 0{
-            cellAdded.PurseImageView.image = #imageLiteral(resourceName: "Add")
-            cellAdded.PurseLabel.text = "Add Purse\n(Coming Soon)"
+            cellAdded.PurseImageView.image = nil
+            cellAdded.PurseLabel.text = "Your Bags"
             //Setting color of the cell and the label text
             cellAdded.backgroundColor = UIColor(red: 209/255, green: 151/255, blue: 72/255, alpha: 1)
             cellAdded.PurseLabel.textColor = UIColor.white
@@ -89,7 +89,7 @@ class RightTableViewController: UITableViewController {
             cellAdded.PurseLabel.text = ALGlobal.sharedInstance.bagLists?[(indexPath.row) - 1].carNumber
             cellAdded.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
             cellAdded.PurseLabel.textColor = UIColor.white
-            
+            cellAdded.isUserInteractionEnabled = false
             //Set the color of the selected menu item
             let bgColorView = UIView()
             bgColorView.backgroundColor = UIColor(red: 148/255, green: 55/255, blue: 86/255, alpha: 1)
