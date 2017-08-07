@@ -140,18 +140,7 @@ class HistoryViewController: ViewController, UITableViewDelegate, UITableViewDat
             let historyData = historyDataList[indexPath.row]
             historyCell.setHistoryDataWith(date: "\(historyData.gpsTime)", placeName: historyData.placeName)
             
-            //                if historyData.placeName.characters.count == 0 && !historyData.isLocationCallMade {
-            //
-            //                historyData.isLocationCallMade = true
-            //
-            //                ReverseGeoCodeDataManager.getReverseGeoCodeNameWith(referenceObject: historyData, latitude: "\(historyData.latitude)", longitude: "\(historyData.longitude)", callBack: {
-            //                    (referenceObject , formattedAddress, errorMessage) in
-            //                    if errorMessage == nil,  let historyObject = referenceObject as? HistoryModel{
-            //                        historyObject.placeName = formattedAddress
-            //                        self.historyDataTblView.reloadData()
-            //                    }
-            //                })
-            //            }
+			
         }
         
         return historyCell
@@ -162,20 +151,4 @@ class HistoryViewController: ViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }

@@ -33,7 +33,6 @@ class TableViewController: UITableViewController {
                            cellData(cell : 2, text : "Help", image : #imageLiteral(resourceName: "HelpW")),
                            cellData(cell : 2, text : "Settings", image : #imageLiteral(resourceName: "SettingsW")),
                            cellData(cell : 2, text : "Logout", image : #imageLiteral(resourceName: "LogoutW"))]
-        //red: 100/255, green: 5/255, blue: 57/255, alpha: 1
         self.tableView.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
         
         tableView.separatorStyle = .none

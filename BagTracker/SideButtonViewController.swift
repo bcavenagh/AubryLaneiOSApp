@@ -111,7 +111,7 @@ class SideButtonViewController: ViewController, UITableViewDataSource, UITableVi
         
         // add the actions (buttons)
         alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler:{ action in
-            self.showTextMessageWarning(phone: phone, name: name, row: cellIndex)
+            self.sendSelectText(phone: phone, name: name, row: cellIndex)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
         
@@ -119,12 +119,35 @@ class SideButtonViewController: ViewController, UITableViewDataSource, UITableVi
         self.present(alert, animated: true, completion: nil)
     }
     func sendSelectText(phone: String, name: String, row: Int){
-        messageVC = MFMessageComposeViewController()
+		var request = URLRequest(url: URL(string: "http://48ec7d6a.ngrok.io/sms")!)
+		request.httpMethod = "POST"
+		let postString = "To=\(String(describing: (ALGlobal.sharedInstance.globalDefaults.object(forKey: "devicePhoneNumber") as? String)!))&From=13176444325&Body=X\(row+1)"
+		print(postString)
+		request.httpBody = postString.data(using: .utf8)
+		let task = URLSession.shared.dataTask(with: request) { data, response, error in
+			guard let data = data, error == nil else {
+				// check for fundamental networking error
+				print("error=\(String(describing: error))")
+				return
+			}
+			
+			if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+				// check for http errors
+				print("statusCode should be 200, but is \(httpStatus.statusCode)")
+				print("response = \(String(describing: response))")
+			}
+			
+			let responseString = String(data: data, encoding: .utf8)
+			print("responseString = \(String(describing: responseString))")
+		}
+		task.resume()
+		
+        /*messageVC = MFMessageComposeViewController()
         messageVC.body = "X\(row+1)"
         messageVC.recipients = [ALGlobal.sharedInstance.globalDefaults.object(forKey: "devicePhoneNumber") as!
             String]
         messageVC.messageComposeDelegate = self;
-        self.present(messageVC, animated: true, completion: nil)
+        self.present(messageVC, animated: true, completion: nil)*/
         saveContact(row: row)
     }
     func saveContact(row: Int){

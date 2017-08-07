@@ -22,14 +22,14 @@ class LoginController: UIViewController {
     
     let loginViewModel = LoginViewModel()
     let loginDataManager = LoginDataManager()
-    
-    
+
     //unwinds the forgot password form back to the login
     @IBAction func forgotPasswordBackButton_Clicked(segue:UIStoryboardSegue) {
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		
     }
     
     @IBAction func login_Clicked(_ sender: Any) {

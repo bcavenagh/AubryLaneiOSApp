@@ -22,10 +22,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         sideMenus()
         customizeNavBar()
-        //getBagList()
-        
-        //GET USER'S CURRENT LOCATION AND CALL getBagList WHEN THEY SELECT A BAG FROM MENU
-        //getUserLocation()
         
     }
     

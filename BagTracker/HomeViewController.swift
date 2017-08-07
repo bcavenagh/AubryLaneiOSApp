@@ -25,12 +25,34 @@ class HomeViewController: ViewController, CLLocationManagerDelegate, MKMapViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		if(!(ALGlobal.sharedInstance.deviceNumberSet())){
+			let alertController = UIAlertController(title: nil, message: "Please input your amulet's phone number:", preferredStyle: .alert)
+			let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
+				if let field = alertController.textFields?[0] {
+					// store your data
+					ALGlobal.sharedInstance.globalDefaults.set(field.text! as String, forKey: "devicePhoneNumber")
+				} else {
+					// user did not fill field
+				}
+			}
+			let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+			
+			alertController.addTextField { (textField) in
+				textField.placeholder = "Phone Number"
+				textField.keyboardType = .numberPad
+			}
+			
+			alertController.addAction(confirmAction)
+			alertController.addAction(cancelAction)
+			
+			self.present(alertController, animated: true, completion: nil)
+		}
         mapTypeSwitcher.layer.cornerRadius = 4.0
         mapTypeSwitcher.backgroundColor = .white
         userMapView.delegate = self
         getBagList()
     }
-    
+	
     @IBAction func mapTypeChanged(_ sender: UISegmentedControl!) {
         switch (sender.selectedSegmentIndex) {
             case 0:

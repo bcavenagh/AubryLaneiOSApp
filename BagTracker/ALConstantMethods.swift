@@ -8,8 +8,7 @@
 
 import UIKit
 
-let textFieldKeyBoardOffset = 10
-
+let textFieldKeyBoardOffset = 108
 
 struct ALConstantsStrings {
     struct UserDefaultKeys{
