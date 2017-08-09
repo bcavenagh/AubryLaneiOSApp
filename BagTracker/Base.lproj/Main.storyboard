@@ -47,7 +47,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Narcia" translatesAutoresizingMaskIntoConstraints="NO" id="elj-df-GNp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="elj-df-GNp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="jp1-nQ-yHA">
@@ -1516,7 +1516,6 @@
         <image name="BlankUserW" width="50" height="50"/>
         <image name="Edit" width="32" height="32"/>
         <image name="Menu" width="25" height="25"/>
-        <image name="Narcia" width="800" height="1199"/>
         <image name="Purse" width="25" height="25"/>
         <image name="barButtonItem:FbD-YA-ffu:image" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
@@ -1704,6 +1703,7 @@ E34ThxOME5QTlxOcE6sTrxO2E74TyxPQE9IT1BPZE+ET5BPpE/ET9BQGFAkUDgAAAAAAAAIBAAAAAAAA
 AEEAAAAAAAAAAAAAAAAAABQQA
 </mutableData>
         </image>
+        <image name="loginBackground" width="1080" height="1920"/>
         <image name="password" width="50" height="50"/>
         <image name="trash" width="25" height="25"/>
     </resources>
