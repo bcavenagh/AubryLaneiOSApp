@@ -8,45 +8,51 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: ViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var menuButton: UIBarButtonItem!
-    override func viewDidLoad() {
+	@IBOutlet weak var changTimezoneButton: UIButton!
+	//var timezonePickerView : UIPickerView = UIPickerView()
+	@IBOutlet weak var timezonePicker: UIPickerView!
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-        
-        customizeNavBar()
-        if revealViewController() != nil {
-            menuButton.target = revealViewController()
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            
-            let revealController = self.revealViewController() as? RevealViewController
-            revealController?.settingsController = self
-        }
+		
+		self.timezonePicker.isHidden = true
+		self.timezonePicker.dataSource = self
+		self.timezonePicker.delegate = self
+		//self.timezonePickerView.frame = CGRect(x: 100, y: 100, width: 100, height: 162)
+		//self.timezonePickerView.backgroundColor = UIColor.black
+		//self.timezonePickerView.layer.borderColor = UIColor.white.cgColor
+		//self.timezonePickerView.layer.borderWidth = 1
+		
+		//self.view.addSubview(timezonePickerView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    func customizeNavBar(){
-        //Change the color of the images
-        navigationController?.navigationBar.tintColor = UIColor(colorLiteralRed: 209/255, green: 151/255, blue: 72/255, alpha: 1)
-        //Change the color of the top main bar
-        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 100/255, green: 5/255, blue: 57/255, alpha: 1)
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	@IBAction func changeTimezone_Pressed(_ sender: Any) {
+		timezonePicker.isHidden = false
+	}
+	
+	func numberOfComponents(in: UIPickerView) -> Int {
+		return 1
+	}
+	
+	func pickerView(_: UIPickerView, numberOfRowsInComponent: Int) -> Int {
+		return 2
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		return "Timezone" as String
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+		return 36.0
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+		return 36.0
+	}
 
 }

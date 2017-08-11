@@ -10,12 +10,13 @@ import Foundation
 import GoogleMaps
 import UIKit
 
+//----------------THIS FILE IS CURRENTLY UNUSED SINCE WE SWITCHED TO APPLE MAPS---------------------
 class MapController: UIViewController {
     var latitude = 39.909319
     var longitude = -86.251950
     var zoom : Float! = 50
     var bag = ALGlobal.sharedInstance.bagLists?[0]
-    
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 //        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: zoom)

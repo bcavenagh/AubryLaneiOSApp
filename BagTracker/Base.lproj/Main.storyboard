@@ -1366,12 +1366,34 @@
                                     <segue destination="Y3x-ot-Y0R" kind="show" id="GhO-GJ-XWv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYw-FN-3hV">
+                                <rect key="frame" x="16" y="175" width="288" height="36"/>
+                                <color key="backgroundColor" red="0.54597981770000004" green="0.1622178819" blue="0.35142686629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="3sz-2G-bEN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.81960784310000001" green="0.59215686270000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Change Timezone"/>
+                                <connections>
+                                    <action selector="changeTimezone_Pressed:" destination="tTV-Xu-ewR" eventType="touchUpInside" id="ZQA-6J-nZI"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsR-Vh-CyQ">
+                                <rect key="frame" x="0.0" y="219" width="320" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tsR-Vh-CyQ" firstAttribute="top" secondItem="LYw-FN-3hV" secondAttribute="bottom" constant="8" id="8EO-es-hGY"/>
                             <constraint firstItem="9sz-S1-Ese" firstAttribute="top" secondItem="VVf-Pk-wg8" secondAttribute="bottom" constant="40" id="Dol-gr-VdV"/>
+                            <constraint firstItem="LYw-FN-3hV" firstAttribute="leading" secondItem="HXZ-oH-q3c" secondAttribute="leadingMargin" id="GfT-IK-c3p"/>
+                            <constraint firstItem="tsR-Vh-CyQ" firstAttribute="leading" secondItem="HXZ-oH-q3c" secondAttribute="leading" id="YWy-VY-Bwi"/>
                             <constraint firstItem="9sz-S1-Ese" firstAttribute="trailing" secondItem="HXZ-oH-q3c" secondAttribute="trailingMargin" id="ZC9-MU-gwF"/>
+                            <constraint firstItem="LYw-FN-3hV" firstAttribute="trailing" secondItem="HXZ-oH-q3c" secondAttribute="trailingMargin" id="cS7-2S-Yaz"/>
+                            <constraint firstItem="LYw-FN-3hV" firstAttribute="top" secondItem="9sz-S1-Ese" secondAttribute="bottom" constant="35" id="chC-ku-gUs"/>
                             <constraint firstItem="9sz-S1-Ese" firstAttribute="leading" secondItem="HXZ-oH-q3c" secondAttribute="leadingMargin" id="gEG-WI-7QA"/>
+                            <constraint firstAttribute="trailing" secondItem="tsR-Vh-CyQ" secondAttribute="trailing" id="zcS-di-ifR"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -1390,7 +1412,9 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="changTimezoneButton" destination="LYw-FN-3hV" id="mnP-a2-0dI"/>
                         <outlet property="menuButton" destination="5j9-W0-B5h" id="qws-NV-v8A"/>
+                        <outlet property="timezonePicker" destination="tsR-Vh-CyQ" id="hNl-6X-prJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7I-4L-iiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1495,7 +1519,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h4U-WQ-Ccw" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3G0-0c-D3L">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3G0-0c-D3L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1708,6 +1732,6 @@ AEEAAAAAAAAAAAAAAAAAABQQA
         <image name="trash" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BFv-NH-CV6"/>
+        <segue reference="5jz-0q-oWU"/>
     </inferredMetricsTieBreakers>
 </document>

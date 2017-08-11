@@ -27,10 +27,6 @@ class RightTableViewController: UITableViewController {
         self.tableView.backgroundColor = UIColor(red: 100/255, green: 5/255, blue: 57/255, alpha: 1)
             
         tableView.separatorStyle = .none
-//        fetchPurse (){
-//            self.createArray()
-//            self.tableView.reloadData()
-//        }
     }
     
     func fetchPurse(completion: @escaping () -> ()){
@@ -50,24 +46,14 @@ class RightTableViewController: UITableViewController {
         }, withCancel: nil)
         
     }
-    func createArray(){
-//        rightArrayOfCellData = [rightCellData(cell : 2, text : "Add Purse", image : #imageLiteral(resourceName: "Add"))]
-//        var i = 0
-//        while i < purses.count{
-//            rightArrayOfCellData.append(rightCellData(cell : 1, text : purses[i].deviceName, image : #imageLiteral(resourceName: "PurseW")))
-//            i += 1
-//        }
-        
-    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //count how many cells are in the array
-//        return rightArrayOfCellData.count
         print(ALGlobal.sharedInstance.getBagsCount)
         return ALGlobal.sharedInstance.getBagsCount + 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //var cell = UITableViewCell() as! PurseTableViewCell
         let cellAdded = Bundle.main.loadNibNamed("PurseTableViewCell", owner: self, options: nil)?.first as! PurseTableViewCell
         
         if indexPath.row == 0{
@@ -101,7 +87,7 @@ class RightTableViewController: UITableViewController {
     }
     
     
-    //TODO: Figure out how to update the map when a purse is selected and close the purse menu
+    //TODO: update the map when a purse is selected and close the purse menu
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         if(indexPath.row == 0){

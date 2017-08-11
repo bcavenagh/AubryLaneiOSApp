@@ -1,0 +1,33 @@
+This is simply a note from me to whoever takes over the app after me to explain some of the code in this project as I know it is somewhat scattered and confusing to read. The files under the "Imported Materials" folder were given to me from the Indian team that created the first version of the app, which I was tasked with completing and pushing to the App Store. These files were given to me slightly after I had started working on the project so by that point I had already had a lot of the app built with Google Maps and Firebase implemented. After being given these files I had to change everything from Google to Apple Maps and from Firebase to our server so there may be remnants of the Google stuff scattered throughout the app. I believe that these can just be removed without causing harm to the app but have a backup just in case. I'll provide a list of things that need to be fixed in the app at the bottom of this file so that you have some idea where to start. If you have looked through the files already you can see that I relied heavily on the Interface Builder to create the layouts for the app. The majority of the UI is in the Main.storyboard with a few additional layouts in the "Views" folder and I also imported some from the India team's version.
+
+ALSharedInstance holds many of the global variables and is also what holds the UserDefaults. Currently tha app saves emergency contacts on the phone rather than sending it to a database because we were still working out a way to redesign the database and push data to it. UserDefaults the data that is saved on the phone.
+
+TO DO LIST:
+1. Contacts page - currently the contacts page saves users into the phone by saving both the name and number to two separate arrays and saving those to the UserDefaults which, on viewDidLoad, are loaded into arrays and added to the tableView. This is problematic because there are too many moving parts and if one is off then all are off. Currently, if a user adds multiple contacts then deletes one in the middle the emergency contacts will shift up because I remove that contact from the array but the Amulet will still have the emergency contacts programmed in the same order. For example if I have 4 contacts:
+		1. Aubry (317-555-5555)
+		2. Lane (317-555-5555)
+		3. John (317-555-5555)
+		4. Jane (317-555-5555)
+	These 4 contacts are saved in the Amulet as:
+		1. a1,317-555-5555
+		2. a2,317-555-5555
+		3. a3,317-555-5555
+		4. a4,317-555-5555
+	Now if the user deletes John's contact from position 3 the contacts will display as:
+		1. Aubry (317-555-5555)
+		2. Lane (317-555-5555)
+		3. Jane (317-555-5555)
+	So now Jane is in the table as contact number 3 but saved in the Amulet as a4. I was waiting for the database to be changed before fixing this issue but a new fix that can be implemented would be to create 5 static cells and save users into those rather than appending and removing from arrays. which changes positions of the contacts. I created a temporary fix which would be to send 5 delete texts to the Amulet and re-add the contacts in the updated order but I didn't know Twilio charges per text message so that would not be cost efficient. Twilio is what we use to send text messages to the Amulet.
+
+2. History page - the times are off on the History page. This probably has to do with the timezone that the phone is set in which I am currently working on but will most likely not finish as at the time of writing this it is my last day so that will be in the SettingsViewController page. There is also a bug where when a time has a 0 in the ten's spot it like 8:05pm it will not display the 0 and will display as 8:5
+
+3. Timezones - Like mentioned above, the Settings page needs to have an option to change timezones for the app.
+
+Those are the main fixes that should be addressed first as those are more crucial than adding other features. I'll provide some suggestions about what should be added in the future given the time.
+
+FUTURE SUGGESTIONS:
+1. Registering users - we currently register users by linking them to the web portal and having them do it through that. Making that native in the app would be better.
+2. Changing password - we do the same thing with changing password (using the web portal). Doing this without the web portal would be better.
+3. Adding Amulets - Adding the ability to add a Amulet for a user would be good so they don't need a separate login for each Amulet. I have a right side menu which will display the user's Amulets and had a way to add to that back when I was using Google Firebase before I received the India team's files. I created the view for adding an Amulet which can be seen in the storyboard but disabled the userInteraction that used to open the page. You can re-enable it by deleting line 65 from the RightTableViewController file. 
+
+
