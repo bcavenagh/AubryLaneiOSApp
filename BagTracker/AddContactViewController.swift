@@ -60,7 +60,7 @@ class AddContactViewController: UIViewController {
             let filledDefaultsArray = ALGlobal.sharedInstance.globalDefaults.array(forKey: "emergencyContactName") as! [String]
             contactIndex = filledDefaultsArray.count + 1
         }
-		var request = URLRequest(url: URL(string: "http://48ec7d6a.ngrok.io/sms")!)
+		 var request = URLRequest(url: URL(string: "http://132.148.89.30:5000/sms")!)
 		request.httpMethod = "POST"
 		let postString = "To=\(String(describing: (ALGlobal.sharedInstance.globalDefaults.object(forKey: "devicePhoneNumber") as? String)!))&From=13176444325&Body=a\(contactIndex),\(phoneNumber!)"
 		print(postString)
