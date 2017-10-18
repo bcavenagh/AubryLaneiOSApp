@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8987E881F16C91473D60A1BF /* Pods_BagTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F4667C0B9E1A0C48C39779 /* Pods_BagTracker.framework */; };
-		8B0A13991EEF1D4300FC9FA7 /* AddPurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A13981EEF1D4300FC9FA7 /* AddPurseViewController.swift */; };
-		8B22162E1F2F851B0068070D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2216211F2F848D0068070D /* Alamofire.framework */; };
-		8B22162F1F2F851B0068070D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2216211F2F848D0068070D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8B24CA651F2667DA0025E6AC /* SideButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24CA641F2667DA0025E6AC /* SideButtonViewController.swift */; };
 		8B24CA691F266A670025E6AC /* SideButtonContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24CA681F266A670025E6AC /* SideButtonContactTableViewCell.swift */; };
 		8B2EFF701F013FFE003F0B4C /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EFF6F1F013FFE003F0B4C /* ContactCell.swift */; };
@@ -19,8 +16,6 @@
 		8B4E82E51EE71C9200969EB1 /* TableViewCellUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E82E31EE71C9200969EB1 /* TableViewCellUser.xib */; };
 		8B4E82E81EE71D9400969EB1 /* TableViewCellTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E82E61EE71D9400969EB1 /* TableViewCellTab.swift */; };
 		8B4E82E91EE71D9400969EB1 /* TableViewCellTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E82E71EE71D9400969EB1 /* TableViewCellTab.xib */; };
-		8B7E38141F2F8B10006C9651 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7E38131F2F8B10006C9651 /* PasswordViewController.swift */; };
-		8B7E381D1F2F97FE006C9651 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7E381C1F2F97FE006C9651 /* ForgotPasswordViewController.swift */; };
 		8B8216911F2235ED008AAB98 /* GeoFenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8216901F2235ED008AAB98 /* GeoFenceViewController.swift */; };
 		8BA94A0D1EEEF8F400D0BF22 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA94A0C1EEEF8F400D0BF22 /* RegisterViewController.swift */; };
 		8BB07ABA1EEEE6F7007230CF /* NHRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB07AB81EEEE6F7007230CF /* NHRangeSlider.swift */; };
@@ -63,73 +58,20 @@
 		8BECDDE21EFAC47700B8826B /* Purse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDE11EFAC47700B8826B /* Purse.swift */; };
 		8BECDDE61EFC9DB800B8826B /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDE51EFC9DB800B8826B /* AddContactViewController.swift */; };
 		8BECDDEA1EFCA88100B8826B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDE91EFCA88100B8826B /* Contact.swift */; };
-		8BECDDF41EFCB72600B8826B /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECDDF31EFCB72600B8826B /* ContactsViewController.swift */; };
-		8BFC276A1EEECEE5008E79F2 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC27691EEECEE5008E79F2 /* RevealViewController.swift */; };
 		8BFC276D1EEED217008E79F2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC276C1EEED217008E79F2 /* HistoryViewController.swift */; };
-		8BFC27711EEED25F008E79F2 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC27701EEED25F008E79F2 /* BatteryViewController.swift */; };
 		8BFC27731EEED26C008E79F2 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC27721EEED26C008E79F2 /* HelpViewController.swift */; };
 		8BFC27751EEED276008E79F2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC27741EEED276008E79F2 /* SettingsViewController.swift */; };
 		8BFC27771EEEDFE0008E79F2 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC27761EEEDFE0008E79F2 /* KDCircularProgress.swift */; };
 		9C4857E51F97D95A00368F47 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9C4857E41F97D95A00368F47 /* .gitignore */; };
+		9C56D0CA1F97EFDA0005F905 /* AddPurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56D0C91F97EFDA0005F905 /* AddPurseViewController.swift */; };
+		9C56D0CC1F97EFED0005F905 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56D0CB1F97EFED0005F905 /* RevealViewController.swift */; };
+		9C56D0CE1F97EFFF0005F905 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56D0CD1F97EFFF0005F905 /* ForgotPasswordViewController.swift */; };
+		9C56D0D01F97F00A0005F905 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56D0CF1F97F00A0005F905 /* ContactsViewController.swift */; };
+		9C56D0D21F97F0190005F905 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56D0D11F97F0180005F905 /* BatteryViewController.swift */; };
+		9C56D0D41F97F0250005F905 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56D0D31F97F0250005F905 /* PasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8B2216201F2F848D0068070D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B2216151F2F848D0068070D /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		8B2216221F2F848D0068070D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B2216151F2F848D0068070D /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		8B2216241F2F848D0068070D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B2216151F2F848D0068070D /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire macOS";
-		};
-		8B2216261F2F848D0068070D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B2216151F2F848D0068070D /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire macOS Tests";
-		};
-		8B2216281F2F848D0068070D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B2216151F2F848D0068070D /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		8B22162A1F2F848D0068070D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B2216151F2F848D0068070D /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
-		8B22162C1F2F848D0068070D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B2216151F2F848D0068070D /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4202FE01B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
-		8B2216301F2F851B0068070D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B2216151F2F848D0068070D /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 		8BB9A91A1EE6DF4F009D3052 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8BB9A8FD1EE6DF4F009D3052 /* Project object */;
@@ -153,7 +95,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8B22162F1F2F851B0068070D /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,8 +103,6 @@
 
 /* Begin PBXFileReference section */
 		29F4667C0B9E1A0C48C39779 /* Pods_BagTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BagTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B0A13981EEF1D4300FC9FA7 /* AddPurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPurseViewController.swift; sourceTree = "<group>"; };
-		8B2216151F2F848D0068070D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8B24CA641F2667DA0025E6AC /* SideButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideButtonViewController.swift; sourceTree = "<group>"; };
 		8B24CA681F266A670025E6AC /* SideButtonContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideButtonContactTableViewCell.swift; sourceTree = "<group>"; };
 		8B2EFF6F1F013FFE003F0B4C /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
@@ -173,8 +112,6 @@
 		8B4E82E31EE71C9200969EB1 /* TableViewCellUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellUser.xib; sourceTree = "<group>"; };
 		8B4E82E61EE71D9400969EB1 /* TableViewCellTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTab.swift; sourceTree = "<group>"; };
 		8B4E82E71EE71D9400969EB1 /* TableViewCellTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellTab.xib; sourceTree = "<group>"; };
-		8B7E38131F2F8B10006C9651 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
-		8B7E381C1F2F97FE006C9651 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		8B8216901F2235ED008AAB98 /* GeoFenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoFenceViewController.swift; sourceTree = "<group>"; };
 		8BA94A0C1EEEF8F400D0BF22 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8BB07AB81EEEE6F7007230CF /* NHRangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHRangeSlider.swift; sourceTree = "<group>"; };
@@ -225,14 +162,17 @@
 		8BECDDE11EFAC47700B8826B /* Purse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purse.swift; sourceTree = "<group>"; };
 		8BECDDE51EFC9DB800B8826B /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		8BECDDE91EFCA88100B8826B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		8BECDDF31EFCB72600B8826B /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		8BFC27691EEECEE5008E79F2 /* RevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
 		8BFC276C1EEED217008E79F2 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		8BFC27701EEED25F008E79F2 /* BatteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		8BFC27721EEED26C008E79F2 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		8BFC27741EEED276008E79F2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8BFC27761EEEDFE0008E79F2 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		9C4857E41F97D95A00368F47 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9C56D0C91F97EFDA0005F905 /* AddPurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPurseViewController.swift; path = "../../../Downloads/Re%3a_Aubry_Lane_iOS_app/AddPurseViewController.swift"; sourceTree = "<group>"; };
+		9C56D0CB1F97EFED0005F905 /* RevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RevealViewController.swift; path = "../../../Downloads/Re%3a_Aubry_Lane_iOS_app/RevealViewController.swift"; sourceTree = "<group>"; };
+		9C56D0CD1F97EFFF0005F905 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = "../../../Downloads/Re%3a_Aubry_Lane_iOS_app/ForgotPasswordViewController.swift"; sourceTree = "<group>"; };
+		9C56D0CF1F97F00A0005F905 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewController.swift; path = "../../../Downloads/Re%3a_Aubry_Lane_iOS_app/ContactsViewController.swift"; sourceTree = "<group>"; };
+		9C56D0D11F97F0180005F905 /* BatteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BatteryViewController.swift; path = "../../../Downloads/Re%3a_Aubry_Lane_iOS_app/BatteryViewController.swift"; sourceTree = "<group>"; };
+		9C56D0D31F97F0250005F905 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordViewController.swift; path = "../../../Downloads/Re%3a_Aubry_Lane_iOS_app/PasswordViewController.swift"; sourceTree = "<group>"; };
 		B9ACDE991FEC7FC71045480C /* Pods-BagTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BagTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BagTracker/Pods-BagTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA867F37BD68AE624D92463 /* Pods-BagTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BagTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BagTracker/Pods-BagTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -243,7 +183,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD29C611F04493900F29EC4 /* CoreLocation.framework in Frameworks */,
-				8B22162E1F2F851B0068070D /* Alamofire.framework in Frameworks */,
 				8987E881F16C91473D60A1BF /* Pods_BagTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,20 +222,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8B2216161F2F848D0068070D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8B2216211F2F848D0068070D /* Alamofire.framework */,
-				8B2216231F2F848D0068070D /* Alamofire iOS Tests.xctest */,
-				8B2216251F2F848D0068070D /* Alamofire.framework */,
-				8B2216271F2F848D0068070D /* Alamofire macOS Tests.xctest */,
-				8B2216291F2F848D0068070D /* Alamofire.framework */,
-				8B22162B1F2F848D0068070D /* Alamofire tvOS Tests.xctest */,
-				8B22162D1F2F848D0068070D /* Alamofire.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		8B4E82EA1EE7311E00969EB1 /* LeftMenuTableViewControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,7 +258,6 @@
 		8BB9A9071EE6DF4F009D3052 /* BagTracker */ = {
 			isa = PBXGroup;
 			children = (
-				8B2216151F2F848D0068070D /* Alamofire.xcodeproj */,
 				8B46A57E1F2B7AC9002DC3C2 /* BagTracker.entitlements */,
 				8BD29C7C1F06B11A00F29EC4 /* Imported Materials */,
 				8BECDDE41EFAF1CA00B8826B /* Views */,
@@ -384,7 +308,7 @@
 		8BC2CF2F1EE785CF00F8E0A2 /* RightMenuTableViewControl */ = {
 			isa = PBXGroup;
 			children = (
-				8B0A13981EEF1D4300FC9FA7 /* AddPurseViewController.swift */,
+				9C56D0C91F97EFDA0005F905 /* AddPurseViewController.swift */,
 				8BC2CF301EE7869C00F8E0A2 /* RightTableViewController.swift */,
 			);
 			name = RightMenuTableViewControl;
@@ -443,7 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				8BECDDE51EFC9DB800B8826B /* AddContactViewController.swift */,
-				8BECDDF31EFCB72600B8826B /* ContactsViewController.swift */,
+				9C56D0CF1F97F00A0005F905 /* ContactsViewController.swift */,
 			);
 			name = "Contact Controllers";
 			sourceTree = "<group>";
@@ -451,23 +375,23 @@
 		8BFC276B1EEED1F8008E79F2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8BFC27691EEECEE5008E79F2 /* RevealViewController.swift */,
+				9C56D0CB1F97EFED0005F905 /* RevealViewController.swift */,
 				8BC2CF2F1EE785CF00F8E0A2 /* RightMenuTableViewControl */,
 				8B4E82EA1EE7311E00969EB1 /* LeftMenuTableViewControl */,
 				8BB9A93B1EE6E18B009D3052 /* ViewController.swift */,
 				8BD29C621F06954C00F29EC4 /* HomeViewController.swift */,
 				8BCE20F31EF80F74003F0883 /* LoginController.swift */,
-				8B7E381C1F2F97FE006C9651 /* ForgotPasswordViewController.swift */,
+				9C56D0CD1F97EFFF0005F905 /* ForgotPasswordViewController.swift */,
 				8BB9A93D1EE6E8E4009D3052 /* MapController.swift */,
 				8BFC276C1EEED217008E79F2 /* HistoryViewController.swift */,
 				8BECDDE71EFCA6DD00B8826B /* Contact Controllers */,
-				8BFC27701EEED25F008E79F2 /* BatteryViewController.swift */,
+				9C56D0D11F97F0180005F905 /* BatteryViewController.swift */,
 				8BFC27721EEED26C008E79F2 /* HelpViewController.swift */,
 				8BFC27741EEED276008E79F2 /* SettingsViewController.swift */,
 				8BA94A0C1EEEF8F400D0BF22 /* RegisterViewController.swift */,
 				8B8216901F2235ED008AAB98 /* GeoFenceViewController.swift */,
 				8B24CA641F2667DA0025E6AC /* SideButtonViewController.swift */,
-				8B7E38131F2F8B10006C9651 /* PasswordViewController.swift */,
+				9C56D0D31F97F0250005F905 /* PasswordViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -490,7 +414,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8B2216311F2F851B0068070D /* PBXTargetDependency */,
 			);
 			name = BagTracker;
 			productName = BagTracker;
@@ -578,12 +501,6 @@
 			mainGroup = 8BB9A8FC1EE6DF4F009D3052;
 			productRefGroup = 8BB9A9061EE6DF4F009D3052 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8B2216161F2F848D0068070D /* Products */;
-					ProjectRef = 8B2216151F2F848D0068070D /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8BB9A9041EE6DF4F009D3052 /* BagTracker */,
@@ -592,58 +509,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8B2216211F2F848D0068070D /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 8B2216201F2F848D0068070D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8B2216231F2F848D0068070D /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = 8B2216221F2F848D0068070D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8B2216251F2F848D0068070D /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 8B2216241F2F848D0068070D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8B2216271F2F848D0068070D /* Alamofire macOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire macOS Tests.xctest";
-			remoteRef = 8B2216261F2F848D0068070D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8B2216291F2F848D0068070D /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 8B2216281F2F848D0068070D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8B22162B1F2F848D0068070D /* Alamofire tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = 8B22162A1F2F848D0068070D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8B22162D1F2F848D0068070D /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 8B22162C1F2F848D0068070D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8BB9A9031EE6DF4F009D3052 /* Resources */ = {
@@ -760,21 +625,25 @@
 			files = (
 				8BD29C861F06B14500F29EC4 /* BaseDataManager.swift in Sources */,
 				8BB07ABA1EEEE6F7007230CF /* NHRangeSlider.swift in Sources */,
-				8BECDDF41EFCB72600B8826B /* ContactsViewController.swift in Sources */,
 				8BD29C961F06B17B00F29EC4 /* HomeViewModel.swift in Sources */,
+				9C56D0D21F97F0190005F905 /* BatteryViewController.swift in Sources */,
 				8BB9A93E1EE6E8E4009D3052 /* MapController.swift in Sources */,
 				8B24CA651F2667DA0025E6AC /* SideButtonViewController.swift in Sources */,
 				8B24CA691F266A670025E6AC /* SideButtonContactTableViewCell.swift in Sources */,
 				8BD29C981F06B18500F29EC4 /* LoginViewModel.swift in Sources */,
 				8BECDDEA1EFCA88100B8826B /* Contact.swift in Sources */,
 				8BD29C921F06B17200F29EC4 /* HistoryViewModel.swift in Sources */,
+				9C56D0D01F97F00A0005F905 /* ContactsViewController.swift in Sources */,
+				9C56D0CC1F97EFED0005F905 /* RevealViewController.swift in Sources */,
 				8BD29C941F06B17700F29EC4 /* RegisterUserViewModel.swift in Sources */,
 				8BB9A93C1EE6E18B009D3052 /* ViewController.swift in Sources */,
 				8BFC276D1EEED217008E79F2 /* HistoryViewController.swift in Sources */,
 				8BECDDE21EFAC47700B8826B /* Purse.swift in Sources */,
 				8BFC27771EEEDFE0008E79F2 /* KDCircularProgress.swift in Sources */,
+				9C56D0CE1F97EFFF0005F905 /* ForgotPasswordViewController.swift in Sources */,
 				8B2EFF701F013FFE003F0B4C /* ContactCell.swift in Sources */,
 				8BFC27731EEED26C008E79F2 /* HelpViewController.swift in Sources */,
+				9C56D0D41F97F0250005F905 /* PasswordViewController.swift in Sources */,
 				8BD29C631F06954C00F29EC4 /* HomeViewController.swift in Sources */,
 				8BB9A9091EE6DF4F009D3052 /* AppDelegate.swift in Sources */,
 				8B8216911F2235ED008AAB98 /* GeoFenceViewController.swift in Sources */,
@@ -782,10 +651,7 @@
 				8BD29C881F06B14500F29EC4 /* ReverseGeoCodeDataManager.swift in Sources */,
 				8BC2CF341EE788A500F8E0A2 /* PurseTableViewCell.swift in Sources */,
 				8BFC27751EEED276008E79F2 /* SettingsViewController.swift in Sources */,
-				8B7E381D1F2F97FE006C9651 /* ForgotPasswordViewController.swift in Sources */,
 				8BD29C9A1F06B1A100F29EC4 /* LoginCustomTextFields.swift in Sources */,
-				8BFC276A1EEECEE5008E79F2 /* RevealViewController.swift in Sources */,
-				8B7E38141F2F8B10006C9651 /* PasswordViewController.swift in Sources */,
 				8BCE20F41EF80F74003F0883 /* LoginController.swift in Sources */,
 				8BA94A0D1EEEF8F400D0BF22 /* RegisterViewController.swift in Sources */,
 				8B4E82DB1EE719D100969EB1 /* TableViewController.swift in Sources */,
@@ -794,9 +660,8 @@
 				8BD29C9F1F06B33B00F29EC4 /* HistoryTableViewCell.swift in Sources */,
 				8BD29C801F06B13500F29EC4 /* ALCustomButton.swift in Sources */,
 				8BD29C7E1F06B12800F29EC4 /* ALCustomTextField.swift in Sources */,
-				8B0A13991EEF1D4300FC9FA7 /* AddPurseViewController.swift in Sources */,
+				9C56D0CA1F97EFDA0005F905 /* AddPurseViewController.swift in Sources */,
 				8BD29C8A1F06B15600F29EC4 /* HistoryDataManager.swift in Sources */,
-				8BFC27711EEED25F008E79F2 /* BatteryViewController.swift in Sources */,
 				8BD29C8C1F06B15F00F29EC4 /* ALSharedInstance.swift in Sources */,
 				8BD29C821F06B13E00F29EC4 /* ALConstantMethods.swift in Sources */,
 				8B4E82E41EE71C9200969EB1 /* TableViewCellUser.swift in Sources */,
@@ -826,11 +691,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8B2216311F2F851B0068070D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = 8B2216301F2F851B0068070D /* PBXContainerItemProxy */;
-		};
 		8BB9A91B1EE6DF4F009D3052 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8BB9A9041EE6DF4F009D3052 /* BagTracker */;

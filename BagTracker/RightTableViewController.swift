@@ -31,8 +31,8 @@ class RightTableViewController: UITableViewController {
     
     func fetchPurse(completion: @escaping () -> ()){
         
-        let ref = FIRDatabase.database().reference(fromURL: "https://test-database-ba3a2.firebaseio.com/")
-        let user = (FIRAuth.auth()?.currentUser?.uid)!
+		let ref = Database.database().reference(fromURL: "https://test-database-ba3a2.firebaseio.com/")
+		let user = (Auth.auth().currentUser?.uid)!
         let userRef = ref.child("users").child(user).child("devices")
         
         userRef.observe(.childAdded, with: { (snapshot) in

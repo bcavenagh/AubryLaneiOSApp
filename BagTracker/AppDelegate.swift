@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.setHomeViewController()
-        FIRApp.configure()
+		FirebaseApp.configure()
         GMSServices.provideAPIKey("AIzaSyDZtrqQR1csEg2Z1Rr5vjF41bBQXLdPwB0")
         
         return true
